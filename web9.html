@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tirumala Textiles | Building Solutions & Automations</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            green: '#2E7D32', // Matches logo green
+                            dark: '#1B5E20',
+                            light: '#E8F5E9',
+                            text: '#111827'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 1s ease-out forwards',
+                        'slide-up': 'slideUp 0.8s ease-out forwards',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #2E7D32; border-radius: 4px; }
+        
+        /* Glassmorphism */
+        .glass {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .image-fallback {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f3f4f6;
+            color: #9ca3af;
+            font-size: 0.8rem;
+            text-align: center;
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="bg-white text-brand-text antialiased">
+
+    <div class="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
+        <a href="mailto:tirumala.textiles10@gmail.com" class="w-12 h-12 bg-white rounded-full shadow-lg border border-gray-100 flex items-center justify-center text-gray-600 hover:text-red-500 hover:scale-110 transition group relative">
+            <i class="fas fa-envelope text-xl"></i>
+            <span class="absolute right-14 bg-black text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition whitespace-nowrap">Email Us</span>
+        </a>
+        <a href="https://wa.me/918100888810" target="_blank" class="w-14 h-14 bg-[#25D366] rounded-full shadow-xl flex items-center justify-center text-white hover:scale-110 transition animate-bounce group relative">
+            <i class="fab fa-whatsapp text-3xl"></i>
+            <span class="absolute right-16 bg-black text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition whitespace-nowrap">Chat Now</span>
+        </a>
+    </div>
+
+    <nav class="fixed w-full z-40 glass transition-all">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+            <div class="flex items-center gap-3 cursor-pointer">
+                <img src="ChatGPT Image Jan 9, 2026 at 01_38_46 PM.jpg" alt="Tirumala Textiles Logo" class="h-12 w-auto object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                <div class="hidden flex-col">
+                    <span class="font-bold text-lg text-brand-green leading-none">Tirumala</span>
+                    <span class="text-[10px] uppercase tracking-widest text-gray-500">Textiles</span>
+                </div>
+            </div>
+
+            <div class="hidden md:flex space-x-8 text-sm font-medium text-gray-500">
+                <a href="#home" class="hover:text-brand-green transition">Home</a>
+                <a href="#problem" class="hover:text-brand-green transition">The Problem</a>
+                <a href="#casestudy" class="hover:text-brand-green transition">Case Study</a>
+                <a href="#modules" class="hover:text-brand-green transition">Modules</a>
+                <a href="#hierarchy" class="hover:text-brand-green transition">Hierarchy</a>
+                <a href="#contact" class="bg-brand-green text-white px-5 py-2 rounded-full hover:bg-brand-dark transition shadow-lg">Book Demo</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="pt-32 pb-20 px-6">
+        <div class="max-w-7xl mx-auto text-center">
+            <div class="inline-block px-3 py-1 bg-green-50 text-brand-green rounded-full text-xs font-bold tracking-wide mb-6">
+                EST. 2019 • BUILDING SOLUTIONS [cite: 147]
+            </div>
+            <h1 class="text-5xl md:text-7xl font-bold tracking-tight mb-6 text-gray-900 leading-tight">
+                Turn <span class="text-red-500 line-through decoration-4 decoration-gray-300">12 Minutes</span> of Work<br>
+                Into <span class="text-brand-green">1 Minute</span> of Automation.
+            </h1>
+            <p class="text-xl text-gray-500 max-w-2xl mx-auto mb-10">
+                We replace manual chaos with intelligent Excel Automation. 
+                Real-time visibility across Fabric, Stitching, and Finishing.
+            </p>
+            <div class="flex justify-center gap-4">
+                <a href="#casestudy" class="px-8 py-4 bg-brand-green text-white rounded-full font-bold shadow-lg hover:bg-brand-dark transition">See The Math</a>
+                <a href="#modules" class="px-8 py-4 bg-white text-gray-900 border border-gray-200 rounded-full font-bold hover:bg-gray-50 transition">View Modules</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="problem" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">From Chaos to Clarity </h2>
+                <p class="text-gray-500">Visualizing the difference between manual tracking and our automation.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="rounded-2xl overflow-hidden shadow-2xl border border-gray-100">
+                    <img src="Gemini_Generated_Image_qkqyykqkqyykqkqy.jpg" alt="Chaos vs Clarity" class="w-full h-auto object-cover" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'bg-gray-200 h-64 flex items-center justify-center\'>Image Placeholder</div>'">
+                </div>
+                
+                <div class="space-y-8">
+                    <div class="bg-white p-6 rounded-xl border-l-4 border-red-500 shadow-sm">
+                        <h3 class="font-bold text-lg text-red-600 mb-2">Old Manual Way [cite: 49]</h3>
+                        <ul class="text-sm text-gray-600 space-y-2">
+                            <li><i class="fas fa-times text-red-500 w-5"></i> High Wastage due to manual tracking [cite: 4]</li>
+                            <li><i class="fas fa-times text-red-500 w-5"></i> Line stoppages due to accessory shortages [cite: 24]</li>
+                            <li><i class="fas fa-times text-red-500 w-5"></i> 1 Hour per job card entry [cite: 10]</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl border-l-4 border-brand-green shadow-sm">
+                        <h3 class="font-bold text-lg text-brand-green mb-2">New Automation [cite: 50]</h3>
+                        <ul class="text-sm text-gray-600 space-y-2">
+                            <li><i class="fas fa-check text-brand-green w-5"></i> 3 Minutes per job card entry [cite: 14]</li>
+                            <li><i class="fas fa-check text-brand-green w-5"></i> Real-time visibility across departments [cite: 2]</li>
+                            <li><i class="fas fa-check text-brand-green w-5"></i> Reduced labor idle time [cite: 25]</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="hierarchy" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-6">Role-Based Hierarchy </h2>
+            <p class="text-gray-500 max-w-2xl mx-auto mb-12">
+                We eliminate data clutter. Management sees financials, HODs see planning, Operators see tasks.
+            </p>
+            
+            <div class="flex justify-center mb-12">
+                <div class="max-w-3xl w-full rounded-2xl overflow-hidden shadow-lg border border-gray-100">
+                    <img src="Gemini_Generated_Image_4rf8xr4rf8xr4rf8.jpg" alt="Hierarchy Pyramid" class="w-full h-auto" onerror="this.style.display='none';">
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6 text-left">
+                <div class="p-6 bg-gray-50 rounded-xl">
+                    <h3 class="font-bold text-brand-green mb-2">Management Level [cite: 62]</h3>
+                    <p class="text-xs text-gray-500">Access to Master Tracker, Financials, and Red Alerts.</p>
+                </div>
+                <div class="p-6 bg-gray-50 rounded-xl">
+                    <h3 class="font-bold text-brand-green mb-2">HOD Level [cite: 65]</h3>
+                    <p class="text-xs text-gray-500">Department-specific tracking (Fabric, Stitching, Finishing).</p>
+                </div>
+                <div class="p-6 bg-gray-50 rounded-xl">
+                    <h3 class="font-bold text-brand-green mb-2">Operator Level [cite: 66]</h3>
+                    <p class="text-xs text-gray-500">Simple data entry screens. No confusion.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="casestudy" class="py-20 bg-brand-light">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-16">The ROI Case Study [cite: 36]</h2>
+            
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div class="bg-white p-8 rounded-2xl shadow-xl">
+                    <h3 class="font-bold text-lg mb-6">Cost Savings Analysis </h3>
+                    
+                    <div class="mb-6">
+                        <div class="flex justify-between text-xs font-bold text-gray-500 mb-1">
+                            <span>Per Day</span>
+                            <span class="text-brand-green">₹ 400 Saved</span>
+                        </div>
+                        <div class="w-full bg-gray-100 rounded-full h-3">
+                            <div class="bg-brand-green h-3 rounded-full" style="width: 20%"></div>
+                        </div>
+                    </div>
+
+                    <div class="mb-6">
+                        <div class="flex justify-between text-xs font-bold text-gray-500 mb-1">
+                            <span>Per Week</span>
+                            <span class="text-brand-green">₹ 2,800 Saved</span>
+                        </div>
+                        <div class="w-full bg-gray-100 rounded-full h-3">
+                            <div class="bg-brand-green h-3 rounded-full" style="width: 50%"></div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="flex justify-between text-xs font-bold text-gray-500 mb-1">
+                            <span>Per Month</span>
+                            <span class="text-brand-green text-lg">₹ 12,000 Saved</span>
+                        </div>
+                        <div class="w-full bg-gray-100 rounded-full h-4">
+                            <div class="bg-brand-green h-4 rounded-full" style="width: 90%"></div>
+                        </div>
+                        <p class="text-xs text-gray-400 mt-2 text-right">Based on reduced man-hours [cite: 29]</p>
+                    </div>
+                </div>
+
+                <div class="rounded-2xl overflow-hidden shadow-2xl border border-white">
+                    <img src="Gemini_Generated_Image_8oboko8oboko8obo.jpg" alt="1 Hour vs 3 Minutes" class="w-full h-auto" onerror="this.style.display='none';">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-4">The Connected Factory </h2>
+            <p class="text-gray-500 mb-12">Department-Level Trackers Working in Sync </p>
+            
+            <div class="relative max-w-4xl mx-auto rounded-3xl overflow-hidden shadow-lg border border-gray-100 bg-gray-50 p-4">
+                <img src="Gemini_Generated_Image_5bfoiy5bfoiy5bfo.jpg" alt="Team Alignment" class="w-full h-auto" onerror="this.style.display='none';">
+            </div>
+        </div>
+    </section>
+
+    <section id="modules" class="py-20 bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">Comprehensive Module Suite</h2>
+                <p class="text-gray-400">17 Specialized Modules for Garment Manufacturing [cite: 94]</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 text-sm">
+                <div class="p-4 bg-gray-800 rounded-lg hover:bg-gray-700 transition border border-gray-700">1. Printing Sample & Bulk Job Card [cite: 96]</div>
+                <div class="p-4 bg-gray-800 rounded-lg hover:bg-gray-700 transition border border-gray-700">2. Embroidery Sample & Bulk Job Card [cite: 98]</div>
+                <div class="p-4 bg-gray-800 rounded-lg hover:bg-gray-700 transition border border-gray-700">3. PPM File Addition [cite: 100]</div>
+                <div class="p-4 bg-gray-800 rounded-lg hover:bg-gray-700 transition border border-gray-700">4. KPI Per Merchant [cite: 102]</div>
+                <div class="p-4 bg-gray-800 rounded-lg hover:bg-gray-700 transition border border-gray-700">5. Buyer Sample Conversion [cite: 104]</div>
+                <div class="p-4 bg-brand-green rounded-lg font-bold">6. Automated Daily Production Report [cite: 106]</div>
+                <div class="p-4 bg-red-900/50 border border-red-500 rounded-lg text-red-100">7. Automated Red Alerts [cite: 108]</div>
+                <div class="p-4 bg-gray-800 rounded-lg hover:bg-gray-700 transition border border-gray-700">8. Trims Card [cite: 110]</div>
+                <div class="p-4 bg-gray-800 rounded-lg hover:bg-gray-700 transition border border-gray-700">9. BOM Sheet [cite: 112]</div>
+                <div class="p-4 bg-gray-800 rounded-lg hover:bg-gray-700 transition border border-gray-700">10. Quoted Cost vs Actual Costing [cite: 114]</div>
+                <div class="p-4 bg-gray-800 rounded-lg hover:bg-gray-700 transition border border-gray-700">11. Job Worker Capacity Tracker [cite: 116]</div>
+                <div class="p-4 bg-gray-800 rounded-lg hover:bg-gray-700 transition border border-gray-700">12. Free Stock vs Booked Stock [cite: 118]</div>
+                <div class="p-4 bg-gray-800 rounded-lg hover:bg-gray-700 transition border border-gray-700">13. Accessory Store Inventory [cite: 122]</div>
+                <div class="p-4 bg-gray-800 rounded-lg hover:bg-gray-700 transition border border-gray-700">14. Attendance & Auto-Payslip [cite: 124]</div>
+                <div class="p-4 bg-gray-800 rounded-lg hover:bg-gray-700 transition border border-gray-700">15. Forecast Analysis [cite: 126]</div>
+                <div class="p-4 bg-gray-800 rounded-lg hover:bg-gray-700 transition border border-gray-700">16. Planning vs Actual Date [cite: 128]</div>
+                <div class="p-4 bg-gray-800 rounded-lg hover:bg-gray-700 transition border border-gray-700">17. Costing Module [cite: 130]</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-12 text-center">Ready for any Style</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="group relative aspect-[3/4] overflow-hidden rounded-xl bg-gray-100">
+                    <img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?auto=format&fit=crop&q=80" class="w-full h-full object-cover transition duration-500 group-hover:scale-105" alt="Knits">
+                    <div class="absolute bottom-4 left-4 font-bold text-white opacity-0 group-hover:opacity-100 transition">Knitted Garments</div>
+                </div>
+                <div class="group relative aspect-[3/4] overflow-hidden rounded-xl bg-gray-100">
+                    <img src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&q=80" class="w-full h-full object-cover transition duration-500 group-hover:scale-105" alt="Ethnic">
+                    <div class="absolute bottom-4 left-4 font-bold text-white opacity-0 group-hover:opacity-100 transition">Kurtis</div>
+                </div>
+                <div class="group relative aspect-[3/4] overflow-hidden rounded-xl bg-gray-100">
+                    <img src="https://images.unsplash.com/photo-1542272454315-4c01d7abdf4a?auto=format&fit=crop&q=80" class="w-full h-full object-cover transition duration-500 group-hover:scale-105" alt="Denim">
+                    <div class="absolute bottom-4 left-4 font-bold text-white opacity-0 group-hover:opacity-100 transition">Denim</div>
+                </div>
+                <div class="group relative aspect-[3/4] overflow-hidden rounded-xl bg-gray-100">
+                    <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&fit=crop&q=80" class="w-full h-full object-cover transition duration-500 group-hover:scale-105" alt="Jackets">
+                    <div class="absolute bottom-4 left-4 font-bold text-white opacity-0 group-hover:opacity-100 transition">Outerwear</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="bg-gray-50 border-t border-gray-200 py-20">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-8">Start Your Transformation</h2>
+            
+            <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 inline-block w-full">
+                <div class="flex flex-col md:flex-row justify-center items-center gap-12">
+                    <div class="text-left">
+                        <p class="text-xs font-bold text-gray-400 uppercase mb-1">POC</p>
+                        <p class="text-xl font-bold text-gray-900">Rohit Agarwal [cite: 151]</p>
+                        <p class="text-brand-green font-bold mt-1">+91 8100888810 / +91 8100034567 [cite: 145]</p>
+                        <p class="text-gray-500 mt-1">tirumala.textiles10@gmail.com [cite: 146]</p>
+                    </div>
+                    <div class="h-12 w-px bg-gray-200 hidden md:block"></div>
+                    <div class="text-left">
+                        <p class="text-xs font-bold text-gray-400 uppercase mb-1">Company</p>
+                        <p class="text-xl font-bold text-gray-900">Tirumala Textiles [cite: 144]</p>
+                        <p class="text-gray-500 mt-1">Building Solutions & Automations [cite: 143]</p>
+                        <p class="text-xs text-gray-400 mt-2">Est. 2019 [cite: 147]</p>
+                    </div>
+                </div>
+            </div>
+
+            <p class="text-gray-400 text-sm mt-12">&copy; 2026 Tirumala Textiles. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
