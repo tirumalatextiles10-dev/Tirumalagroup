@@ -3,314 +3,459 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tirumala Textiles | Building Solutions & Automations</title>
+    <title>Tirumala Textiles | Automated Intelligence</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;800&display=swap" rel="stylesheet">
     
     <script>
         tailwind.config = {
             theme: {
                 extend: {
+                    fontFamily: { sans: ['Outfit', 'sans-serif'] },
                     colors: {
                         brand: {
-                            green: '#2E7D32', // Matches logo green
-                            dark: '#1B5E20',
-                            light: '#E8F5E9',
-                            text: '#111827'
+                            black: '#0f172a',
+                            dark: '#1e293b',
+                            green: '#2E7D32',
+                            accent: '#4ade80'
                         }
                     },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    },
                     animation: {
-                        'fade-in': 'fadeIn 1s ease-out forwards',
-                        'slide-up': 'slideUp 0.8s ease-out forwards',
+                        'spin-slow': 'spin 20s linear infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-glow': 'pulseGlow 2s infinite',
+                        'slide-up-item': 'slideUpItem 4s infinite',
+                    },
+                    keyframes: {
+                        float: { '0%, 100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-15px)' } },
+                        pulseGlow: { '0%, 100%': { boxShadow: '0 0 10px #2E7D32' }, '50%': { boxShadow: '0 0 25px #4ade80' } },
+                        slideUpItem: { '0%': { transform: 'translateY(100%)', opacity: 0 }, '10%': { transform: 'translateY(0)', opacity: 1 }, '90%': { transform: 'translateY(0)', opacity: 1 }, '100%': { transform: 'translateY(-100%)', opacity: 0 } }
                     }
                 }
             }
         }
     </script>
     <style>
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #f1f1f1; }
-        ::-webkit-scrollbar-thumb { background: #2E7D32; border-radius: 4px; }
+        .glass { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); }
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
         
-        /* Glassmorphism */
-        .glass {
-            background: rgba(255, 255, 255, 0.9);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(0,0,0,0.05);
+        /* CSS Phone Screen Animation */
+        .screen-content {
+            animation: scroll-vertical 10s linear infinite;
         }
-
-        .image-fallback {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: #f3f4f6;
-            color: #9ca3af;
-            font-size: 0.8rem;
-            text-align: center;
-            height: 100%;
-            width: 100%;
+        @keyframes scroll-vertical {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-50px); }
+            100% { transform: translateY(0); }
         }
+        
+        /* Bar Graph Growth */
+        .bar-fill { width: 0; transition: width 2s cubic-bezier(0.22, 1, 0.36, 1); }
     </style>
 </head>
-<body class="bg-white text-brand-text antialiased">
+<body class="bg-slate-50 text-slate-900 antialiased overflow-x-hidden">
 
-    <div class="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
-        <a href="mailto:tirumala.textiles10@gmail.com" class="w-12 h-12 bg-white rounded-full shadow-lg border border-gray-100 flex items-center justify-center text-gray-600 hover:text-red-500 hover:scale-110 transition group relative">
-            <i class="fas fa-envelope text-xl"></i>
-            <span class="absolute right-14 bg-black text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition whitespace-nowrap">Email Us</span>
+    <div class="fixed bottom-6 right-6 z-50 flex flex-col gap-4">
+        <a href="mailto:tirumala.textiles10@gmail.com" class="group flex items-center justify-end hover:-translate-x-2 transition">
+            <span class="bg-slate-800 text-white text-xs px-3 py-1 rounded-lg mr-2 opacity-0 group-hover:opacity-100 transition shadow-lg">Email Us</span>
+            <div class="w-12 h-12 bg-white rounded-full shadow-lg border border-slate-100 flex items-center justify-center text-slate-600 hover:text-red-500 transition">
+                <i class="fas fa-envelope text-xl"></i>
+            </div>
         </a>
-        <a href="https://wa.me/918100888810" target="_blank" class="w-14 h-14 bg-[#25D366] rounded-full shadow-xl flex items-center justify-center text-white hover:scale-110 transition animate-bounce group relative">
-            <i class="fab fa-whatsapp text-3xl"></i>
-            <span class="absolute right-16 bg-black text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition whitespace-nowrap">Chat Now</span>
+        <a href="https://wa.me/918100888810" target="_blank" class="group flex items-center justify-end hover:-translate-x-2 transition">
+             <span class="bg-slate-800 text-white text-xs px-3 py-1 rounded-lg mr-2 opacity-0 group-hover:opacity-100 transition shadow-lg">Chat Live</span>
+            <div class="w-14 h-14 bg-[#25D366] rounded-full shadow-xl flex items-center justify-center text-white hover:scale-110 transition animate-bounce">
+                <i class="fab fa-whatsapp text-3xl"></i>
+            </div>
         </a>
     </div>
 
-    <nav class="fixed w-full z-40 glass transition-all">
+    <nav class="fixed w-full z-40 glass border-b border-slate-200 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
-            <div class="flex items-center gap-3 cursor-pointer">
-                <img src="ChatGPT Image Jan 9, 2026 at 01_38_46 PM.jpg" alt="Tirumala Textiles Logo" class="h-12 w-auto object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
-                <div class="hidden flex-col">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-brand-green rounded-lg flex items-center justify-center text-white text-xl shadow-lg shadow-green-200 hover:rotate-12 transition">
+                    <i class="fas fa-tree"></i>
+                </div>
+                <div class="flex flex-col">
                     <span class="font-bold text-lg text-brand-green leading-none">Tirumala</span>
-                    <span class="text-[10px] uppercase tracking-widest text-gray-500">Textiles</span>
+                    <span class="text-[10px] uppercase tracking-widest text-slate-500">Automation</span>
                 </div>
             </div>
 
-            <div class="hidden md:flex space-x-8 text-sm font-medium text-gray-500">
-                <a href="#home" class="hover:text-brand-green transition">Home</a>
-                <a href="#problem" class="hover:text-brand-green transition">The Problem</a>
-                <a href="#casestudy" class="hover:text-brand-green transition">Case Study</a>
-                <a href="#modules" class="hover:text-brand-green transition">Modules</a>
-                <a href="#hierarchy" class="hover:text-brand-green transition">Hierarchy</a>
-                <a href="#contact" class="bg-brand-green text-white px-5 py-2 rounded-full hover:bg-brand-dark transition shadow-lg">Book Demo</a>
+            <div class="hidden md:flex space-x-8 text-sm font-medium text-slate-600 items-center">
+                <a href="#merchant-demo" class="hover:text-brand-green transition hover:-translate-y-0.5">Merchant Demo</a>
+                <a href="#mobile-app" class="hover:text-brand-green transition hover:-translate-y-0.5">Mobile App</a>
+                <a href="#casestudy" class="hover:text-brand-green transition hover:-translate-y-0.5">ROI & Savings</a>
+                
+                <a href="https://instagram.com/tirumalatextiles10" target="_blank" class="flex items-center gap-2 text-pink-600 font-bold bg-pink-50 px-3 py-1 rounded-full hover:bg-pink-600 hover:text-white transition">
+                    <i class="fab fa-instagram"></i> tirumalatextiles10
+                </a>
+                
+                <button onclick="openReviewModal()" class="text-brand-green font-bold hover:underline">Write Review</button>
             </div>
         </div>
     </nav>
 
-    <section id="home" class="pt-32 pb-20 px-6">
-        <div class="max-w-7xl mx-auto text-center">
-            <div class="inline-block px-3 py-1 bg-green-50 text-brand-green rounded-full text-xs font-bold tracking-wide mb-6">
-                EST. 2019 • BUILDING SOLUTIONS [cite: 147]
+    <section class="pt-32 pb-20 px-6 bg-slate-900 text-white relative overflow-hidden min-h-screen flex items-center">
+        <div class="absolute top-0 left-0 w-full h-full opacity-10" style="background-image: radial-gradient(#4ade80 2px, transparent 2px); background-size: 40px 40px;"></div>
+        
+        <div class="absolute top-1/4 left-1/4 w-64 h-64 bg-brand-green rounded-full blur-[100px] animate-float opacity-30"></div>
+        <div class="absolute bottom-1/4 right-1/4 w-64 h-64 bg-blue-500 rounded-full blur-[100px] animate-float opacity-30" style="animation-delay: 2s"></div>
+
+        <div class="max-w-7xl mx-auto text-center relative z-10 reveal active">
+            <div class="inline-block px-4 py-1 bg-white/10 backdrop-blur rounded-full text-xs font-bold tracking-wide mb-6 border border-white/20 animate-pulse-glow">
+                <i class="fas fa-bolt text-yellow-400 mr-2"></i> LIVE FACTORY SYNC ENABLED
             </div>
-            <h1 class="text-5xl md:text-7xl font-bold tracking-tight mb-6 text-gray-900 leading-tight">
-                Turn <span class="text-red-500 line-through decoration-4 decoration-gray-300">12 Minutes</span> of Work<br>
-                Into <span class="text-brand-green">1 Minute</span> of Automation.
+            <h1 class="text-5xl md:text-8xl font-bold tracking-tight mb-6 leading-tight">
+                Turn <span class="text-red-400 line-through decoration-4 decoration-white/30">1 Hour</span> of Chaos<br>
+                Into <span class="text-brand-green">3 Minutes</span> of Control.
             </h1>
-            <p class="text-xl text-gray-500 max-w-2xl mx-auto mb-10">
-                We replace manual chaos with intelligent Excel Automation. 
+            <p class="text-xl text-slate-400 max-w-2xl mx-auto mb-10">
+                We replace manual data entry with intelligent Excel Automation. 
                 Real-time visibility across Fabric, Stitching, and Finishing.
             </p>
             <div class="flex justify-center gap-4">
-                <a href="#casestudy" class="px-8 py-4 bg-brand-green text-white rounded-full font-bold shadow-lg hover:bg-brand-dark transition">See The Math</a>
-                <a href="#modules" class="px-8 py-4 bg-white text-gray-900 border border-gray-200 rounded-full font-bold hover:bg-gray-50 transition">View Modules</a>
+                <a href="#merchant-demo" class="px-8 py-4 bg-brand-green text-white rounded-full font-bold shadow-[0_0_20px_rgba(46,125,50,0.5)] hover:scale-110 transition">
+                    Try Live Demo
+                </a>
+                <a href="#mobile-app" class="px-8 py-4 bg-white/10 text-white border border-white/20 rounded-full font-bold hover:bg-white/20 transition">
+                    See Mobile App
+                </a>
             </div>
         </div>
     </section>
 
-    <section id="problem" class="py-20 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold mb-4">From Chaos to Clarity </h2>
-                <p class="text-gray-500">Visualizing the difference between manual tracking and our automation.</p>
+    <section id="merchant-demo" class="py-24 bg-white relative">
+        <div class="max-w-5xl mx-auto px-6 reveal">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-bold mb-4">Merchant Privacy Shield</h2>
+                <p class="text-slate-500 max-w-2xl mx-auto">
+                    [cite_start]"Merchandisers see ONLY their buyers. No clutter. No confusion." [cite: 137]
+                </p>
             </div>
-            
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div class="rounded-2xl overflow-hidden shadow-2xl border border-gray-100">
-                    <img src="Gemini_Generated_Image_qkqyykqkqyykqkqy.jpg" alt="Chaos vs Clarity" class="w-full h-auto object-cover" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'bg-gray-200 h-64 flex items-center justify-center\'>Image Placeholder</div>'">
-                </div>
+
+            <div class="bg-slate-50 rounded-3xl border border-slate-200 p-8 shadow-2xl relative overflow-hidden group">
+                <div class="absolute top-0 left-0 w-full h-1 bg-brand-green"></div>
                 
-                <div class="space-y-8">
-                    <div class="bg-white p-6 rounded-xl border-l-4 border-red-500 shadow-sm">
-                        <h3 class="font-bold text-lg text-red-600 mb-2">Old Manual Way [cite: 49]</h3>
-                        <ul class="text-sm text-gray-600 space-y-2">
-                            <li><i class="fas fa-times text-red-500 w-5"></i> High Wastage due to manual tracking [cite: 4]</li>
-                            <li><i class="fas fa-times text-red-500 w-5"></i> Line stoppages due to accessory shortages [cite: 24]</li>
-                            <li><i class="fas fa-times text-red-500 w-5"></i> 1 Hour per job card entry [cite: 10]</li>
-                        </ul>
-                    </div>
-                    <div class="bg-white p-6 rounded-xl border-l-4 border-brand-green shadow-sm">
-                        <h3 class="font-bold text-lg text-brand-green mb-2">New Automation [cite: 50]</h3>
-                        <ul class="text-sm text-gray-600 space-y-2">
-                            <li><i class="fas fa-check text-brand-green w-5"></i> 3 Minutes per job card entry [cite: 14]</li>
-                            <li><i class="fas fa-check text-brand-green w-5"></i> Real-time visibility across departments [cite: 2]</li>
-                            <li><i class="fas fa-check text-brand-green w-5"></i> Reduced labor idle time [cite: 25]</li>
-                        </ul>
-                    </div>
+                <div class="flex justify-center gap-4 mb-8">
+                    <button onclick="filterTable('admin')" id="btn-admin" class="px-6 py-2 bg-slate-800 text-white rounded-full text-sm font-bold shadow-lg transform hover:scale-105 transition">Admin View (See All)</button>
+                    <button onclick="filterTable('merchant')" id="btn-merchant" class="px-6 py-2 bg-white text-slate-600 border border-slate-200 rounded-full text-sm font-bold hover:bg-slate-100 transform hover:scale-105 transition">Merchant View (H&M Only)</button>
+                </div>
+
+                <div class="overflow-hidden rounded-2xl bg-white border border-slate-100 shadow-sm">
+                    <table class="w-full text-left text-sm">
+                        <thead class="bg-slate-100 text-slate-500 uppercase font-bold text-xs">
+                            <tr>
+                                <th class="p-4">Order ID</th>
+                                <th class="p-4">Buyer</th>
+                                <th class="p-4">Style</th>
+                                <th class="p-4">Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="merchant-table-body">
+                            <tr class="border-b border-slate-50 hover:bg-green-50 transition duration-300">
+                                <td class="p-4 font-mono text-slate-500">#ORD-001</td>
+                                <td class="p-4 font-bold text-brand-green">H&M</td>
+                                <td class="p-4">Cotton Joggers</td>
+                                <td class="p-4"><span class="bg-green-100 text-green-700 px-2 py-1 rounded text-xs font-bold animate-pulse">In Stitching</span></td>
+                            </tr>
+                            <tr class="border-b border-slate-50 hover:bg-blue-50 transition duration-300" data-buyer="zara">
+                                <td class="p-4 font-mono text-slate-500">#ORD-002</td>
+                                <td class="p-4 font-bold text-blue-600">ZARA</td>
+                                <td class="p-4">Linen Shirt</td>
+                                <td class="p-4"><span class="bg-blue-100 text-blue-700 px-2 py-1 rounded text-xs font-bold">Cutting</span></td>
+                            </tr>
+                            <tr class="hover:bg-red-50 transition duration-300" data-buyer="uniqlo">
+                                <td class="p-4 font-mono text-slate-500">#ORD-003</td>
+                                <td class="p-4 font-bold text-red-600">UNIQLO</td>
+                                <td class="p-4">Denim Jacket</td>
+                                <td class="p-4"><span class="bg-red-100 text-red-700 px-2 py-1 rounded text-xs font-bold">Pending</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div id="privacy-msg" class="hidden text-center mt-6 text-slate-400 text-sm italic animate-bounce">
+                    <i class="fas fa-lock mr-2 text-brand-green"></i> Secure Mode Active: Competitor data hidden.
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="hierarchy" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-6 text-center">
-            <h2 class="text-3xl font-bold mb-6">Role-Based Hierarchy </h2>
-            <p class="text-gray-500 max-w-2xl mx-auto mb-12">
-                We eliminate data clutter. Management sees financials, HODs see planning, Operators see tasks.
-            </p>
-            
-            <div class="flex justify-center mb-12">
-                <div class="max-w-3xl w-full rounded-2xl overflow-hidden shadow-lg border border-gray-100">
-                    <img src="Gemini_Generated_Image_4rf8xr4rf8xr4rf8.jpg" alt="Hierarchy Pyramid" class="w-full h-auto" onerror="this.style.display='none';">
+    <section id="mobile-app" class="py-24 bg-brand-black text-white relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-green/10 rounded-full blur-[120px] animate-pulse"></div>
+        
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+            <div class="reveal">
+                <span class="text-brand-green font-bold tracking-widest uppercase text-sm mb-4 block">Power Apps Integration</span>
+                <h2 class="text-5xl font-bold mb-6">Factory in Your Pocket.</h2>
+                <p class="text-slate-400 text-lg mb-8">
+                    "Access tracking from anywhere. Approve POs, check daily output, and manage teams via iOS & Android."
+                </p>
+                <div class="flex flex-col gap-4">
+                    <div class="flex items-center gap-4 p-4 bg-white/5 rounded-xl hover:bg-white/10 transition cursor-pointer">
+                        <div class="w-12 h-12 rounded-full bg-brand-green flex items-center justify-center text-xl"><i class="fas fa-bell"></i></div>
+                        <div>
+                            <h4 class="font-bold">Real-Time Alerts</h4>
+                            <p class="text-sm text-slate-400">"Zipper Shortage" alerts sent instantly to your phone.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4 p-4 bg-white/5 rounded-xl hover:bg-white/10 transition cursor-pointer">
+                        <div class="w-12 h-12 rounded-full bg-blue-500 flex items-center justify-center text-xl"><i class="fas fa-chart-line"></i></div>
+                        <div>
+                            <h4 class="font-bold">Live Production</h4>
+                            <p class="text-sm text-slate-400">Watch the Stitching count rise as it happens.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div class="grid md:grid-cols-3 gap-6 text-left">
-                <div class="p-6 bg-gray-50 rounded-xl">
-                    <h3 class="font-bold text-brand-green mb-2">Management Level [cite: 62]</h3>
-                    <p class="text-xs text-gray-500">Access to Master Tracker, Financials, and Red Alerts.</p>
-                </div>
-                <div class="p-6 bg-gray-50 rounded-xl">
-                    <h3 class="font-bold text-brand-green mb-2">HOD Level [cite: 65]</h3>
-                    <p class="text-xs text-gray-500">Department-specific tracking (Fabric, Stitching, Finishing).</p>
-                </div>
-                <div class="p-6 bg-gray-50 rounded-xl">
-                    <h3 class="font-bold text-brand-green mb-2">Operator Level [cite: 66]</h3>
-                    <p class="text-xs text-gray-500">Simple data entry screens. No confusion.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="casestudy" class="py-20 bg-brand-light">
-        <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center mb-16">The ROI Case Study [cite: 36]</h2>
-            
-            <div class="grid md:grid-cols-2 gap-16 items-center">
-                <div class="bg-white p-8 rounded-2xl shadow-xl">
-                    <h3 class="font-bold text-lg mb-6">Cost Savings Analysis </h3>
+            <div class="flex justify-center reveal" style="transition-delay: 200ms;">
+                <div class="relative border-[14px] border-slate-800 rounded-[3rem] overflow-hidden w-[320px] h-[640px] shadow-2xl bg-white text-slate-900">
+                    <div class="absolute top-0 left-1/2 -translate-x-1/2 h-7 w-32 bg-black rounded-b-xl z-20"></div>
                     
-                    <div class="mb-6">
-                        <div class="flex justify-between text-xs font-bold text-gray-500 mb-1">
-                            <span>Per Day</span>
-                            <span class="text-brand-green">₹ 400 Saved</span>
+                    <div class="bg-brand-green h-40 p-6 pt-12 text-white rounded-b-[2rem] shadow-lg relative z-10">
+                        <div class="flex justify-between items-center">
+                            <i class="fas fa-bars text-xl"></i>
+                            <span class="font-bold">Dashboard</span>
+                            <div class="relative">
+                                <i class="fas fa-bell text-xl"></i>
+                                <span class="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full border-2 border-brand-green"></span>
+                            </div>
                         </div>
-                        <div class="w-full bg-gray-100 rounded-full h-3">
-                            <div class="bg-brand-green h-3 rounded-full" style="width: 20%"></div>
-                        </div>
-                    </div>
-
-                    <div class="mb-6">
-                        <div class="flex justify-between text-xs font-bold text-gray-500 mb-1">
-                            <span>Per Week</span>
-                            <span class="text-brand-green">₹ 2,800 Saved</span>
-                        </div>
-                        <div class="w-full bg-gray-100 rounded-full h-3">
-                            <div class="bg-brand-green h-3 rounded-full" style="width: 50%"></div>
+                        <div class="mt-6 text-center">
+                            <p class="text-xs opacity-80 uppercase tracking-wide">Today's Production</p>
+                            <h3 class="text-5xl font-bold">1,420</h3>
                         </div>
                     </div>
 
-                    <div>
-                        <div class="flex justify-between text-xs font-bold text-gray-500 mb-1">
-                            <span>Per Month</span>
-                            <span class="text-brand-green text-lg">₹ 12,000 Saved</span>
+                    <div class="p-4 space-y-3 bg-slate-50 h-full">
+                        <div class="bg-white p-4 rounded-xl shadow-md border-l-4 border-red-500 animate-[slideUpItem_5s_infinite]">
+                            <div class="flex justify-between items-center mb-1">
+                                <span class="text-[10px] font-bold text-red-500 uppercase">CRITICAL ALERT</span>
+                                <span class="text-[10px] text-slate-400">Just Now</span>
+                            </div>
+                            <p class="font-bold text-sm">Thread Stock Low (Line 2)</p>
                         </div>
-                        <div class="w-full bg-gray-100 rounded-full h-4">
-                            <div class="bg-brand-green h-4 rounded-full" style="width: 90%"></div>
-                        </div>
-                        <p class="text-xs text-gray-400 mt-2 text-right">Based on reduced man-hours [cite: 29]</p>
-                    </div>
-                </div>
 
-                <div class="rounded-2xl overflow-hidden shadow-2xl border border-white">
-                    <img src="Gemini_Generated_Image_8oboko8oboko8obo.jpg" alt="1 Hour vs 3 Minutes" class="w-full h-auto" onerror="this.style.display='none';">
+                        <div class="bg-white p-4 rounded-xl shadow-sm flex items-center gap-4 hover:shadow-md transition">
+                            <div class="w-10 h-10 rounded-full bg-blue-50 text-blue-500 flex items-center justify-center"><i class="fas fa-cut"></i></div>
+                            <div class="flex-1">
+                                <div class="flex justify-between">
+                                    <span class="font-bold text-sm">Cutting</span>
+                                    <span class="text-xs font-bold text-green-500">98%</span>
+                                </div>
+                                <div class="w-full bg-slate-100 h-1.5 rounded-full mt-2"><div class="bg-blue-500 h-1.5 rounded-full w-[98%]"></div></div>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-4 rounded-xl shadow-sm flex items-center gap-4 hover:shadow-md transition">
+                            <div class="w-10 h-10 rounded-full bg-purple-50 text-purple-500 flex items-center justify-center"><i class="fas fa-tshirt"></i></div>
+                            <div class="flex-1">
+                                <div class="flex justify-between">
+                                    <span class="font-bold text-sm">Stitching</span>
+                                    <span class="text-xs font-bold text-orange-500">In Progress</span>
+                                </div>
+                                <div class="w-full bg-slate-100 h-1.5 rounded-full mt-2"><div class="bg-purple-500 h-1.5 rounded-full w-[45%] animate-pulse"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="absolute bottom-0 w-full h-16 bg-white border-t border-slate-100 flex justify-around items-center text-2xl text-slate-300">
+                        <i class="fas fa-home text-brand-green"></i>
+                        <i class="fas fa-search hover:text-slate-500 transition"></i>
+                        <i class="fas fa-user hover:text-slate-500 transition"></i>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-6 text-center">
-            <h2 class="text-3xl font-bold mb-4">The Connected Factory </h2>
-            <p class="text-gray-500 mb-12">Department-Level Trackers Working in Sync </p>
+    <section id="casestudy" class="py-24 bg-white">
+        <div class="max-w-4xl mx-auto px-6 reveal">
+            <h2 class="text-3xl font-bold text-center mb-4">The ₹60,000 Advantage</h2>
+            <p class="text-center text-slate-500 mb-16">"From 1 Hour to 3 Minutes. [cite_start]See the savings stack up." [cite: 37, 48]</p>
             
-            <div class="relative max-w-4xl mx-auto rounded-3xl overflow-hidden shadow-lg border border-gray-100 bg-gray-50 p-4">
-                <img src="Gemini_Generated_Image_5bfoiy5bfoiy5bfo.jpg" alt="Team Alignment" class="w-full h-auto" onerror="this.style.display='none';">
-            </div>
-        </div>
-    </section>
-
-    <section id="modules" class="py-20 bg-gray-900 text-white">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold mb-4">Comprehensive Module Suite</h2>
-                <p class="text-gray-400">17 Specialized Modules for Garment Manufacturing [cite: 94]</p>
-            </div>
-
-            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 text-sm">
-                <div class="p-4 bg-gray-800 rounded-lg hover:bg-gray-700 transition border border-gray-700">1. Printing Sample & Bulk Job Card [cite: 96]</div>
-                <div class="p-4 bg-gray-800 rounded-lg hover:bg-gray-700 transition border border-gray-700">2. Embroidery Sample & Bulk Job Card [cite: 98]</div>
-                <div class="p-4 bg-gray-800 rounded-lg hover:bg-gray-700 transition border border-gray-700">3. PPM File Addition [cite: 100]</div>
-                <div class="p-4 bg-gray-800 rounded-lg hover:bg-gray-700 transition border border-gray-700">4. KPI Per Merchant [cite: 102]</div>
-                <div class="p-4 bg-gray-800 rounded-lg hover:bg-gray-700 transition border border-gray-700">5. Buyer Sample Conversion [cite: 104]</div>
-                <div class="p-4 bg-brand-green rounded-lg font-bold">6. Automated Daily Production Report [cite: 106]</div>
-                <div class="p-4 bg-red-900/50 border border-red-500 rounded-lg text-red-100">7. Automated Red Alerts [cite: 108]</div>
-                <div class="p-4 bg-gray-800 rounded-lg hover:bg-gray-700 transition border border-gray-700">8. Trims Card [cite: 110]</div>
-                <div class="p-4 bg-gray-800 rounded-lg hover:bg-gray-700 transition border border-gray-700">9. BOM Sheet [cite: 112]</div>
-                <div class="p-4 bg-gray-800 rounded-lg hover:bg-gray-700 transition border border-gray-700">10. Quoted Cost vs Actual Costing [cite: 114]</div>
-                <div class="p-4 bg-gray-800 rounded-lg hover:bg-gray-700 transition border border-gray-700">11. Job Worker Capacity Tracker [cite: 116]</div>
-                <div class="p-4 bg-gray-800 rounded-lg hover:bg-gray-700 transition border border-gray-700">12. Free Stock vs Booked Stock [cite: 118]</div>
-                <div class="p-4 bg-gray-800 rounded-lg hover:bg-gray-700 transition border border-gray-700">13. Accessory Store Inventory [cite: 122]</div>
-                <div class="p-4 bg-gray-800 rounded-lg hover:bg-gray-700 transition border border-gray-700">14. Attendance & Auto-Payslip [cite: 124]</div>
-                <div class="p-4 bg-gray-800 rounded-lg hover:bg-gray-700 transition border border-gray-700">15. Forecast Analysis [cite: 126]</div>
-                <div class="p-4 bg-gray-800 rounded-lg hover:bg-gray-700 transition border border-gray-700">16. Planning vs Actual Date [cite: 128]</div>
-                <div class="p-4 bg-gray-800 rounded-lg hover:bg-gray-700 transition border border-gray-700">17. Costing Module [cite: 130]</div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-3xl font-bold mb-12 text-center">Ready for any Style</h2>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <div class="group relative aspect-[3/4] overflow-hidden rounded-xl bg-gray-100">
-                    <img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?auto=format&fit=crop&q=80" class="w-full h-full object-cover transition duration-500 group-hover:scale-105" alt="Knits">
-                    <div class="absolute bottom-4 left-4 font-bold text-white opacity-0 group-hover:opacity-100 transition">Knitted Garments</div>
+            <div class="bg-slate-50 p-10 rounded-[2rem] border border-slate-200 shadow-xl">
+                <div class="mb-8 group">
+                    <div class="flex justify-between text-sm font-bold text-slate-600 mb-2">
+                        <span>Savings Per Day</span>
+                        <span class="text-brand-green">₹ 2,000</span>
+                    </div>
+                    <div class="w-full bg-white h-8 rounded-full overflow-hidden border border-slate-100 shadow-inner">
+                        <div class="bar-fill bg-brand-green h-full rounded-full flex items-center justify-end px-3 text-xs text-white font-bold group-hover:bg-brand-accent transition" style="width: 25%">2k</div>
+                    </div>
                 </div>
-                <div class="group relative aspect-[3/4] overflow-hidden rounded-xl bg-gray-100">
-                    <img src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&q=80" class="w-full h-full object-cover transition duration-500 group-hover:scale-105" alt="Ethnic">
-                    <div class="absolute bottom-4 left-4 font-bold text-white opacity-0 group-hover:opacity-100 transition">Kurtis</div>
+
+                <div class="mb-8 group">
+                    <div class="flex justify-between text-sm font-bold text-slate-600 mb-2">
+                        <span>Savings Per Week</span>
+                        <span class="text-brand-green">₹ 14,000</span>
+                    </div>
+                    <div class="w-full bg-white h-8 rounded-full overflow-hidden border border-slate-100 shadow-inner">
+                        <div class="bar-fill bg-brand-green h-full rounded-full flex items-center justify-end px-3 text-xs text-white font-bold group-hover:bg-brand-accent transition" style="width: 55%">14k</div>
+                    </div>
                 </div>
-                <div class="group relative aspect-[3/4] overflow-hidden rounded-xl bg-gray-100">
-                    <img src="https://images.unsplash.com/photo-1542272454315-4c01d7abdf4a?auto=format&fit=crop&q=80" class="w-full h-full object-cover transition duration-500 group-hover:scale-105" alt="Denim">
-                    <div class="absolute bottom-4 left-4 font-bold text-white opacity-0 group-hover:opacity-100 transition">Denim</div>
-                </div>
-                <div class="group relative aspect-[3/4] overflow-hidden rounded-xl bg-gray-100">
-                    <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&fit=crop&q=80" class="w-full h-full object-cover transition duration-500 group-hover:scale-105" alt="Jackets">
-                    <div class="absolute bottom-4 left-4 font-bold text-white opacity-0 group-hover:opacity-100 transition">Outerwear</div>
+
+                <div class="group">
+                    <div class="flex justify-between text-sm font-bold text-slate-600 mb-2">
+                        <span>Savings Per Month</span>
+                        <span class="text-brand-green text-xl font-bold">₹ 60,000</span>
+                    </div>
+                    <div class="w-full bg-white h-10 rounded-full overflow-hidden border border-slate-100 shadow-inner">
+                        <div class="bar-fill bg-brand-green h-full rounded-full flex items-center justify-end px-4 text-sm text-white font-bold group-hover:bg-brand-accent transition" style="width: 95%">₹ 60,000 SAVED</div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer id="contact" class="bg-gray-50 border-t border-gray-200 py-20">
-        <div class="max-w-4xl mx-auto px-6 text-center">
-            <h2 class="text-3xl font-bold mb-8">Start Your Transformation</h2>
+    <section class="py-20 bg-slate-900 text-white">
+        <div class="max-w-7xl mx-auto px-6 reveal">
+            [cite_start]<h2 class="text-3xl font-bold text-center mb-16">17 Specialized Modules [cite: 94-130]</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-sm">
+                <div class="p-4 bg-white/5 rounded-lg border border-white/10 hover:bg-white/10 transition hover:scale-105 duration-300 cursor-default">1. Printing Sample Job Card</div>
+                <div class="p-4 bg-white/5 rounded-lg border border-white/10 hover:bg-white/10 transition hover:scale-105 duration-300 cursor-default">2. Embroidery Bulk Job Card</div>
+                <div class="p-4 bg-white/5 rounded-lg border border-white/10 hover:bg-white/10 transition hover:scale-105 duration-300 cursor-default">3. PPM File Addition</div>
+                <div class="p-4 bg-white/5 rounded-lg border border-white/10 hover:bg-white/10 transition hover:scale-105 duration-300 cursor-default">4. KPI Per Merchant</div>
+                <div class="p-4 bg-white/5 rounded-lg border border-white/10 hover:bg-white/10 transition hover:scale-105 duration-300 cursor-default">5. Buyer Sample Conversion</div>
+                <div class="p-4 bg-brand-green text-white font-bold rounded-lg shadow-[0_0_15px_rgba(46,125,50,0.6)] transform scale-105">6. Auto Daily Production Report</div>
+                <div class="p-4 bg-red-900/20 text-red-200 border border-red-500/30 rounded-lg animate-pulse">7. Automated Red Alerts</div>
+                <div class="p-4 bg-white/5 rounded-lg border border-white/10 hover:bg-white/10 transition hover:scale-105 duration-300 cursor-default">8. Trims Card</div>
+                <div class="p-4 bg-white/5 rounded-lg border border-white/10 hover:bg-white/10 transition hover:scale-105 duration-300 cursor-default">9. BOM Sheet</div>
+                <div class="p-4 bg-white/5 rounded-lg border border-white/10 hover:bg-white/10 transition hover:scale-105 duration-300 cursor-default">10. Quoted vs Actual Costing</div>
+                <div class="p-4 bg-white/5 rounded-lg border border-white/10 hover:bg-white/10 transition hover:scale-105 duration-300 cursor-default">11. Job Worker Capacity</div>
+                <div class="p-4 bg-white/5 rounded-lg border border-white/10 hover:bg-white/10 transition hover:scale-105 duration-300 cursor-default">12. Free vs Booked Stock</div>
+                <div class="p-4 bg-white/5 rounded-lg border border-white/10 hover:bg-white/10 transition hover:scale-105 duration-300 cursor-default">13. Accessory Inventory</div>
+                <div class="p-4 bg-white/5 rounded-lg border border-white/10 hover:bg-white/10 transition hover:scale-105 duration-300 cursor-default">14. Attendance & Payroll</div>
+                <div class="p-4 bg-white/5 rounded-lg border border-white/10 hover:bg-white/10 transition hover:scale-105 duration-300 cursor-default">15. Forecast Analysis</div>
+                <div class="p-4 bg-white/5 rounded-lg border border-white/10 hover:bg-white/10 transition hover:scale-105 duration-300 cursor-default">16. Planning vs Actual</div>
+                <div class="p-4 bg-white/5 rounded-lg border border-white/10 hover:bg-white/10 transition hover:scale-105 duration-300 cursor-default">17. Costing Module</div>
+            </div>
+        </div>
+    </section>
+
+    <div id="reviewModal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/50 hidden opacity-0 transition-opacity duration-300 backdrop-blur-sm">
+        <div class="bg-white rounded-2xl p-8 max-w-md w-full m-4 shadow-2xl relative transform scale-95 transition-transform duration-300" id="modal-content">
+            <button onclick="closeReviewModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600"><i class="fas fa-times text-xl"></i></button>
+            <h3 class="text-2xl font-bold mb-6">Write a Review</h3>
+            <form onsubmit="submitReview(event)">
+                <div class="mb-4">
+                    <label class="block text-xs font-bold text-slate-500 uppercase mb-2">Name</label>
+                    <input type="text" class="w-full p-3 rounded-lg border border-slate-200 focus:border-brand-green outline-none transition" required>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-xs font-bold text-slate-500 uppercase mb-2">Rating</label>
+                    <div class="flex gap-2 text-2xl text-slate-300 hover:text-yellow-400 cursor-pointer transition">
+                        <i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                </div>
+                <div class="mb-6">
+                    <label class="block text-xs font-bold text-slate-500 uppercase mb-2">Feedback</label>
+                    <textarea class="w-full p-3 rounded-lg border border-slate-200 focus:border-brand-green outline-none h-24 transition" required></textarea>
+                </div>
+                <button type="submit" class="w-full bg-brand-green text-white font-bold py-3 rounded-xl hover:bg-green-700 transition transform active:scale-95">Submit Review</button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="bg-slate-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="text-center md:text-left">
+                <p class="font-bold text-xl mb-1">Tirumala Textiles</p>
+                <p class="text-xs text-slate-500">Building Solutions & Automations. Est 2019.</p>
+            </div>
             
-            <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 inline-block w-full">
-                <div class="flex flex-col md:flex-row justify-center items-center gap-12">
-                    <div class="text-left">
-                        <p class="text-xs font-bold text-gray-400 uppercase mb-1">POC</p>
-                        <p class="text-xl font-bold text-gray-900">Rohit Agarwal [cite: 151]</p>
-                        <p class="text-brand-green font-bold mt-1">+91 8100888810 / +91 8100034567 [cite: 145]</p>
-                        <p class="text-gray-500 mt-1">tirumala.textiles10@gmail.com [cite: 146]</p>
-                    </div>
-                    <div class="h-12 w-px bg-gray-200 hidden md:block"></div>
-                    <div class="text-left">
-                        <p class="text-xs font-bold text-gray-400 uppercase mb-1">Company</p>
-                        <p class="text-xl font-bold text-gray-900">Tirumala Textiles [cite: 144]</p>
-                        <p class="text-gray-500 mt-1">Building Solutions & Automations [cite: 143]</p>
-                        <p class="text-xs text-gray-400 mt-2">Est. 2019 [cite: 147]</p>
-                    </div>
-                </div>
+            <div class="flex gap-6 items-center">
+                <a href="https://instagram.com/tirumalatextiles10" target="_blank" class="flex items-center gap-2 text-slate-400 hover:text-white transition transform hover:scale-110">
+                    <i class="fab fa-instagram text-xl"></i>
+                    <span>tirumalatextiles10</span>
+                </a>
             </div>
-
-            <p class="text-gray-400 text-sm mt-12">&copy; 2026 Tirumala Textiles. All rights reserved.</p>
+        </div>
+        <div class="text-center text-slate-600 text-xs mt-12 border-t border-slate-800 pt-8">
+            &copy; 2026 Tirumala Textiles. All rights reserved.
         </div>
     </footer>
 
+    <script>
+        // Scroll Reveal Animation
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    if (entry.target.querySelector('.bar-fill')) {
+                        // Trigger graph animations when section is visible
+                        entry.target.querySelectorAll('.bar-fill').forEach(bar => {
+                            bar.style.width = bar.style.width; // Force reflow
+                        });
+                    }
+                }
+            });
+        }, { threshold: 0.2 });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // Merchant Demo Logic
+        function filterTable(view) {
+            const btnAdmin = document.getElementById('btn-admin');
+            const btnMerchant = document.getElementById('btn-merchant');
+            const rows = document.querySelectorAll('#merchant-table-body tr');
+            const msg = document.getElementById('privacy-msg');
+
+            if (view === 'merchant') {
+                btnAdmin.classList.replace('bg-slate-800', 'bg-white');
+                btnAdmin.classList.replace('text-white', 'text-slate-600');
+                btnMerchant.classList.replace('bg-white', 'bg-slate-800');
+                btnMerchant.classList.replace('text-slate-600', 'text-white');
+                
+                rows.forEach(row => {
+                    if (row.hasAttribute('data-buyer')) row.style.display = 'none';
+                });
+                msg.classList.remove('hidden');
+            } else {
+                btnMerchant.classList.replace('bg-slate-800', 'bg-white');
+                btnMerchant.classList.replace('text-white', 'text-slate-600');
+                btnAdmin.classList.replace('bg-white', 'bg-slate-800');
+                btnAdmin.classList.replace('text-slate-600', 'text-white');
+
+                rows.forEach(row => row.style.display = 'table-row');
+                msg.classList.add('hidden');
+            }
+        }
+
+        // Review Modal
+        function openReviewModal() {
+            const modal = document.getElementById('reviewModal');
+            const content = document.getElementById('modal-content');
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                modal.classList.remove('opacity-0');
+                content.classList.replace('scale-95', 'scale-100');
+            }, 10);
+        }
+        function closeReviewModal() {
+            const modal = document.getElementById('reviewModal');
+            const content = document.getElementById('modal-content');
+            modal.classList.add('opacity-0');
+            content.classList.replace('scale-100', 'scale-95');
+            setTimeout(() => modal.classList.add('hidden'), 300);
+        }
+        function submitReview(e) {
+            e.preventDefault();
+            alert("Review submitted! Thank you.");
+            closeReviewModal();
+        }
+        
+        // Trigger graphs on load
+        setTimeout(() => {
+           document.querySelectorAll('.bar-fill').forEach(bar => {
+               const width = bar.style.width;
+               bar.style.width = '0';
+               setTimeout(() => bar.style.width = width, 100);
+           });
+        }, 500);
+    </script>
 </body>
 </html>
