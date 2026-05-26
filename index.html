@@ -3,302 +3,443 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>TIRUMALA AUTOMATION</title>
+
+<!-- ═══ SEO META TAGS — GOOGLE RANKING ═══ -->
+<title>Tirumala Automation | Excel AI OS for Garment Factories | VBA Automation India</title>
+<meta name="description" content="Tirumala Automation builds advanced Excel AI Operating Systems, Power Apps ecosystems and VBA automation for garment factories. 17 modules. 38+ factories. 6+ hours saved daily. Mumbai, India.">
+<meta name="keywords" content="garment factory automation, Excel ERP garment, VBA automation textile, Power Apps factory, garment ERP software India, merchandising automation, production tracking software, garment factory software Mumbai, Excel AI OS, Tirumala Automation">
+<meta name="author" content="Tirumala Automation">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://yourusername.github.io/tirumala-automation/">
+
+<!-- Open Graph (WhatsApp / Facebook preview) -->
+<meta property="og:title" content="Tirumala Automation | Excel AI OS for Garment Factories">
+<meta property="og:description" content="Turn 1 hour of factory chaos into 3 minutes. Advanced Excel automation for garment manufacturers.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://yourusername.github.io/tirumala-automation/">
+<meta property="og:image" content="https://yourusername.github.io/tirumala-automation/og-image.jpg">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Tirumala Automation | Excel AI OS for Garment Factories">
+<meta name="twitter:description" content="17 specialized modules. 38+ factories served. VBA + Power Apps automation.">
+
+<!-- Schema.org Structured Data for Google -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Tirumala Automation — Excel AI OS",
+  "description": "Advanced Excel AI Operating Systems, Power Apps ecosystems and VBA-based automation infrastructures for garment factories and textile manufacturers.",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Windows, Android",
+  "offers": {"@type": "Offer", "price": "0", "priceCurrency": "INR"},
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+91-81008-88810",
+    "contactType": "sales",
+    "email": "Tirumala.textiles10@gmail.com",
+    "availableLanguage": ["English", "Hindi"]
+  },
+  "areaServed": "India",
+  "url": "https://yourusername.github.io/tirumala-automation/"
+}
+</script>
+
+<!-- Google Analytics (Visitor Tracking) — REPLACE G-XXXXXXXXXX with your ID -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300&family=DM+Sans:wght@200;300;400;500;600&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{
-  --ink:#1A1C24;--ink2:#2C2F3A;--ink3:#3E4150;
-  --paper:#F4F0EA;--paper2:#EDE8E0;--paper3:#E4DDD4;
-  --lav:#B8B0D0;--lav2:#9E94C4;--lav3:#7A6FA8;
-  --rose:#D4B8C0;--rose2:#C4A0AC;
-  --sage:#A8C4B0;--sage2:#7AAA88;
-  --gold:#C8B88A;--gold2:#B0A070;
-  --steel:#94A8BC;--steel2:#6A88A0;
-  --cream:#F8F4EE;--warm:#D8CFC0;
-  --dark:#0E1018;--dark2:#161820;--dark3:#1E2130;
-  --mid:#282C3C;
+  --ink:#12141C;--ink2:#22253A;--ink3:#3A3D52;
+  --paper:#F6F2EC;--paper2:#EEE8DF;
+  --lav:#C4BAE0;--lav2:#A898D0;--lav3:#8070B8;
+  --rose:#DEC0CC;--rose2:#C8A0B0;
+  --sage:#B0CEB8;--sage2:#80B090;
+  --gold:#D8C898;--gold2:#C0A870;
+  --steel:#A0B8D0;--steel2:#7098B8;
+  --teal:#80C8C0;--teal2:#50A8A0;
+  --amber:#D8B870;--amber2:#B89048;
+  --cream:#FAF6F0;--warm:#DDD4C4;
+  --dark:#0A0C14;--dark2:#12141E;--dark3:#1A1D2C;--dark4:#22263A;
+  --vid-opacity:0.55;
 }
 html{scroll-behavior:smooth}
 body{background:var(--dark);color:var(--paper);font-family:'DM Sans',sans-serif;overflow-x:hidden;cursor:none}
 
-.cursor{position:fixed;width:6px;height:6px;background:var(--lav);border-radius:50%;pointer-events:none;z-index:9999;transition:transform 0.08s;mix-blend-mode:screen;top:0;left:0}
-.cring{position:fixed;width:28px;height:28px;border:1px solid rgba(184,176,208,0.5);border-radius:50%;pointer-events:none;z-index:9998;transition:all 0.14s ease;top:0;left:0}
+/* ── CUSTOM CURSOR ── */
+.cursor{position:fixed;width:5px;height:5px;background:var(--lav);border-radius:50%;
+  pointer-events:none;z-index:9999;top:0;left:0;transition:width 0.2s,height 0.2s,background 0.2s}
+.cring{position:fixed;width:32px;height:32px;border:1px solid rgba(196,186,224,0.5);border-radius:50%;
+  pointer-events:none;z-index:9998;top:0;left:0;transition:border-color 0.2s}
+body:has(button:hover) .cursor,body:has(a:hover) .cursor{width:10px;height:10px;background:var(--cream)}
+
+/* ── FLOATING CONTACT BAR (always visible) ── */
+.float-contact{position:fixed;right:20px;top:50%;transform:translateY(-50%);z-index:900;
+  display:flex;flex-direction:column;gap:10px}
+.fc-btn{width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  text-decoration:none;font-size:20px;transition:all 0.3s;border:1px solid transparent;
+  box-shadow:0 4px 20px rgba(0,0,0,0.4)}
+.fc-wa{background:rgba(37,211,102,0.15);border-color:rgba(37,211,102,0.3)}
+.fc-wa:hover{background:rgba(37,211,102,0.28);transform:scale(1.12) translateX(-4px);box-shadow:0 6px 28px rgba(37,211,102,0.25)}
+.fc-mail{background:rgba(196,186,224,0.12);border-color:rgba(196,186,224,0.25)}
+.fc-mail:hover{background:rgba(196,186,224,0.22);transform:scale(1.12) translateX(-4px)}
+.fc-insta{background:rgba(225,120,80,0.12);border-color:rgba(225,120,80,0.25)}
+.fc-insta:hover{background:rgba(225,120,80,0.22);transform:scale(1.12) translateX(-4px)}
+.fc-tooltip{position:absolute;right:58px;background:rgba(12,14,22,0.95);backdrop-filter:blur(12px);
+  color:var(--paper);font-size:10px;letter-spacing:0.1em;padding:5px 12px;border-radius:6px;
+  white-space:nowrap;opacity:0;pointer-events:none;transition:opacity 0.2s;
+  border:1px solid rgba(196,186,224,0.15)}
+.fc-btn:hover .fc-tooltip{opacity:1}
 
 /* ── NAVBAR ── */
-nav{position:fixed;top:16px;left:50%;transform:translateX(-50%);width:95%;max-width:1240px;z-index:1000;
-  background:rgba(14,16,24,0.75);backdrop-filter:blur(28px);-webkit-backdrop-filter:blur(28px);
-  border:1px solid rgba(184,176,208,0.14);border-radius:14px;padding:13px 28px;
+nav{position:fixed;top:14px;left:50%;transform:translateX(-50%);width:95%;max-width:1280px;z-index:1000;
+  background:rgba(10,12,20,0.72);backdrop-filter:blur(32px);-webkit-backdrop-filter:blur(32px);
+  border:1px solid rgba(196,186,224,0.14);border-radius:16px;padding:13px 28px;
   display:flex;align-items:center;justify-content:space-between;
-  box-shadow:0 4px 32px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.05)}
-.nav-brand{font-family:'DM Sans',sans-serif;font-weight:600;font-size:12px;letter-spacing:0.22em;color:var(--paper);opacity:0.92}
-.nav-links{display:flex;gap:36px;list-style:none}
-.nav-links a{font-size:11px;letter-spacing:0.14em;color:rgba(196,188,216,0.6);text-decoration:none;transition:color 0.3s;font-weight:300}
+  box-shadow:0 4px 40px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.06);
+  transition:background 0.4s,border-color 0.4s}
+.nav-brand{font-weight:600;font-size:12px;letter-spacing:0.22em;color:var(--paper);opacity:0.94}
+.nav-links{display:flex;gap:32px;list-style:none}
+.nav-links a{font-size:11px;letter-spacing:0.14em;color:rgba(196,186,224,0.55);text-decoration:none;transition:color 0.3s;font-weight:300}
 .nav-links a:hover{color:var(--paper)}
-.nav-cta{background:rgba(184,176,208,0.12);border:1px solid rgba(184,176,208,0.28);color:var(--lav);
+.nav-right{display:flex;gap:10px;align-items:center}
+.nav-wa{background:rgba(37,211,102,0.12);border:1px solid rgba(37,211,102,0.25);color:#5DD89A;
+  padding:7px 16px;border-radius:100px;font-size:10px;letter-spacing:0.1em;cursor:pointer;
+  transition:all 0.3s;font-family:'DM Sans',sans-serif;text-decoration:none;display:flex;align-items:center;gap:6px}
+.nav-wa:hover{background:rgba(37,211,102,0.22)}
+.nav-cta{background:rgba(196,186,224,0.12);border:1px solid rgba(196,186,224,0.28);color:var(--lav);
   padding:8px 22px;border-radius:100px;font-size:11px;letter-spacing:0.14em;cursor:pointer;
   transition:all 0.3s;font-family:'DM Sans',sans-serif;font-weight:400}
-.nav-cta:hover{background:rgba(184,176,208,0.22);border-color:rgba(184,176,208,0.45)}
+.nav-cta:hover{background:rgba(196,186,224,0.22)}
 
-/* ── VIDEO SECTION WRAPPER ── */
+/* ── VIDEO BG ENGINE ── */
 .vsec{position:relative;width:100%;overflow:hidden}
 .vid-bg{position:absolute;inset:0;z-index:0}
-.vid-bg video{width:100%;height:100%;object-fit:cover;opacity:0.38}
-.vid-bg::after{content:'';position:absolute;inset:0;
-  background:linear-gradient(to bottom,rgba(14,16,24,0.65) 0%,rgba(14,16,24,0.28) 40%,rgba(14,16,24,0.28) 60%,rgba(14,16,24,0.72) 100%)}
-.vid-placeholder{width:100%;height:100%;background:var(--dark2);display:flex;align-items:center;justify-content:center}
-.vid-placeholder-inner{text-align:center;opacity:0.22}
-.vid-placeholder-inner div:first-child{font-size:48px;margin-bottom:12px}
-.vid-placeholder-inner div:last-child{font-size:10px;letter-spacing:0.2em;color:var(--lav);font-weight:300}
+.vid-bg video{width:100%;height:100%;object-fit:cover;opacity:var(--vid-opacity)}
+.voverlay-dark{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(10,12,20,0.55) 0%,rgba(10,12,20,0.12) 40%,rgba(10,12,20,0.12) 60%,rgba(10,12,20,0.65) 100%)}
+.voverlay-light{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(246,242,236,0.82) 0%,rgba(246,242,236,0.55) 50%,rgba(246,242,236,0.86) 100%)}
+
+/* ── 3D PERSPECTIVE LAYER ── */
+.perspective-wrap{perspective:1200px;perspective-origin:50% 30%}
+.tilt-card{transform-style:preserve-3d;transition:transform 0.6s cubic-bezier(0.23,1,0.32,1)}
+
+/* ── PARTICLE CANVAS ── */
+#particles-canvas{position:absolute;inset:0;z-index:1;pointer-events:none;opacity:0.5}
 
 /* ── HERO ── */
-#hero{min-height:100vh;display:flex;align-items:center;justify-content:center}
-.hero-grid-overlay{position:absolute;inset:0;z-index:1;
-  background-image:linear-gradient(rgba(184,176,208,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(184,176,208,0.04) 1px,transparent 1px);
-  background-size:72px 72px}
-.hero-body{position:relative;z-index:2;max-width:860px;text-align:center;padding:0 32px}
-.hero-eyebrow{font-size:10px;letter-spacing:0.36em;color:var(--lav);opacity:0.75;margin-bottom:28px;font-weight:300;
-  animation:riseIn 1s ease 0.3s both}
-.hero-h1{font-family:'Cormorant Garamond',serif;font-size:clamp(46px,8vw,96px);font-weight:300;line-height:1.04;
-  color:var(--cream);margin-bottom:32px;animation:riseIn 1s ease 0.5s both}
+#hero{min-height:100vh;display:flex;align-items:center;justify-content:center;--vid-opacity:0.60}
+.hero-grid{position:absolute;inset:0;z-index:1;
+  background-image:linear-gradient(rgba(196,186,224,0.06) 1px,transparent 1px),linear-gradient(90deg,rgba(196,186,224,0.06) 1px,transparent 1px);
+  background-size:80px 80px;animation:gridShift 20s linear infinite}
+@keyframes gridShift{0%{background-position:0 0}100%{background-position:80px 80px}}
+
+.hero-body{position:relative;z-index:3;max-width:900px;text-align:center;padding:0 32px}
+.hero-eye{font-size:10px;letter-spacing:0.38em;color:var(--lav);opacity:0.8;margin-bottom:30px;font-weight:300;
+  animation:riseIn 1s ease 0.2s both}
+.hero-h1{font-family:'Cormorant Garamond',serif;font-size:clamp(48px,8.5vw,100px);font-weight:300;line-height:1.03;
+  color:var(--cream);margin-bottom:28px;animation:riseIn 1s ease 0.4s both;
+  text-shadow:0 2px 40px rgba(10,12,20,0.8)}
 .hero-h1 em{font-style:italic;color:var(--lav);font-weight:400}
-.hero-p{font-size:clamp(14px,1.5vw,17px);color:rgba(196,188,216,0.65);line-height:1.85;
-  max-width:580px;margin:0 auto 52px;font-weight:300;animation:riseIn 1s ease 0.7s both}
-.hero-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;animation:riseIn 1s ease 0.9s both}
-.btn-p{background:rgba(244,240,234,0.96);border:none;color:var(--ink);
-  padding:15px 38px;border-radius:100px;font-size:12px;letter-spacing:0.12em;cursor:pointer;
-  transition:all 0.35s;font-family:'DM Sans',sans-serif;font-weight:500}
-.btn-p:hover{background:#fff;transform:translateY(-2px);box-shadow:0 12px 40px rgba(244,240,234,0.2)}
-.btn-s{background:transparent;border:1px solid rgba(184,176,208,0.3);color:rgba(196,188,216,0.75);
-  padding:15px 38px;border-radius:100px;font-size:12px;letter-spacing:0.12em;cursor:pointer;
-  transition:all 0.35s;font-family:'DM Sans',sans-serif;font-weight:300}
-.btn-s:hover{border-color:rgba(184,176,208,0.6);color:var(--paper);transform:translateY(-2px)}
+.hero-p{font-size:clamp(14px,1.6vw,18px);color:rgba(196,186,224,0.7);line-height:1.85;
+  max-width:600px;margin:0 auto 52px;font-weight:300;animation:riseIn 1s ease 0.6s both}
+.hero-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;animation:riseIn 1s ease 0.8s both}
+
+/* Rich premium buttons */
+.btn-primary{background:linear-gradient(135deg,rgba(246,242,236,0.96),rgba(220,212,200,0.92));
+  border:none;color:var(--ink);padding:16px 40px;border-radius:100px;font-size:12px;
+  letter-spacing:0.14em;cursor:pointer;transition:all 0.35s;font-family:'DM Sans',sans-serif;font-weight:500;
+  box-shadow:0 8px 32px rgba(196,186,224,0.2),inset 0 1px 0 rgba(255,255,255,0.9)}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 16px 48px rgba(196,186,224,0.3)}
+.btn-ghost{background:rgba(196,186,224,0.08);border:1px solid rgba(196,186,224,0.28);color:rgba(196,186,224,0.85);
+  padding:16px 40px;border-radius:100px;font-size:12px;letter-spacing:0.14em;cursor:pointer;
+  transition:all 0.35s;font-family:'DM Sans',sans-serif;font-weight:300;
+  backdrop-filter:blur(8px)}
+.btn-ghost:hover{background:rgba(196,186,224,0.16);border-color:rgba(196,186,224,0.5);transform:translateY(-3px)}
+.btn-wa-hero{background:linear-gradient(135deg,rgba(37,211,102,0.18),rgba(37,180,80,0.12));
+  border:1px solid rgba(37,211,102,0.35);color:#5DD89A;
+  padding:16px 36px;border-radius:100px;font-size:12px;letter-spacing:0.12em;cursor:pointer;
+  transition:all 0.35s;font-family:'DM Sans',sans-serif;font-weight:400;
+  box-shadow:0 4px 24px rgba(37,211,102,0.12)}
+.btn-wa-hero:hover{background:rgba(37,211,102,0.25);transform:translateY(-3px);box-shadow:0 12px 36px rgba(37,211,102,0.2)}
 
 /* ── METRICS STRIP ── */
-.metrics-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;margin-top:80px;
-  background:rgba(184,176,208,0.1);border:1px solid rgba(184,176,208,0.12);border-radius:18px;overflow:hidden;
-  animation:riseIn 1s ease 1.1s both}
-.mcard{background:rgba(14,16,24,0.88);padding:32px 20px;text-align:center;transition:background 0.3s}
-.mcard:hover{background:rgba(22,24,32,0.95)}
-.mnum{font-family:'Cormorant Garamond',serif;font-size:52px;font-weight:300;color:var(--cream);line-height:1}
-.msup{font-size:24px;color:var(--lav)}
-.mlbl{font-size:9px;letter-spacing:0.22em;color:rgba(148,168,188,0.6);margin-top:10px;font-weight:300}
+.metrics-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;margin-top:72px;
+  background:rgba(196,186,224,0.1);border:1px solid rgba(196,186,224,0.14);border-radius:20px;overflow:hidden;
+  animation:riseIn 1s ease 1s both;transform-style:preserve-3d}
+.mcard{background:rgba(10,12,20,0.85);padding:32px 20px;text-align:center;transition:all 0.35s;position:relative;overflow:hidden}
+.mcard::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(196,186,224,0.3),transparent);
+  opacity:0;transition:opacity 0.35s}
+.mcard:hover{background:rgba(22,24,38,0.95);transform:translateY(-2px)}
+.mcard:hover::before{opacity:1}
+.mnum{font-family:'Cormorant Garamond',serif;font-size:56px;font-weight:300;color:var(--cream);line-height:1}
+.msup{font-size:28px;color:var(--lav);font-family:'Cormorant Garamond',serif}
+.mlbl{font-size:9px;letter-spacing:0.24em;color:rgba(148,168,188,0.55);margin-top:10px;font-weight:300}
 
-@keyframes riseIn{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+@keyframes riseIn{from{opacity:0;transform:translateY(32px)}to{opacity:1;transform:translateY(0)}}
 
-/* ── SECTION COMMON ── */
-.sec{padding:100px 40px;position:relative}
-.sec-inner{max-width:1200px;margin:0 auto}
-.sec-eye{font-size:9px;letter-spacing:0.32em;color:var(--lav);opacity:0.55;margin-bottom:14px;font-weight:300}
-.sec-h{font-family:'Cormorant Garamond',serif;font-size:clamp(30px,4vw,54px);font-weight:300;color:var(--cream);margin-bottom:18px;line-height:1.18}
-.sec-p{font-size:14px;color:rgba(148,168,188,0.7);line-height:1.9;max-width:540px;font-weight:300;margin-bottom:60px}
+/* ── SECTION ── */
+.sec{padding:110px 40px;position:relative}
+.sec-inner{max-width:1240px;margin:0 auto}
+.sec-eye{font-size:9px;letter-spacing:0.34em;color:var(--lav);opacity:0.6;margin-bottom:14px;font-weight:300}
+.sec-h{font-family:'Cormorant Garamond',serif;font-size:clamp(32px,4.5vw,58px);font-weight:300;color:var(--cream);margin-bottom:18px;line-height:1.16}
+.sec-p{font-size:14px;color:rgba(148,168,188,0.65);line-height:1.95;max-width:540px;font-weight:300;margin-bottom:60px}
+.sec-eye-light{color:var(--lav3);opacity:0.85}
+.sec-h-light{color:var(--ink)}
+.sec-p-light{color:var(--ink3)}
 
-/* ── LIGHT SECTION ── */
-.sec-light{background:var(--paper);color:var(--ink)}
-.sec-light .sec-eye{color:var(--lav3);opacity:0.8}
-.sec-light .sec-h{color:var(--ink)}
-.sec-light .sec-p{color:var(--ink3)}
+/* ── RICH DIVIDER ── */
+.rich-divider{height:1px;background:linear-gradient(90deg,transparent,rgba(196,186,224,0.3),rgba(200,168,112,0.2),rgba(196,186,224,0.3),transparent);margin:0}
 
 /* ── EXCEL WINDOW ── */
-.xwin{background:#FAFBFC;border:1px solid #D0D4DC;border-radius:12px;overflow:hidden;
-  box-shadow:0 32px 80px rgba(0,0,0,0.18),0 2px 0 rgba(255,255,255,0.8) inset}
-.xtbar{background:#F0F1F3;padding:9px 14px;display:flex;align-items:center;gap:10px;border-bottom:1px solid #D4D8E0}
-.xdot{width:11px;height:11px;border-radius:50%}
-.xfname{font-size:11px;color:#5A5E6A;letter-spacing:0.07em;flex:1;text-align:center;margin-left:-60px}
-.xind{display:flex;gap:6px}
-.xi{padding:2px 9px;border-radius:100px;font-size:8px;letter-spacing:0.1em;font-weight:500}
-.xi-g{background:#E6F4EC;color:#1A6B3A;border:1px solid #B0D8BE}
-.xi-b{background:#EBF0FA;color:#1A3D8C;border:1px solid #B4C8F0}
-.xi-p{background:#F0EBFA;color:#4A2A8C;border:1px solid #C8B8F0}
-.xi-r{background:#FAE8E8;color:#8C1A1A;border:1px solid #F0B4B4}
-.xi-w{background:#E8FAE8;color:#1A6B1A;border:1px solid #B0E0B0}
-.xrib{background:#F5F6F8;padding:6px 14px;display:flex;gap:1px;border-bottom:1px solid #DDE0E8}
-.xtab{font-size:10px;color:#8A8E9A;letter-spacing:0.06em;cursor:pointer;padding:4px 10px;border-radius:3px}
-.xtab.on{background:#E8EAEF;color:#1A1C2A;font-weight:500}
-.xfbar{background:#FFFFFF;padding:6px 14px;display:flex;align-items:center;gap:10px;border-bottom:1px solid #E8EAF0}
-.xcref{font-size:10px;color:#5A5EAA;min-width:40px;font-family:monospace}
-.xfx{font-size:10px;color:#888;min-width:16px}
-.xftxt{font-size:10px;color:#1A1C2A;font-family:monospace;flex:1;overflow:hidden;white-space:nowrap}
-.xgrid{overflow:auto;max-height:300px}
-table.xt{width:100%;border-collapse:collapse;font-size:10px;font-family:'DM Sans',sans-serif;min-width:800px}
-table.xt th{background:#EEF0F5;color:#888A98;padding:5px 10px;border:1px solid #DDE0E8;font-weight:400;letter-spacing:0.06em;font-size:9px;white-space:nowrap}
-table.xt td{padding:5px 10px;border:1px solid #EAECF2;color:#3A3C4A;white-space:nowrap}
-.xrh{background:#F5F6F8;color:#9A9CAA;text-align:center;font-size:9px}
-.xca{background:#EEF0FA;color:#4A52A8;font-weight:500}
-.xg{color:#1A6B3A;font-weight:500}.xr{color:#8C1A1A;font-weight:500}.xo{color:#8C5A1A;font-weight:500}
-.xcpulse{animation:cpulse 2s ease-in-out infinite}
-@keyframes cpulse{0%,100%{background:#FAFBFC}50%{background:#EEF0FA}}
-.xbadge{padding:2px 8px;border-radius:100px;font-size:8px;letter-spacing:0.08em;font-weight:500}
-.xbg{background:#E6F4EC;color:#1A6B3A;border:1px solid #B0D8BE}
-.xbr{background:#FAE8E8;color:#8C1A1A;border:1px solid #F0B4B4}
-.xbo{background:#FBF3E2;color:#7A4A0A;border:1px solid #E8C880}
-.xstat{background:#EEF0F5;padding:4px 14px;display:flex;justify-content:space-between;border-top:1px solid #DDE0E8}
+.xwin{background:#F8F9FB;border:1px solid #C8CCD8;border-radius:14px;overflow:hidden;
+  box-shadow:0 40px 100px rgba(0,0,0,0.22),0 2px 0 rgba(255,255,255,0.9) inset,0 0 0 1px rgba(196,186,224,0.1);
+  transform-style:preserve-3d}
+.xtbar{background:linear-gradient(to bottom,#F2F3F6,#ECEDF2);padding:10px 16px;display:flex;align-items:center;gap:10px;border-bottom:1px solid #D0D4E0}
+.xdot{width:12px;height:12px;border-radius:50%}
+.xfname{font-size:11px;color:#585C6A;letter-spacing:0.07em;flex:1;text-align:center;font-weight:500}
+.xind{display:flex;gap:5px}
+.xi{padding:2px 9px;border-radius:100px;font-size:8px;letter-spacing:0.1em;font-weight:500;animation:xipulse 3s ease-in-out infinite}
+@keyframes xipulse{0%,100%{opacity:0.7}50%{opacity:1}}
+.xi-g{background:#E2F5EC;color:#186B38;border:1px solid #A8D8BC;animation-delay:0s}
+.xi-b{background:#E8EEFA;color:#1835A0;border:1px solid #A8C0F0;animation-delay:0.6s}
+.xi-p{background:#EEE8FA;color:#4A28A0;border:1px solid #C0A8F0;animation-delay:1.2s}
+.xi-r{background:#FAE6E6;color:#8C1818;border:1px solid #F0A8A8;animation-delay:1.8s}
+.xi-w{background:#E4FAE6;color:#186B18;border:1px solid #A8E4AC;animation-delay:2.4s}
+.xrib{background:#EEEEF4;padding:6px 14px;display:flex;gap:1px;border-bottom:1px solid #D8DAE8}
+.xtab{font-size:10px;color:#8A8E9A;letter-spacing:0.06em;cursor:pointer;padding:4px 10px;border-radius:4px;transition:all 0.2s}
+.xtab.on{background:#FFFFFF;color:#1A1C2A;font-weight:500;box-shadow:0 1px 3px rgba(0,0,0,0.1)}
+.xfbar{background:#FFFFFF;padding:7px 14px;display:flex;align-items:center;gap:10px;border-bottom:1px solid #E4E8F2}
+.xcref{font-size:10px;color:#4A50A8;min-width:40px;font-family:monospace;font-weight:600}
+.xfx{font-size:11px;color:#A0A4B0;min-width:16px}
+.xftxt{font-size:10px;color:#1A1C2A;font-family:monospace;flex:1;overflow:hidden;white-space:nowrap;animation:formulaCycle 8s steps(1) infinite}
+@keyframes formulaCycle{
+  0%{content:''}
+  0%{font-size:10px}
+}
+.xgrid{overflow:auto;max-height:320px}
+table.xt{width:100%;border-collapse:collapse;font-size:10px;font-family:'DM Sans',sans-serif;min-width:900px}
+table.xt th{background:linear-gradient(to bottom,#EEF0F6,#E8EAF2);color:#7A7E90;padding:6px 11px;
+  border:1px solid #D8DCE8;font-weight:500;letter-spacing:0.08em;font-size:9px;white-space:nowrap}
+table.xt td{padding:6px 11px;border:1px solid #EAECF4;color:#3A3C4E;white-space:nowrap;transition:background 0.4s}
+.xrh{background:#F0F1F6;color:#9A9CAC;text-align:center;font-size:9px;font-weight:500}
+.xca{background:#ECF0FC;color:#3A4AB0;font-weight:600}
+.xg{color:#186B38;font-weight:600}.xr{color:#8C1818;font-weight:600}.xo{color:#8C5018;font-weight:600}
+.xcpulse{animation:cpulse 2.5s ease-in-out infinite}
+@keyframes cpulse{0%,100%{background:#F8F9FB}50%{background:#EEF0FC}}
+.xbadge{padding:2px 9px;border-radius:100px;font-size:8px;letter-spacing:0.08em;font-weight:600}
+.xbg{background:#E2F5EC;color:#186B38;border:1px solid #A8D8BC}
+.xbr{background:#FAE6E6;color:#8C1818;border:1px solid #F0A8A8}
+.xbo{background:#FBF2E0;color:#784808;border:1px solid #E8C070}
+.xstat{background:linear-gradient(to bottom,#EEEEF4,#E8E8F0);padding:5px 14px;display:flex;justify-content:space-between;border-top:1px solid #D8DCE8}
 .xsl{font-size:9px;color:#8A8E9A;letter-spacing:0.06em}
 
-/* ── STEPS GRID ── */
-.steps-g{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:rgba(184,176,208,0.08);
-  border:1px solid rgba(184,176,208,0.1);border-radius:18px;overflow:hidden}
-.step-c{background:var(--dark2);padding:44px 38px;position:relative;overflow:hidden;transition:background 0.35s}
-.step-c:hover{background:var(--dark3)}
+/* ── 3D STEPS ── */
+.steps-g{display:grid;grid-template-columns:1fr 1fr;gap:2px;
+  background:rgba(196,186,224,0.08);border:1px solid rgba(196,186,224,0.12);border-radius:20px;overflow:hidden}
+.step-c{background:var(--dark2);padding:48px 40px;position:relative;overflow:hidden;transition:all 0.4s cubic-bezier(0.23,1,0.32,1)}
+.step-c:hover{background:var(--dark3);transform:translateY(-2px)}
 .step-c.full{grid-column:1/-1}
-.step-n{font-family:'Cormorant Garamond',serif;font-size:72px;font-weight:300;
-  color:rgba(184,176,208,0.06);position:absolute;top:16px;right:28px;line-height:1}
-.step-ico{width:44px;height:44px;border:1px solid rgba(184,176,208,0.18);border-radius:11px;
-  display:flex;align-items:center;justify-content:center;margin-bottom:22px;font-size:20px;background:rgba(184,176,208,0.05)}
+.step-c::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;
+  background:linear-gradient(90deg,transparent,var(--lav2),transparent);opacity:0;transition:opacity 0.4s}
+.step-c:hover::after{opacity:0.6}
+.step-n{font-family:'Cormorant Garamond',serif;font-size:80px;font-weight:300;
+  color:rgba(196,186,224,0.05);position:absolute;top:12px;right:24px;line-height:1}
+.step-ico{width:48px;height:48px;border:1px solid rgba(196,186,224,0.2);border-radius:12px;
+  display:flex;align-items:center;justify-content:center;margin-bottom:24px;font-size:22px;
+  background:rgba(196,186,224,0.06);transition:border-color 0.3s,background 0.3s}
+.step-c:hover .step-ico{border-color:rgba(196,186,224,0.4);background:rgba(196,186,224,0.1)}
 .step-t{font-size:17px;font-weight:500;color:var(--cream);margin-bottom:11px;letter-spacing:0.01em}
-.step-d{font-size:13px;color:rgba(148,168,188,0.65);line-height:1.85;font-weight:300}
-.code-blk{margin-top:22px;background:rgba(10,12,16,0.85);border:1px solid rgba(184,176,208,0.08);
-  border-radius:8px;padding:14px;font-family:monospace;font-size:10px}
-.cl{margin:3px 0;opacity:0.8}
-.cl-g{color:#7AC4A0}.cl-b{color:#8EB4E0}.cl-p{color:#C0A8E8}.cl-r{color:#E4A0A0}.cl-y{color:#E4C880}
+.step-d{font-size:13px;color:rgba(148,168,188,0.6);line-height:1.9;font-weight:300}
+.code-blk{margin-top:22px;background:rgba(8,10,16,0.9);border:1px solid rgba(196,186,224,0.1);
+  border-radius:10px;padding:16px;font-family:monospace;font-size:10px}
+.cl{margin:4px 0;opacity:0.85;line-height:1.6}
+.cl-g{color:#80C8A0}.cl-b{color:#90B8E4}.cl-p{color:#C8B0F0}.cl-r{color:#E8A8A8}.cl-y{color:#E8CC88}
 
 /* ── MODULES ── */
-.mods-g{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1px;
-  background:rgba(184,176,208,0.08);border:1px solid rgba(184,176,208,0.1);border-radius:18px;overflow:hidden}
-.mod-c{background:var(--dark2);padding:28px 24px;transition:all 0.35s;cursor:pointer;position:relative;overflow:hidden}
-.mod-c:hover{background:var(--dark3)}
+.mods-g{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:1px;
+  background:rgba(196,186,224,0.08);border:1px solid rgba(196,186,224,0.12);border-radius:20px;overflow:hidden}
+.mod-c{background:var(--dark2);padding:28px 24px;transition:all 0.4s cubic-bezier(0.23,1,0.32,1);
+  cursor:pointer;position:relative;overflow:hidden}
+.mod-c:hover{background:var(--dark3);transform:translateY(-2px)}
 .mod-c::before{content:'';position:absolute;inset:0;
-  background:radial-gradient(circle at 50% -20%,rgba(184,176,208,0.08),transparent 65%);opacity:0;transition:opacity 0.35s}
+  background:radial-gradient(ellipse at 50% -10%,rgba(196,186,224,0.1),transparent 60%);
+  opacity:0;transition:opacity 0.4s}
 .mod-c:hover::before{opacity:1}
-.mod-ico{width:36px;height:36px;border:1px solid rgba(184,176,208,0.14);border-radius:9px;
-  display:flex;align-items:center;justify-content:center;margin-bottom:16px;font-size:16px;background:rgba(184,176,208,0.04)}
-.mod-n{font-size:12px;font-weight:500;color:var(--cream);margin-bottom:6px;line-height:1.45;letter-spacing:0.01em}
+.mod-ico{width:40px;height:40px;border:1px solid rgba(196,186,224,0.16);border-radius:10px;
+  display:flex;align-items:center;justify-content:center;margin-bottom:16px;font-size:18px;
+  background:rgba(196,186,224,0.05);transition:all 0.3s}
+.mod-c:hover .mod-ico{border-color:rgba(196,186,224,0.35);background:rgba(196,186,224,0.1)}
+.mod-n{font-size:12px;font-weight:500;color:var(--cream);margin-bottom:5px;line-height:1.5;letter-spacing:0.01em}
 .mod-m{font-size:10px;color:var(--lav);margin-top:10px;padding:4px 10px;
-  background:rgba(184,176,208,0.1);border-radius:100px;display:inline-block;letter-spacing:0.08em}
+  background:rgba(196,186,224,0.1);border-radius:100px;display:inline-block;letter-spacing:0.08em;
+  border:1px solid rgba(196,186,224,0.15)}
 
 /* ── DASHBOARD ── */
-.dash-wrap{background:var(--dark2);border:1px solid rgba(184,176,208,0.12);border-radius:18px;overflow:hidden;
-  box-shadow:0 32px 80px rgba(0,0,0,0.45)}
-.dash-hdr{background:rgba(20,22,32,0.98);padding:18px 26px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(184,176,208,0.08)}
-.dh-t{font-size:12px;font-weight:500;letter-spacing:0.12em;color:var(--cream)}
-.dlive{display:flex;align-items:center;gap:7px;font-size:10px;color:#7AC4A0;letter-spacing:0.1em}
-.ldot{width:5px;height:5px;background:#7AC4A0;border-radius:50%;animation:lp 1.6s ease-in-out infinite}
-@keyframes lp{0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(122,196,160,0.4)}50%{opacity:0.6;box-shadow:0 0 0 5px rgba(122,196,160,0)}}
-.kpi-row{display:grid;grid-template-columns:repeat(6,1fr);gap:1px;background:rgba(184,176,208,0.07)}
-.kpi{background:var(--dark2);padding:22px 16px;text-align:center}
-.kv{font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:300;color:var(--cream);line-height:1}
-.kl{font-size:8px;letter-spacing:0.18em;color:rgba(148,168,188,0.5);margin-top:5px}
+.dash-wrap{background:var(--dark2);border:1px solid rgba(196,186,224,0.14);border-radius:20px;overflow:hidden;
+  box-shadow:0 40px 100px rgba(0,0,0,0.5),0 0 0 1px rgba(196,186,224,0.05)}
+.dash-hdr{background:rgba(16,18,28,0.98);padding:18px 26px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(196,186,224,0.08)}
+.dh-t{font-size:12px;font-weight:500;letter-spacing:0.14em;color:var(--cream)}
+.dlive{display:flex;align-items:center;gap:8px;font-size:10px;color:#80C8A0;letter-spacing:0.12em}
+.ldot{width:5px;height:5px;background:#80C8A0;border-radius:50%;animation:lp 1.6s ease-in-out infinite}
+@keyframes lp{0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(128,200,160,0.5)}50%{opacity:0.6;box-shadow:0 0 0 6px rgba(128,200,160,0)}}
+.kpi-row{display:grid;grid-template-columns:repeat(6,1fr);gap:1px;background:rgba(196,186,224,0.07)}
+.kpi{background:var(--dark2);padding:24px 16px;text-align:center;transition:background 0.3s;position:relative;overflow:hidden}
+.kpi:hover{background:var(--dark3)}
+.kv{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:300;color:var(--cream);line-height:1}
+.kl{font-size:8px;letter-spacing:0.18em;color:rgba(148,168,188,0.45);margin-top:5px}
 .kch{font-size:10px;margin-top:7px}
-.up{color:#7AC4A0}.dn{color:#E4A0A0}.wn{color:#E4C880}
-
-.chart-row{display:grid;grid-template-columns:2fr 1fr;gap:1px;background:rgba(184,176,208,0.07)}
-.cpanel{background:var(--dark2);padding:26px}
-.cp-t{font-size:10px;letter-spacing:0.12em;color:rgba(148,168,188,0.5);margin-bottom:18px;font-weight:300}
-.bars{display:flex;align-items:flex-end;gap:6px;height:110px}
+.up{color:#80C8A0}.dn{color:#E8A8A8}.wn{color:#E8CC88}
+.chart-row{display:grid;grid-template-columns:2fr 1fr;gap:1px;background:rgba(196,186,224,0.07)}
+.cpanel{background:var(--dark2);padding:28px}
+.cp-t{font-size:10px;letter-spacing:0.14em;color:rgba(148,168,188,0.45);margin-bottom:20px;font-weight:300}
+.bars{display:flex;align-items:flex-end;gap:7px;height:120px}
 .bar-item{flex:1;display:flex;flex-direction:column;align-items:center}
-.bar-fill{width:100%;border-radius:3px 3px 0 0;transition:all 0.6s ease;animation:bg 1.4s ease both}
-@keyframes bg{from{transform:scaleY(0);transform-origin:bottom}to{transform:scaleY(1);transform-origin:bottom}}
-.bar-lbl{font-size:8px;color:rgba(148,168,188,0.4);text-align:center;margin-top:5px;letter-spacing:0.06em}
-.donut-p{background:var(--dark2);padding:26px;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.bar-fill{width:100%;border-radius:4px 4px 0 0;transition:all 0.6s;animation:barUp 1.4s ease both}
+@keyframes barUp{from{transform:scaleY(0);transform-origin:bottom}to{transform:scaleY(1);transform-origin:bottom}}
+.bar-lbl{font-size:8px;color:rgba(148,168,188,0.35);text-align:center;margin-top:5px;letter-spacing:0.06em}
+.donut-p{background:var(--dark2);padding:28px;display:flex;flex-direction:column;align-items:center;justify-content:center}
 
 /* ── SHIELD ── */
-.shield-wrap{background:var(--dark2);border:1px solid rgba(184,176,208,0.12);border-radius:18px;overflow:hidden}
-.shield-hdr{background:rgba(20,22,32,0.98);padding:22px 26px;border-bottom:1px solid rgba(184,176,208,0.08)}
-.shield-tabs{display:flex;gap:2px;margin-top:14px}
-.stab{padding:7px 18px;border-radius:7px;font-size:10px;letter-spacing:0.12em;cursor:pointer;
-  transition:all 0.25s;border:1px solid transparent;font-family:'DM Sans',sans-serif;font-weight:300;color:rgba(148,168,188,0.5)}
-.stab.on{background:rgba(184,176,208,0.12);border-color:rgba(184,176,208,0.22);color:var(--cream)}
-.stab:not(.on):hover{color:var(--lav)}
+.shield-wrap{background:var(--dark2);border:1px solid rgba(196,186,224,0.12);border-radius:20px;overflow:hidden;
+  box-shadow:0 24px 60px rgba(0,0,0,0.3)}
+.shield-hdr{background:rgba(16,18,28,0.98);padding:22px 26px;border-bottom:1px solid rgba(196,186,224,0.08)}
+.shield-tabs{display:flex;gap:3px;margin-top:14px}
+.stab{padding:7px 18px;border-radius:8px;font-size:10px;letter-spacing:0.12em;cursor:pointer;
+  transition:all 0.25s;border:1px solid transparent;font-family:'DM Sans',sans-serif;
+  font-weight:300;color:rgba(148,168,188,0.5)}
+.stab.on{background:rgba(196,186,224,0.12);border-color:rgba(196,186,224,0.25);color:var(--cream)}
+.stab:not(.on):hover{color:var(--lav);background:rgba(196,186,224,0.05)}
 .sh-tbl{width:100%;border-collapse:collapse}
-.sh-tbl th{background:rgba(22,24,34,0.9);padding:10px 18px;text-align:left;font-size:9px;
-  letter-spacing:0.14em;color:rgba(148,168,188,0.45);border-bottom:1px solid rgba(184,176,208,0.06);font-weight:400}
-.sh-tbl td{padding:12px 18px;border-bottom:1px solid rgba(184,176,208,0.04);font-size:11px;color:rgba(196,188,216,0.7)}
+.sh-tbl th{background:rgba(20,22,34,0.9);padding:11px 18px;text-align:left;font-size:9px;
+  letter-spacing:0.14em;color:rgba(148,168,188,0.4);border-bottom:1px solid rgba(196,186,224,0.07);font-weight:400}
+.sh-tbl td{padding:13px 18px;border-bottom:1px solid rgba(196,186,224,0.04);font-size:11px;color:rgba(196,186,224,0.65)}
 .sh-tbl td:first-child{color:var(--cream);font-weight:500}
-.sbadge{padding:2px 8px;border-radius:100px;font-size:9px;letter-spacing:0.08em}
-.sbg{background:rgba(122,196,160,0.12);color:#7AC4A0;border:1px solid rgba(122,196,160,0.2)}
-.sbr{background:rgba(228,160,160,0.12);color:#E4A0A0;border:1px solid rgba(228,160,160,0.2)}
-.sbo{background:rgba(228,200,128,0.12);color:#E4C880;border:1px solid rgba(228,200,128,0.2)}
-.blurred td:not(:first-child){filter:blur(5px);color:rgba(148,168,188,0.3);font-size:10px}
+.sh-tbl tr:hover td{background:rgba(196,186,224,0.03)}
+.sbadge{padding:2px 9px;border-radius:100px;font-size:9px;letter-spacing:0.08em;font-weight:500}
+.sbg{background:rgba(128,200,160,0.12);color:#80C8A0;border:1px solid rgba(128,200,160,0.22)}
+.sbr{background:rgba(232,168,168,0.12);color:#E8A8A8;border:1px solid rgba(232,168,168,0.22)}
+.sbo{background:rgba(232,204,136,0.12);color:#E8CC88;border:1px solid rgba(232,204,136,0.22)}
+.blurred td:not(:first-child){filter:blur(5px);color:rgba(148,168,188,0.25)}
 
-/* ── VIDEO GALLERY (full section videos) ── */
-.vsec-gallery{position:relative;height:520px;overflow:hidden}
-.vsec-gallery .vid-bg video{opacity:0.52}
-.vid-content{position:relative;z-index:2;height:100%;display:flex;flex-direction:column;
-  align-items:center;justify-content:center;text-align:center;padding:40px}
-.vid-tag{font-size:9px;letter-spacing:0.28em;color:rgba(184,176,208,0.6);margin-bottom:16px;font-weight:300}
-.vid-h{font-family:'Cormorant Garamond',serif;font-size:clamp(28px,4vw,52px);font-weight:300;color:var(--cream);margin-bottom:14px;line-height:1.15}
-.vid-d{font-size:13px;color:rgba(196,188,216,0.55);max-width:520px;line-height:1.8;font-weight:300}
-.vid-nav{display:flex;gap:8px;margin-top:28px}
-.vdot{width:6px;height:6px;border-radius:50%;background:rgba(184,176,208,0.3);cursor:pointer;transition:all 0.3s;border:none;padding:0}
-.vdot.on{background:var(--lav);width:22px;border-radius:3px}
+/* ── VIDEO GALLERY ── */
+.vsec-gallery{position:relative;height:560px;overflow:hidden;--vid-opacity:0.65}
+.vid-content{position:relative;z-index:3;height:100%;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;text-align:center;padding:48px 40px}
+.vid-tag{font-size:9px;letter-spacing:0.32em;color:rgba(196,186,224,0.65);margin-bottom:18px;font-weight:300}
+.vid-h{font-family:'Cormorant Garamond',serif;font-size:clamp(30px,4.5vw,58px);font-weight:300;
+  color:var(--cream);margin-bottom:16px;line-height:1.12;text-shadow:0 2px 30px rgba(0,0,0,0.6)}
+.vid-d{font-size:14px;color:rgba(196,186,224,0.6);max-width:540px;line-height:1.85;font-weight:300}
 
-/* ── LIGHT SECTION WITH VIDEO ── */
-.vsec-light .vid-bg video{opacity:0.22}
-.vsec-light .vid-bg::after{background:linear-gradient(to bottom,rgba(244,240,234,0.82) 0%,rgba(244,240,234,0.6) 50%,rgba(244,240,234,0.85) 100%)}
-.vsec-light .sec-h{color:var(--ink)}
-.vsec-light .sec-eye{color:var(--lav3);opacity:0.8}
-.vsec-light .sec-p{color:var(--ink3)}
-
-/* ── PHONES ── */
-.phones-row{display:flex;justify-content:center;gap:20px;flex-wrap:wrap}
-.phone{width:155px;background:var(--dark3);border:1px solid rgba(184,176,208,0.14);
-  border-radius:26px;padding:14px;transition:transform 0.4s;position:relative;
-  box-shadow:0 20px 60px rgba(0,0,0,0.35)}
-.phone:nth-child(2){transform:translateY(-18px)}
-.phone:nth-child(4){transform:translateY(-10px)}
-.phone:hover{transform:translateY(-8px) scale(1.02)!important}
-.pnotch{width:44px;height:4px;background:rgba(184,176,208,0.14);border-radius:100px;margin:0 auto 10px}
-.pscr{background:#0A0C12;border-radius:14px;padding:12px;min-height:220px;overflow:hidden}
-.phdr{font-size:8px;letter-spacing:0.14em;color:rgba(148,168,188,0.45);margin-bottom:10px;display:flex;justify-content:space-between}
-.pmet{background:rgba(20,22,32,0.95);border-radius:7px;padding:9px;margin-bottom:7px;border:1px solid rgba(184,176,208,0.07)}
-.pmv{font-size:18px;font-family:'Cormorant Garamond',serif;color:var(--cream);font-weight:300;line-height:1}
-.pml{font-size:8px;color:rgba(148,168,188,0.45);letter-spacing:0.1em;margin-top:2px}
+/* ── PHONES 3D ── */
+.phones-row{display:flex;justify-content:center;gap:22px;flex-wrap:wrap;perspective:1000px}
+.phone{width:158px;background:var(--dark3);border:1px solid rgba(196,186,224,0.16);
+  border-radius:28px;padding:14px;transition:all 0.5s cubic-bezier(0.23,1,0.32,1);position:relative;
+  box-shadow:0 24px 60px rgba(0,0,0,0.4),0 0 0 1px rgba(196,186,224,0.05),inset 0 1px 0 rgba(255,255,255,0.04)}
+.phone:nth-child(2){transform:translateY(-22px) rotateY(-5deg)}
+.phone:nth-child(4){transform:translateY(-12px) rotateY(4deg)}
+.phone:nth-child(3){transform:translateY(-4px) rotateY(-2deg)}
+.phone:hover{transform:translateY(-10px) rotateY(0deg) scale(1.03)!important;
+  box-shadow:0 36px 80px rgba(0,0,0,0.5),0 0 0 1px rgba(196,186,224,0.12)}
+.pnotch{width:44px;height:4px;background:rgba(196,186,224,0.14);border-radius:100px;margin:0 auto 10px}
+.pscr{background:#080A12;border-radius:16px;padding:12px;min-height:230px;overflow:hidden}
+.phdr{font-size:8px;letter-spacing:0.14em;color:rgba(148,168,188,0.4);margin-bottom:10px;display:flex;justify-content:space-between}
+.pmet{background:rgba(18,20,30,0.98);border-radius:8px;padding:9px;margin-bottom:7px;border:1px solid rgba(196,186,224,0.08)}
+.pmv{font-size:20px;font-family:'Cormorant Garamond',serif;color:var(--cream);font-weight:300;line-height:1}
+.pml{font-size:8px;color:rgba(148,168,188,0.4);letter-spacing:0.1em;margin-top:2px}
 .pbar{height:3px;border-radius:100px;margin-top:5px}
-.palt{border-radius:7px;padding:8px;margin-bottom:7px;border:1px solid}
-.palt-r{background:rgba(228,160,160,0.08);border-color:rgba(228,160,160,0.18)}
-.palt-o{background:rgba(228,200,128,0.08);border-color:rgba(228,200,128,0.15)}
-.palt-g{background:rgba(122,196,160,0.08);border-color:rgba(122,196,160,0.18)}
+.palt{border-radius:8px;padding:8px;margin-bottom:7px;border:1px solid}
+.palt-r{background:rgba(232,168,168,0.08);border-color:rgba(232,168,168,0.2)}
+.palt-o{background:rgba(232,204,136,0.08);border-color:rgba(232,204,136,0.18)}
+.palt-g{background:rgba(128,200,160,0.08);border-color:rgba(128,200,160,0.2)}
 .palt-t{font-size:8px;letter-spacing:0.06em}
 
+/* ── CONTACT SECTION ── */
+.contact-actions{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:40px}
+.ca-btn{display:flex;flex-direction:column;align-items:center;gap:12px;padding:28px 20px;
+  border-radius:18px;text-decoration:none;transition:all 0.4s cubic-bezier(0.23,1,0.32,1);
+  border:1px solid;cursor:pointer;font-family:'DM Sans',sans-serif}
+.ca-btn:hover{transform:translateY(-4px)}
+.ca-icon{font-size:32px;line-height:1}
+.ca-label{font-size:10px;letter-spacing:0.18em;font-weight:300}
+.ca-value{font-size:13px;font-weight:500;color:var(--cream)}
+.ca-wa{background:rgba(37,211,102,0.1);border-color:rgba(37,211,102,0.25)}
+.ca-wa:hover{background:rgba(37,211,102,0.18);box-shadow:0 16px 48px rgba(37,211,102,0.15)}
+.ca-mail{background:rgba(196,186,224,0.08);border-color:rgba(196,186,224,0.2)}
+.ca-mail:hover{background:rgba(196,186,224,0.14);box-shadow:0 16px 48px rgba(196,186,224,0.1)}
+.ca-insta{background:rgba(225,120,80,0.1);border-color:rgba(225,120,80,0.22)}
+.ca-insta:hover{background:rgba(225,120,80,0.17);box-shadow:0 16px 48px rgba(225,120,80,0.12)}
+.ca-lbl-wa{color:#5DD89A}
+.ca-lbl-mail{color:var(--lav)}
+.ca-lbl-insta{color:#E07850}
+
 /* ── CTA ── */
-.cta-sec{position:relative;padding:160px 40px;text-align:center;overflow:hidden}
-.cta-sec .vid-bg video{opacity:0.28}
-.cta-body{position:relative;z-index:2;max-width:680px;margin:0 auto}
-.cta-h{font-family:'Cormorant Garamond',serif;font-size:clamp(36px,5.5vw,68px);font-weight:300;color:var(--cream);margin-bottom:22px;line-height:1.1}
-.cta-p{font-size:15px;color:rgba(196,188,216,0.55);max-width:500px;margin:0 auto 48px;line-height:1.9;font-weight:300}
-.cta-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:60px}
-.btn-wa{background:rgba(122,196,160,0.14);border:1px solid rgba(122,196,160,0.28);color:#7AC4A0;
-  padding:15px 36px;border-radius:100px;font-size:12px;letter-spacing:0.1em;cursor:pointer;
-  transition:all 0.35s;font-family:'DM Sans',sans-serif;font-weight:400}
-.btn-wa:hover{background:rgba(122,196,160,0.24);transform:translateY(-2px)}
-.contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(184,176,208,0.08);
-  border:1px solid rgba(184,176,208,0.1);border-radius:14px;overflow:hidden}
-.cg-item{background:rgba(14,16,24,0.92);padding:22px 20px}
-.cg-lbl{font-size:8px;letter-spacing:0.18em;color:rgba(148,168,188,0.4);margin-bottom:8px}
-.cg-val{font-size:13px;color:var(--cream);font-weight:400}
+.cta-sec{position:relative;padding:160px 40px;text-align:center;overflow:hidden;--vid-opacity:0.45}
+.cta-body{position:relative;z-index:3;max-width:700px;margin:0 auto}
+.cta-h{font-family:'Cormorant Garamond',serif;font-size:clamp(38px,6vw,72px);font-weight:300;
+  color:var(--cream);margin-bottom:22px;line-height:1.08;text-shadow:0 2px 40px rgba(0,0,0,0.7)}
+.cta-p{font-size:16px;color:rgba(196,186,224,0.55);max-width:500px;margin:0 auto 52px;line-height:1.9;font-weight:300}
 
 /* ── FOOTER ── */
-footer{background:rgba(8,10,14,0.98);border-top:1px solid rgba(184,176,208,0.07);padding:44px 40px;
-  display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px}
-.fbrand{font-size:11px;font-weight:600;letter-spacing:0.22em;color:var(--paper);margin-bottom:10px}
-.fdesc{font-size:11px;color:rgba(148,168,188,0.4);line-height:1.9;font-weight:300}
-.fcitem{display:flex;gap:10px;margin-bottom:14px;align-items:flex-start}
-.fcico{font-size:14px;margin-top:1px;opacity:0.6}
-.fctxt{font-size:11px;color:rgba(148,168,188,0.45);line-height:1.7;font-weight:300}
-.fctxt strong{color:rgba(196,188,216,0.5);font-weight:400;display:block;font-size:9px;letter-spacing:0.14em;margin-bottom:2px}
-.fstack{font-size:10px;color:rgba(148,168,188,0.3);line-height:2.1;font-weight:300;letter-spacing:0.04em}
-.fcopy{font-size:9px;color:rgba(148,168,188,0.2);letter-spacing:0.1em;margin-top:12px}
+footer{background:rgba(6,8,14,0.99);border-top:1px solid rgba(196,186,224,0.07);padding:52px 40px;
+  display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:48px}
+.fbrand{font-size:12px;font-weight:600;letter-spacing:0.24em;color:var(--paper);margin-bottom:12px}
+.fdesc{font-size:11px;color:rgba(148,168,188,0.38);line-height:2;font-weight:300}
+.fcitem{display:flex;gap:11px;margin-bottom:16px;align-items:flex-start}
+.fctxt{font-size:11px;color:rgba(148,168,188,0.42);line-height:1.7;font-weight:300}
+.fctxt strong{color:rgba(196,186,224,0.48);font-weight:400;display:block;font-size:9px;letter-spacing:0.16em;margin-bottom:3px}
+.fstack{font-size:10px;color:rgba(148,168,188,0.28);line-height:2.2;font-weight:300;letter-spacing:0.04em}
+.fcopy{font-size:9px;color:rgba(148,168,188,0.2);letter-spacing:0.12em;margin-top:14px}
+footer a{color:inherit;text-decoration:none}
+footer a:hover{color:rgba(196,186,224,0.6)}
 
 ::-webkit-scrollbar{width:3px;height:3px}
 ::-webkit-scrollbar-track{background:rgba(255,255,255,0.02)}
-::-webkit-scrollbar-thumb{background:rgba(184,176,208,0.2);border-radius:2px}
+::-webkit-scrollbar-thumb{background:rgba(196,186,224,0.2);border-radius:2px}
 
 @media(max-width:768px){
-  .nav-links{display:none}
+  .nav-links,.nav-wa{display:none}
   .metrics-strip{grid-template-columns:repeat(2,1fr)}
   .steps-g{grid-template-columns:1fr}
   .step-c.full{grid-column:1}
   .kpi-row{grid-template-columns:repeat(3,1fr)}
   .chart-row{grid-template-columns:1fr}
   footer{grid-template-columns:1fr}
-  .contact-grid{grid-template-columns:1fr}
+  .contact-actions{grid-template-columns:1fr}
+  .float-contact{right:12px}
 }
 </style>
 </head>
 <body>
 
+<!-- CUSTOM CURSOR -->
 <div class="cursor" id="cur"></div>
 <div class="cring" id="crng"></div>
+
+<!-- FLOATING CONTACT BUTTONS -->
+<div class="float-contact">
+  <a class="fc-btn fc-wa" href="https://wa.me/918100888810" target="_blank">
+    <span style="font-size:22px">💬</span>
+    <span class="fc-tooltip">WhatsApp Us</span>
+  </a>
+  <a class="fc-btn fc-mail" href="mailto:Tirumala.textiles10@gmail.com">
+    <span style="font-size:20px">✉️</span>
+    <span class="fc-tooltip">Send Email</span>
+  </a>
+  <a class="fc-btn fc-insta" href="https://instagram.com/tirumalatextiles10" target="_blank">
+    <span style="font-size:20px">📷</span>
+    <span class="fc-tooltip">@tirumalatextiles10</span>
+  </a>
+</div>
 
 <!-- NAVBAR -->
 <nav id="navbar">
@@ -309,54 +450,51 @@ footer{background:rgba(8,10,14,0.98);border-top:1px solid rgba(184,176,208,0.07)
     <li><a href="#mobile">Mobile</a></li>
     <li><a href="#cta">Contact</a></li>
   </ul>
-  <button class="nav-cta">Get Demo</button>
+  <div class="nav-right">
+    <a class="nav-wa" href="https://wa.me/918100888810" target="_blank">💬 WhatsApp</a>
+    <button class="nav-cta" onclick="document.getElementById('cta').scrollIntoView({behavior:'smooth'})">Get Demo</button>
+  </div>
 </nav>
 
-<!-- ═══ HERO — VIDEO BG ═══ -->
+<!-- ═══ HERO ═══ -->
 <section class="vsec" id="hero">
+  <canvas id="particles-canvas"></canvas>
   <div class="vid-bg">
-    <video autoplay muted loop playsinline src="hero-bg.mp4">
-      <source src="hero-bg.webm" type="video/webm">
-    </video>
-    <div class="vid-placeholder">
-      <div class="vid-placeholder-inner">
-        <div>🏭</div>
-        <div>PLACE hero-bg.mp4 IN SAME FOLDER</div>
-      </div>
-    </div>
-    <div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(14,16,24,0.72) 0%,rgba(14,16,24,0.22) 45%,rgba(14,16,24,0.22) 55%,rgba(14,16,24,0.78) 100%)"></div>
+    <video autoplay muted loop playsinline src="hero-bg.mp4"></video>
+    <div class="voverlay-dark"></div>
   </div>
-  <div class="hero-grid-overlay"></div>
+  <div class="hero-grid"></div>
   <div class="hero-body">
-    <div class="hero-eyebrow">EXCEL AI OS &nbsp;·&nbsp; POWER APPS &nbsp;·&nbsp; VBA AUTOMATION</div>
+    <div class="hero-eye">EXCEL AI OS &nbsp;·&nbsp; POWER APPS &nbsp;·&nbsp; VBA AUTOMATION</div>
     <h1 class="hero-h1">Turn <em>1 hour</em> of<br>factory chaos into<br><em>3 minutes.</em></h1>
     <p class="hero-p">We build indestructible automated Excel ecosystems — natively integrated with Power Apps — custom-engineered for garment factory floors. 17 specialized modules. Zero generic software.</p>
     <div class="hero-btns">
-      <button class="btn-p" onclick="document.getElementById('cta').scrollIntoView({behavior:'smooth'})">Run Live Demo</button>
-      <button class="btn-s" onclick="document.getElementById('modules').scrollIntoView({behavior:'smooth'})">See All Modules</button>
+      <button class="btn-primary" onclick="document.getElementById('cta').scrollIntoView({behavior:'smooth'})">Run Live Demo</button>
+      <a class="btn-wa-hero" href="https://wa.me/918100888810" target="_blank">💬 WhatsApp Now</a>
+      <button class="btn-ghost" onclick="document.getElementById('modules').scrollIntoView({behavior:'smooth'})">See 17 Modules</button>
     </div>
     <div class="metrics-strip">
       <div class="mcard"><div class="mnum" data-target="17">0</div><div class="mlbl">MODULES LIVE</div></div>
       <div class="mcard"><div class="mnum" data-target="6">0</div><div class="mlbl">HOURS SAVED / DAY</div></div>
       <div class="mcard"><div class="mnum" data-target="38">0</div><div class="mlbl">FACTORIES SERVED</div></div>
-      <div class="mcard"><div class="mnum" data-target="99">0</div><div class="msup" style="display:inline">%</div><div class="mlbl">ACCURACY RATE</div></div>
+      <div class="mcard"><div class="mnum" data-target="99">0</div><span class="msup">%</span><div class="mlbl">ACCURACY RATE</div></div>
     </div>
   </div>
 </section>
 
-<!-- ═══ EXCEL ENGINE — LIGHT SECTION W/ VIDEO ═══ -->
-<section class="vsec vsec-light sec" id="excel">
+<div class="rich-divider"></div>
+
+<!-- ═══ EXCEL ENGINE ═══ -->
+<section class="vsec sec" id="excel" style="--vid-opacity:0.22;background:var(--paper)">
   <div class="vid-bg">
-    <video autoplay muted loop playsinline src="excel-engine.mp4">
-      <source src="excel-engine.webm" type="video/webm">
-    </video>
-    <div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(244,240,234,0.88) 0%,rgba(244,240,234,0.68) 50%,rgba(244,240,234,0.9) 100%)"></div>
+    <video autoplay muted loop playsinline src="excel-engine.mp4"></video>
+    <div class="voverlay-light"></div>
   </div>
   <div class="sec-inner" style="position:relative;z-index:2">
-    <div class="sec-eye">LIVE ENGINE</div>
-    <h2 class="sec-h" style="color:var(--ink)">Master_ERP_Engine.xlsm</h2>
-    <p class="sec-p">Excel evolved into an operating system. VBA macros fire, KPIs update, PDF reports auto-generate in real time.</p>
-    <div class="xwin">
+    <div class="sec-eye sec-eye-light">LIVE ENGINE</div>
+    <h2 class="sec-h sec-h-light">Master_ERP_Engine.xlsm</h2>
+    <p class="sec-p sec-p-light">Excel evolved into an operating system. Watch VBA macros fire, KPIs update, and PDF reports auto-generate in real time.</p>
+    <div class="xwin perspective-wrap" id="excelWin">
       <div class="xtbar">
         <div class="xdot" style="background:#FF5F57"></div>
         <div class="xdot" style="background:#FEBC2E"></div>
@@ -371,138 +509,104 @@ footer{background:rgba(8,10,14,0.98);border-top:1px solid rgba(184,176,208,0.07)
         </div>
       </div>
       <div class="xrib">
-        <span class="xtab on">Home</span>
-        <span class="xtab">Insert</span>
-        <span class="xtab">Page Layout</span>
-        <span class="xtab">Formulas</span>
-        <span class="xtab">Data</span>
-        <span class="xtab">Review</span>
-        <span class="xtab">Developer</span>
-        <span class="xtab" style="color:#7A6FA8;font-weight:500">AI Macros</span>
+        <span class="xtab on">Home</span><span class="xtab">Insert</span><span class="xtab">Page Layout</span>
+        <span class="xtab">Formulas</span><span class="xtab">Data</span><span class="xtab">Review</span>
+        <span class="xtab">Developer</span><span class="xtab" style="color:#7060B8;font-weight:600">⚡ AI Macros</span>
       </div>
       <div class="xfbar">
-        <span class="xcref">D8</span>
+        <span class="xcref" id="xcref">D8</span>
         <span class="xfx">fx</span>
-        <span class="xftxt">=IF(F8="PENDING",VLOOKUP(A8,BuyerSheet!$A:$Z,8,0)*C8,"✓ COMPLETE") — VBA: Auto_ERP_Sync() executing...</span>
+        <span class="xftxt" id="xftxt">=IF(F8="PENDING",VLOOKUP(A8,BuyerSheet!$A:$Z,8,0)*C8,"✓ COMPLETE")</span>
       </div>
       <div class="xgrid">
         <table class="xt">
-          <thead>
-            <tr>
-              <th style="width:30px"></th>
-              <th style="min-width:100px">A</th><th style="min-width:100px">B</th><th style="min-width:130px">C</th>
-              <th style="min-width:70px">D</th><th style="min-width:60px">E</th><th style="min-width:60px">F</th>
-              <th style="min-width:60px">G</th><th style="min-width:100px">H</th><th style="min-width:80px">I</th>
-              <th style="min-width:80px">J</th>
-            </tr>
-          </thead>
+          <thead><tr>
+            <th style="width:28px"></th>
+            <th style="min-width:100px">A</th><th style="min-width:105px">B</th><th style="min-width:140px">C</th>
+            <th style="min-width:72px">D</th><th style="min-width:62px">E</th><th style="min-width:62px">F</th>
+            <th style="min-width:62px">G</th><th style="min-width:105px">H</th><th style="min-width:82px">I</th><th style="min-width:82px">J</th>
+          </tr></thead>
           <tbody>
-            <tr>
-              <td class="xrh">1</td>
-              <td colspan="10" style="background:#EEF0F8;color:#4A52A8;font-weight:600;letter-spacing:0.1em;padding:8px 10px;font-size:11px">MASTER ERP ENGINE — GARMENT PRODUCTION TRACKER — TIRUMALA AUTOMATION v4.2</td>
-            </tr>
-            <tr>
-              <td class="xrh">2</td>
-              <td style="background:#F5F6F8;color:#8A8E9A;font-weight:500;font-size:9px;letter-spacing:0.08em">ORDER NO.</td>
-              <td style="background:#F5F6F8;color:#8A8E9A;font-weight:500;font-size:9px;letter-spacing:0.08em">BUYER</td>
-              <td style="background:#F5F6F8;color:#8A8E9A;font-weight:500;font-size:9px;letter-spacing:0.08em">STYLE</td>
-              <td style="background:#F5F6F8;color:#8A8E9A;font-weight:500;font-size:9px;letter-spacing:0.08em">QTY (PCS)</td>
-              <td style="background:#F5F6F8;color:#8A8E9A;font-weight:500;font-size:9px;letter-spacing:0.08em">CUT %</td>
-              <td style="background:#F5F6F8;color:#8A8E9A;font-weight:500;font-size:9px;letter-spacing:0.08em">STITCH %</td>
-              <td style="background:#F5F6F8;color:#8A8E9A;font-weight:500;font-size:9px;letter-spacing:0.08em">FINISH %</td>
-              <td style="background:#F5F6F8;color:#8A8E9A;font-weight:500;font-size:9px;letter-spacing:0.08em">STATUS</td>
-              <td style="background:#F5F6F8;color:#8A8E9A;font-weight:500;font-size:9px;letter-spacing:0.08em">SHIP DATE</td>
-              <td style="background:#F5F6F8;color:#8A8E9A;font-weight:500;font-size:9px;letter-spacing:0.08em">ALERT</td>
+            <tr><td class="xrh">1</td><td colspan="10" style="background:#EBEEf8;color:#3840A8;font-weight:600;letter-spacing:0.1em;padding:8px 11px;font-size:11px">MASTER ERP ENGINE — GARMENT PRODUCTION TRACKER — TIRUMALA AUTOMATION v4.2</td></tr>
+            <tr><td class="xrh">2</td>
+              <td style="background:#F4F5FA;color:#6A6E82;font-weight:600;font-size:9px;letter-spacing:0.1em">ORDER NO.</td>
+              <td style="background:#F4F5FA;color:#6A6E82;font-weight:600;font-size:9px;letter-spacing:0.1em">BUYER</td>
+              <td style="background:#F4F5FA;color:#6A6E82;font-weight:600;font-size:9px;letter-spacing:0.1em">STYLE</td>
+              <td style="background:#F4F5FA;color:#6A6E82;font-weight:600;font-size:9px;letter-spacing:0.1em">QTY (PCS)</td>
+              <td style="background:#F4F5FA;color:#6A6E82;font-weight:600;font-size:9px;letter-spacing:0.1em">CUT %</td>
+              <td style="background:#F4F5FA;color:#6A6E82;font-weight:600;font-size:9px;letter-spacing:0.1em">STITCH %</td>
+              <td style="background:#F4F5FA;color:#6A6E82;font-weight:600;font-size:9px;letter-spacing:0.1em">FINISH %</td>
+              <td style="background:#F4F5FA;color:#6A6E82;font-weight:600;font-size:9px;letter-spacing:0.1em">STATUS</td>
+              <td style="background:#F4F5FA;color:#6A6E82;font-weight:600;font-size:9px;letter-spacing:0.1em">SHIP DATE</td>
+              <td style="background:#F4F5FA;color:#6A6E82;font-weight:600;font-size:9px;letter-spacing:0.1em">ALERT</td>
             </tr>
             <tr class="xcpulse"><td class="xrh">3</td><td class="xca">TA-2024-001</td><td>BUYER A</td><td>POLO SHIRT / WHITE</td><td>12,000</td><td class="xg">98.2%</td><td class="xg">94.7%</td><td class="xo">78.3%</td><td><span class="xbadge xbo">ON TRACK</span></td><td>15-Jun-25</td><td>—</td></tr>
             <tr><td class="xrh">4</td><td>TA-2024-002</td><td>BUYER B</td><td>SLIM FIT TROUSER / BLK</td><td>8,500</td><td class="xg">100%</td><td class="xo">82.1%</td><td class="xr">41.2%</td><td><span class="xbadge xbr">⚠ DELAYED</span></td><td>10-Jun-25</td><td class="xr">🔴 CRITICAL</td></tr>
             <tr><td class="xrh">5</td><td>TA-2024-003</td><td>BUYER C</td><td>CREW NECK SWEATSHIRT</td><td>15,200</td><td class="xg">100%</td><td class="xg">100%</td><td class="xg">96.4%</td><td><span class="xbadge xbg">✓ COMPLETE</span></td><td>08-Jun-25</td><td class="xg">—</td></tr>
             <tr><td class="xrh">6</td><td>TA-2024-004</td><td>BUYER D</td><td>DRY-FIT SHORTS / NAVY</td><td>22,000</td><td class="xo">71.3%</td><td class="xo">45.8%</td><td class="xr">12.0%</td><td><span class="xbadge xbr">🔴 AT RISK</span></td><td>20-Jun-25</td><td class="xr">🔴 ALERT</td></tr>
             <tr><td class="xrh">7</td><td>TA-2024-005</td><td>BUYER E</td><td>LINEN SHIRT / ECRU</td><td>6,800</td><td class="xg">88.9%</td><td class="xg">79.2%</td><td class="xo">60.1%</td><td><span class="xbadge xbo">IN PROGRESS</span></td><td>25-Jun-25</td><td>—</td></tr>
-            <tr><td class="xrh">8</td><td class="xca">TA-2024-006</td><td>BUYER F</td><td>PERFORMANCE JACKET / RED</td><td>4,200</td><td class="xg">100%</td><td class="xg">100%</td><td class="xg">100%</td><td><span class="xbadge xbg">✓ SHIPPED</span></td><td>01-Jun-25</td><td class="xg">✓ DONE</td></tr>
+            <tr><td class="xrh">8</td><td class="xca">TA-2024-006</td><td>BUYER F</td><td>PERFORMANCE JACKET</td><td>4,200</td><td class="xg">100%</td><td class="xg">100%</td><td class="xg">100%</td><td><span class="xbadge xbg">✓ SHIPPED</span></td><td>01-Jun-25</td><td class="xg">✓ DONE</td></tr>
             <tr><td class="xrh">9</td><td>TA-2024-007</td><td>BUYER G</td><td>FORMAL SHIRT / BLUE CHECK</td><td>9,100</td><td class="xo">55.4%</td><td class="xr">23.1%</td><td class="xr">0%</td><td><span class="xbadge xbr">⚠ BEHIND</span></td><td>18-Jun-25</td><td class="xr">🔴 URGENT</td></tr>
-            <tr style="background:#F0F2F8">
-              <td class="xrh">10</td>
-              <td colspan="3" style="color:#7A6FA8;font-size:9px;letter-spacing:0.06em">⚡ MACRO: Auto_PDF_Export() — 09:14:32 AM ✓</td>
-              <td style="color:#5A5E6A;font-size:9px">=SUM(D3:D9)</td>
-              <td style="color:#5A5E6A;font-size:9px">=AVG(E3:E9)</td>
-              <td colspan="5" style="color:#5A5E6A;font-size:9px">=AVERAGEIF(H3:H9,"COMPLETE",G3:G9)</td>
-            </tr>
-            <tr style="background:#EEF5EE">
-              <td class="xrh">11</td>
-              <td colspan="3" style="color:#5A5E6A;font-size:9px;letter-spacing:0.06em">KPI SUMMARY — Auto-generated 09:14 AM</td>
-              <td class="xg" style="font-weight:600">77,800</td>
-              <td class="xg">87.8%</td>
-              <td class="xo">74.9%</td>
-              <td class="xo">55.4%</td>
-              <td colspan="3" style="color:#5A5E6A;font-size:9px">7 orders active · 2 complete</td>
-            </tr>
+            <tr style="background:#EEF0F8"><td class="xrh">10</td><td colspan="3" style="color:#6858B0;font-size:9px;letter-spacing:0.06em">⚡ MACRO: Auto_PDF_Export() — <span id="xtime">09:14:32</span> AM ✓</td><td style="color:#5A5E72;font-size:9px">=SUM(D3:D9)</td><td colspan="6" style="color:#5A5E72;font-size:9px">=AVERAGEIF(H3:H9,"COMPLETE",G3:G9)</td></tr>
+            <tr style="background:#EEF5EE"><td class="xrh">11</td><td colspan="3" style="color:#5A5E72;font-size:9px">KPI SUMMARY — Auto-generated</td><td class="xg" style="font-weight:700">77,800</td><td class="xg">87.8%</td><td class="xo">74.9%</td><td class="xo">55.4%</td><td colspan="3" style="color:#5A5E72;font-size:9px">7 orders · 2 complete</td></tr>
           </tbody>
         </table>
       </div>
       <div class="xstat">
-        <div class="xsl">Ready | MACRO: Auto_Sync_Running | Sheet: ERP_Master | Cells: 1,247</div>
-        <div style="display:flex;gap:14px">
-          <span class="xsl">Average: 78.4%</span>
-          <span class="xsl">Count: 7</span>
-          <span class="xsl">Sum: 77,800</span>
-          <span class="xsl" style="color:#7A6FA8">100% ▾</span>
-        </div>
+        <div class="xsl">Ready | MACRO: Auto_Sync_Running | Sheet: ERP_Master | 1,247 cells</div>
+        <div style="display:flex;gap:16px"><span class="xsl">Average: 78.4%</span><span class="xsl">Count: 7</span><span class="xsl">Sum: 77,800</span><span class="xsl" style="color:#6858B0">100% ▾</span></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══ ARCHITECTURE STEPS — DARK ═══ -->
+<div class="rich-divider"></div>
+
+<!-- ═══ ARCHITECTURE ═══ -->
 <section class="sec" id="architecture">
   <div class="sec-inner">
     <div class="sec-eye">OS WORKFLOW</div>
     <h2 class="sec-h">From data entry to boardroom<br>report in 3 minutes.</h2>
     <div class="steps-g">
-      <div class="step-c"><div class="step-n">01</div>
-        <div class="step-ico">📱</div>
+      <div class="step-c"><div class="step-n">01</div><div class="step-ico">📱</div>
         <div class="step-t">Mobile Entry — Power Apps</div>
         <div class="step-d">Factory floor worker enters production data into Power Apps on Android. Live syncing. Production counters update instantly.</div>
         <div class="code-blk"><div class="cl cl-g">▶ PowerApps.Submit(ProductionForm)</div><div class="cl">→ Sync to SharePoint: 847 records</div><div class="cl cl-p">→ Excel trigger: FIRED ✓</div></div>
       </div>
-      <div class="step-c"><div class="step-n">02</div>
-        <div class="step-ico">⚡</div>
+      <div class="step-c"><div class="step-n">02</div><div class="step-ico">⚡</div>
         <div class="step-t">Excel Macro Fires — VBA Engine</div>
-        <div class="step-d">VBA engine executes automation instantly. Formulas cascade. Stock validation runs. Calculations spread factory-wide.</div>
-        <div class="code-blk"><div class="cl cl-y">Sub Auto_ERP_Sync()</div><div class="cl">  Call RefreshAllKPIs</div><div class="cl">  Call ValidateStock</div><div class="cl cl-g">  MsgBox "Sync COMPLETE" ✓</div></div>
+        <div class="step-d">VBA engine executes automation instantly. Formulas cascade. Stock validation runs. Calculations spread factory-wide in seconds.</div>
+        <div class="code-blk"><div class="cl cl-y">Sub Auto_ERP_Sync()</div><div class="cl">  Call RefreshAllKPIs</div><div class="cl">  Call ValidateStock</div><div class="cl cl-g">  — Sync COMPLETE ✓</div></div>
       </div>
-      <div class="step-c"><div class="step-n">03</div>
-        <div class="step-ico">🧠</div>
+      <div class="step-c"><div class="step-n">03</div><div class="step-ico">🧠</div>
         <div class="step-t">AI Logic Layer — Rule Engine</div>
         <div class="step-d">Intelligent rule engine detects risks, analyzes shortages, triggers smart alerts, calculates variance in milliseconds.</div>
-        <div class="code-blk"><div class="cl cl-r">🔴 RISK: Order B — 14 days behind</div><div class="cl cl-y">⚠ STOCK: Thread #40 — 2,400m short</div><div class="cl cl-p">→ Alert to: MD, Merchant dispatched</div></div>
+        <div class="code-blk"><div class="cl cl-r">🔴 RISK: Order B — 14 days behind</div><div class="cl cl-y">⚠ STOCK: Thread #40 — 2,400m short</div><div class="cl cl-p">→ Alert dispatched to MD + Merchant</div></div>
       </div>
-      <div class="step-c"><div class="step-n">04</div>
-        <div class="step-ico">📄</div>
+      <div class="step-c"><div class="step-n">04</div><div class="step-ico">📄</div>
         <div class="step-t">PDF Auto-Generated</div>
-        <div class="step-d">Professional boardroom reports auto-generate and distribute. Dashboards export. KPI summaries reach management in seconds.</div>
-        <div class="code-blk"><div class="cl cl-p">📄 Generating: Daily_KPI_Report.pdf</div><div class="cl">   Pages: 12 | Rows: 2,847</div><div class="cl cl-g">✓ Sent to 5 recipients — 09:14 AM</div></div>
+        <div class="step-d">Professional boardroom reports auto-generate and distribute. KPI summaries reach management in seconds. Zero manual effort.</div>
+        <div class="code-blk"><div class="cl cl-p">📄 Daily_KPI_Report.pdf — Pages: 12</div><div class="cl">   Data rows: 2,847 processed</div><div class="cl cl-g">✓ Sent to 5 recipients — 09:14 AM</div></div>
       </div>
-      <div class="step-c full"><div class="step-n">05</div>
-        <div class="step-ico">💬</div>
+      <div class="step-c full"><div class="step-n">05</div><div class="step-ico">💬</div>
         <div class="step-t">WhatsApp Alert — Instant Dispatch</div>
-        <div class="step-d">Managers receive instant WhatsApp alerts. Production warnings, stock alerts, KPI breaches — dispatched automatically. Zero manual intervention. The factory speaks to its leaders in real time.</div>
-        <div class="code-blk" style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
-          <div><div class="cl cl-g">✓ WhatsApp API: Connected</div><div class="cl">→ MD: "Order B Critical — Day 14"</div><div class="cl">→ Merchant: "Thread Stock Alert"</div><div class="cl cl-g">✓ All delivered: 09:14:38 AM</div></div>
-          <div><div class="cl cl-p">Total Time: 2 min 47 sec</div><div class="cl">Data points: 12,847</div><div class="cl">Reports: 7 generated</div><div class="cl cl-g">Accuracy: 99.4% ✓</div></div>
+        <div class="step-d">Managers receive instant WhatsApp alerts. Production warnings, stock alerts, KPI breaches — all dispatched automatically. The factory speaks to its leaders in real time.</div>
+        <div class="code-blk" style="display:grid;grid-template-columns:1fr 1fr;gap:24px">
+          <div><div class="cl cl-g">✓ WhatsApp API: Connected</div><div class="cl">→ MD: "Order B — Day 14 Critical"</div><div class="cl">→ Merchant: "Thread Stock Alert"</div><div class="cl cl-g">✓ All delivered: 09:14:38 AM</div></div>
+          <div><div class="cl cl-p">Total Time: 2 min 47 sec</div><div class="cl">Data points processed: 12,847</div><div class="cl">Reports generated: 7</div><div class="cl cl-g">Accuracy: 99.4% ✓</div></div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══ DASHBOARD — VIDEO BG DARK ═══ -->
-<section class="vsec sec" id="dashboard" style="padding:100px 40px">
+<div class="rich-divider"></div>
+
+<!-- ═══ DASHBOARD ═══ -->
+<section class="vsec sec" id="dashboard" style="--vid-opacity:0.50">
   <div class="vid-bg">
-    <video autoplay muted loop playsinline src="factory-floor.mp4">
-      <source src="factory-floor.webm" type="video/webm">
-    </video>
-    <div style="position:absolute;inset:0;background:rgba(14,16,24,0.8)"></div>
+    <video autoplay muted loop playsinline src="factory-floor.mp4"></video>
+    <div style="position:absolute;inset:0;background:rgba(10,12,20,0.75)"></div>
   </div>
   <div class="sec-inner" style="position:relative;z-index:2">
     <div class="sec-eye">COMMAND CENTER</div>
@@ -512,7 +616,7 @@ footer{background:rgba(8,10,14,0.98);border-top:1px solid rgba(184,176,208,0.07)
       <div class="dash-hdr">
         <div class="dh-t">FACTORY OPERATIONS — LIVE VIEW</div>
         <div style="display:flex;gap:24px;align-items:center">
-          <span style="font-size:10px;color:rgba(148,168,188,0.4);letter-spacing:0.1em" id="dashtime">--</span>
+          <span style="font-size:10px;color:rgba(148,168,188,0.38);letter-spacing:0.1em" id="dashtime">--</span>
           <div class="dlive"><div class="ldot"></div>LIVE</div>
         </div>
       </div>
@@ -522,46 +626,48 @@ footer{background:rgba(8,10,14,0.98);border-top:1px solid rgba(184,176,208,0.07)
         <div class="kpi"><div class="kv">94.8%</div><div class="kl">CUTTING %</div><div class="kch up">↑ Good</div></div>
         <div class="kpi"><div class="kv">79.2%</div><div class="kl">STITCHING %</div><div class="kch wn">→ Stable</div></div>
         <div class="kpi"><div class="kv">61.7%</div><div class="kl">FINISHING %</div><div class="kch dn">↓ Monitor</div></div>
-        <div class="kpi"><div class="kv" style="color:#E4A0A0">3</div><div class="kl">STOCK ALERTS</div><div class="kch dn">⚠ Action</div></div>
+        <div class="kpi"><div class="kv" style="color:#E8A8A8">3</div><div class="kl">STOCK ALERTS</div><div class="kch dn">⚠ Action</div></div>
       </div>
       <div class="chart-row">
         <div class="cpanel">
           <div class="cp-t">WEEKLY PRODUCTION OUTPUT (PCS)</div>
           <div class="bars">
-            <div class="bar-item"><div class="bar-fill" style="height:75%;background:rgba(184,176,208,0.5)"></div><div class="bar-lbl">MON</div></div>
-            <div class="bar-item"><div class="bar-fill" style="height:88%;background:rgba(148,168,188,0.5);animation-delay:0.1s"></div><div class="bar-lbl">TUE</div></div>
-            <div class="bar-item"><div class="bar-fill" style="height:82%;background:rgba(184,176,208,0.45);animation-delay:0.2s"></div><div class="bar-lbl">WED</div></div>
-            <div class="bar-item"><div class="bar-fill" style="height:95%;background:rgba(216,207,192,0.5);animation-delay:0.3s"></div><div class="bar-lbl">THU</div></div>
-            <div class="bar-item"><div class="bar-fill" style="height:90%;background:rgba(122,196,160,0.45);animation-delay:0.4s"></div><div class="bar-lbl">FRI</div></div>
-            <div class="bar-item"><div class="bar-fill" style="height:65%;background:rgba(184,176,208,0.35);animation-delay:0.5s"></div><div class="bar-lbl">SAT</div></div>
-            <div class="bar-item"><div class="bar-fill" style="height:78%;background:rgba(148,168,188,0.45);animation-delay:0.6s"></div><div class="bar-lbl">SUN</div></div>
+            <div class="bar-item"><div class="bar-fill" style="height:75%;background:rgba(196,186,224,0.5)"></div><div class="bar-lbl">MON</div></div>
+            <div class="bar-item"><div class="bar-fill" style="height:88%;background:rgba(160,184,208,0.5);animation-delay:0.1s"></div><div class="bar-lbl">TUE</div></div>
+            <div class="bar-item"><div class="bar-fill" style="height:82%;background:rgba(196,186,224,0.45);animation-delay:0.2s"></div><div class="bar-lbl">WED</div></div>
+            <div class="bar-item"><div class="bar-fill" style="height:95%;background:rgba(216,200,152,0.5);animation-delay:0.3s"></div><div class="bar-lbl">THU</div></div>
+            <div class="bar-item"><div class="bar-fill" style="height:90%;background:rgba(128,200,160,0.48);animation-delay:0.4s"></div><div class="bar-lbl">FRI</div></div>
+            <div class="bar-item"><div class="bar-fill" style="height:65%;background:rgba(196,186,224,0.35);animation-delay:0.5s"></div><div class="bar-lbl">SAT</div></div>
+            <div class="bar-item"><div class="bar-fill" style="height:78%;background:rgba(160,184,208,0.45);animation-delay:0.6s"></div><div class="bar-lbl">SUN</div></div>
           </div>
         </div>
         <div class="donut-p">
           <div class="cp-t">ORDER COMPLETION</div>
-          <svg width="110" height="110" viewBox="0 0 110 110">
-            <circle cx="55" cy="55" r="42" fill="none" stroke="rgba(184,176,208,0.1)" stroke-width="8"/>
-            <circle cx="55" cy="55" r="42" fill="none" stroke="rgba(184,176,208,0.55)" stroke-width="8"
-              stroke-dasharray="264 264" stroke-dashoffset="66" stroke-linecap="round"
-              transform="rotate(-90 55 55)" style="transition:stroke-dashoffset 1.5s ease"/>
+          <svg width="116" height="116" viewBox="0 0 116 116">
+            <circle cx="58" cy="58" r="46" fill="none" stroke="rgba(196,186,224,0.1)" stroke-width="9"/>
+            <circle cx="58" cy="58" r="46" fill="none" stroke="rgba(196,186,224,0.55)" stroke-width="9"
+              stroke-dasharray="289 289" stroke-dashoffset="72" stroke-linecap="round"
+              transform="rotate(-90 58 58)"/>
           </svg>
-          <div style="font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:300;color:var(--cream);margin-top:-68px;text-align:center;position:relative;z-index:2">75%</div>
-          <div style="margin-top:50px;font-size:9px;color:rgba(148,168,188,0.4);letter-spacing:0.14em">ORDERS ON TRACK</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:300;color:var(--cream);margin-top:-72px;text-align:center;position:relative;z-index:2">75%</div>
+          <div style="margin-top:52px;font-size:9px;color:rgba(148,168,188,0.4);letter-spacing:0.14em">ORDERS ON TRACK</div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══ ROLE SHIELD — LIGHT ═══ -->
+<div class="rich-divider"></div>
+
+<!-- ═══ SHIELD ═══ -->
 <section class="sec" id="shield" style="background:var(--paper)">
   <div class="sec-inner">
-    <div class="sec-eye" style="color:var(--lav3);opacity:0.8">PRIVACY ARCHITECTURE</div>
-    <h2 class="sec-h" style="color:var(--ink)">Merchant Privacy Shield.</h2>
-    <p class="sec-p" style="color:var(--ink3)">Each merchandiser sees only their buyer's orders. Built-in confidentiality. Zero configuration.</p>
+    <div class="sec-eye sec-eye-light">PRIVACY ARCHITECTURE</div>
+    <h2 class="sec-h sec-h-light">Merchant Privacy Shield.</h2>
+    <p class="sec-p sec-p-light">Each merchandiser sees only their buyer's orders. Built-in confidentiality. Zero configuration.</p>
     <div class="shield-wrap">
       <div class="shield-hdr">
-        <div style="font-size:11px;font-weight:500;color:var(--cream);letter-spacing:0.1em">ACCESS CONTROL — ROLE-BASED VIEW</div>
+        <div style="font-size:11px;font-weight:500;color:var(--cream);letter-spacing:0.12em">ACCESS CONTROL — ROLE-BASED VIEW</div>
         <div class="shield-tabs" id="stabs">
           <div class="stab on" data-tab="admin">ADMIN</div>
           <div class="stab" data-tab="hm">BUYER A</div>
@@ -579,7 +685,9 @@ footer{background:rgba(8,10,14,0.98);border-top:1px solid rgba(184,176,208,0.07)
   </div>
 </section>
 
-<!-- ═══ MODULES — DARK ═══ -->
+<div class="rich-divider"></div>
+
+<!-- ═══ MODULES ═══ -->
 <section class="sec" id="modules">
   <div class="sec-inner">
     <div class="sec-eye">17 SPECIALIZED MODULES</div>
@@ -589,34 +697,32 @@ footer{background:rgba(8,10,14,0.98);border-top:1px solid rgba(184,176,208,0.07)
   </div>
 </section>
 
-<!-- ═══ VIDEO GALLERY — FULL CINEMATIC SECTIONS ═══ -->
-<section class="vsec vsec-gallery" id="vid1">
-  <div class="vid-bg">
-    <video autoplay muted loop playsinline src="excel-engine.mp4"><source src="excel-engine.webm" type="video/webm"></video>
-  </div>
+<div class="rich-divider"></div>
+
+<!-- ═══ VIDEO FILMS ═══ -->
+<section class="vsec vsec-gallery" id="vid1" style="--vid-opacity:0.70">
+  <div class="vid-bg"><video autoplay muted loop playsinline src="excel-engine.mp4"></video>
+    <div class="voverlay-dark"></div></div>
   <div class="vid-content">
     <div class="vid-tag">AUTOMATION FILM 01</div>
     <h2 class="vid-h">Automated Fabric Order Generation</h2>
-    <p class="vid-d">Merchandiser enters buyer quantity once. Fabric calculations populate instantly. Purchase orders auto-generate. Supplier sheets synchronize automatically. VBA macros execute in real time.</p>
+    <p class="vid-d">Merchandiser enters buyer quantity once. Fabric calculations populate instantly. Purchase orders auto-generate. Supplier sheets synchronize. VBA macros execute in real time.</p>
   </div>
 </section>
 
-<section class="vsec vsec-gallery" id="vid2" style="background:var(--paper)">
-  <div class="vid-bg">
-    <video autoplay muted loop playsinline src="factory-floor.mp4"><source src="factory-floor.webm" type="video/webm"></video>
-    <div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(244,240,234,0.72) 0%,rgba(244,240,234,0.45) 50%,rgba(244,240,234,0.78) 100%)"></div>
-  </div>
-  <div class="vid-content" style="color:var(--ink)">
-    <div class="vid-tag" style="color:var(--lav3)">AUTOMATION FILM 02</div>
+<section class="vsec vsec-gallery" id="vid2" style="--vid-opacity:0.68;background:var(--paper2)">
+  <div class="vid-bg"><video autoplay muted loop playsinline src="factory-floor.mp4"></video>
+    <div class="voverlay-light"></div></div>
+  <div class="vid-content">
+    <div class="vid-tag" style="color:rgba(120,112,184,0.8)">AUTOMATION FILM 02</div>
     <h2 class="vid-h" style="color:var(--ink)">Accessory Pending Intelligence</h2>
-    <p class="vid-d" style="color:var(--ink3)">Live dashboard identifies delayed trims, shortages, missing accessories and supplier delays in real time. Red alerts pulse across elegant Excel dashboards. Zero manual chasing.</p>
+    <p class="vid-d" style="color:rgba(60,62,80,0.7)">Live dashboard identifies delayed trims, shortages, missing accessories and supplier delays in real time. Red alerts pulse across Excel dashboards. Zero manual chasing.</p>
   </div>
 </section>
 
-<section class="vsec vsec-gallery" id="vid3">
-  <div class="vid-bg">
-    <video autoplay muted loop playsinline src="mobile-apps.mp4"><source src="mobile-apps.webm" type="video/webm"></video>
-  </div>
+<section class="vsec vsec-gallery" id="vid3" style="--vid-opacity:0.70">
+  <div class="vid-bg"><video autoplay muted loop playsinline src="mobile-apps.mp4"></video>
+    <div class="voverlay-dark"></div></div>
   <div class="vid-content">
     <div class="vid-tag">AUTOMATION FILM 03</div>
     <h2 class="vid-h">One Update. Entire Factory Synced.</h2>
@@ -624,108 +730,106 @@ footer{background:rgba(8,10,14,0.98);border-top:1px solid rgba(184,176,208,0.07)
   </div>
 </section>
 
-<section class="vsec vsec-gallery" id="vid4" style="background:var(--paper2)">
-  <div class="vid-bg">
-    <video autoplay muted loop playsinline src="cta-bg.mp4"><source src="cta-bg.webm" type="video/webm"></video>
-    <div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(237,232,224,0.72) 0%,rgba(237,232,224,0.45) 50%,rgba(237,232,224,0.78) 100%)"></div>
-  </div>
-  <div class="vid-content" style="color:var(--ink)">
-    <div class="vid-tag" style="color:var(--lav3)">AUTOMATION FILM 04</div>
+<section class="vsec vsec-gallery" id="vid4" style="--vid-opacity:0.65;background:var(--paper2)">
+  <div class="vid-bg"><video autoplay muted loop playsinline src="cta-bg.mp4"></video>
+    <div class="voverlay-light"></div></div>
+  <div class="vid-content">
+    <div class="vid-tag" style="color:rgba(120,112,184,0.8)">AUTOMATION FILM 04</div>
     <h2 class="vid-h" style="color:var(--ink)">Approve From Anywhere.</h2>
-    <p class="vid-d" style="color:var(--ink3)">Factory owner at an airport lounge receives a production approval notification on their phone. Approves costing and production instantly. Factory systems activate automatically.</p>
+    <p class="vid-d" style="color:rgba(60,62,80,0.7)">Factory owner at an airport lounge receives a production approval notification. Approves costing and production instantly. Factory systems activate automatically.</p>
   </div>
 </section>
 
-<!-- ═══ POWER APPS MOBILE — VIDEO BG ═══ -->
-<section class="vsec sec" id="mobile" style="padding:100px 40px">
-  <div class="vid-bg">
-    <video autoplay muted loop playsinline src="mobile-apps.mp4"><source src="mobile-apps.webm" type="video/webm"></video>
-    <div style="position:absolute;inset:0;background:rgba(14,16,24,0.78)"></div>
-  </div>
+<div class="rich-divider"></div>
+
+<!-- ═══ MOBILE ═══ -->
+<section class="vsec sec" id="mobile" style="--vid-opacity:0.52">
+  <div class="vid-bg"><video autoplay muted loop playsinline src="mobile-apps.mp4"></video>
+    <div style="position:absolute;inset:0;background:rgba(10,12,20,0.76)"></div></div>
   <div class="sec-inner" style="position:relative;z-index:2;text-align:center">
     <div class="sec-eye">POWER APPS ECOSYSTEM</div>
     <h2 class="sec-h" style="text-align:center">Factory in your pocket.</h2>
-    <p class="sec-p" style="text-align:center;margin:0 auto 60px">Production updates every second. Intelligent red alerts. KPI dashboards. Factory approval notifications.</p>
+    <p class="sec-p" style="text-align:center;margin:0 auto 60px">Production updates every second. Intelligent red alerts. KPI dashboards. Factory approvals from anywhere.</p>
     <div class="phones-row">
-      <div class="phone">
-        <div class="pnotch"></div>
-        <div class="pscr">
-          <div class="phdr"><span>PRODUCTION</span><span style="color:#7AC4A0">● LIVE</span></div>
-          <div class="pmet"><div class="pmv" id="pm1">4,847</div><div class="pml">TODAY'S OUTPUT</div><div class="pbar" style="background:linear-gradient(90deg,rgba(184,176,208,0.6) 87%,rgba(184,176,208,0.1) 87%)"></div></div>
-          <div class="pmet"><div class="pmv">87.3%</div><div class="pml">LINE EFF.</div><div class="pbar" style="background:linear-gradient(90deg,rgba(122,196,160,0.6) 87%,rgba(122,196,160,0.1) 87%)"></div></div>
-          <div class="palt palt-r"><div class="palt-t" style="color:#E4A0A0">THREAD ALERT — 2,400m SHORT</div></div>
-        </div>
-      </div>
-      <div class="phone">
-        <div class="pnotch"></div>
-        <div class="pscr">
-          <div class="phdr"><span>KPI DASH</span><span style="color:#E4C880">SYNC</span></div>
-          <div class="pmet" style="border-color:rgba(228,160,160,0.15)"><div class="pmv" style="color:#E4A0A0">3</div><div class="pml">OPEN ALERTS</div></div>
-          <div class="pmet"><div class="pmv">94.8%</div><div class="pml">CUTTING</div><div class="pbar" style="background:linear-gradient(90deg,rgba(122,196,160,0.6) 95%,rgba(122,196,160,0.1) 95%)"></div></div>
-          <div class="pmet"><div class="pmv">61.7%</div><div class="pml">FINISHING</div><div class="pbar" style="background:linear-gradient(90deg,rgba(228,200,128,0.6) 62%,rgba(228,200,128,0.1) 62%)"></div></div>
-        </div>
-      </div>
-      <div class="phone">
-        <div class="pnotch"></div>
-        <div class="pscr">
-          <div class="phdr"><span>APPROVALS</span><span style="color:#7AC4A0">2 PENDING</span></div>
-          <div style="background:rgba(122,196,160,0.08);border:1px solid rgba(122,196,160,0.18);border-radius:7px;padding:9px;margin-bottom:7px">
-            <div class="pml" style="color:#7AC4A0;margin-bottom:3px">APPROVE COSTING?</div>
-            <div style="font-size:10px;color:rgba(196,188,216,0.6)">TA-2024-005 / BUYER E</div>
-            <div style="display:flex;gap:5px;margin-top:7px">
-              <div style="flex:1;background:rgba(122,196,160,0.2);border-radius:4px;padding:4px;text-align:center;font-size:8px;color:#7AC4A0">APPROVE</div>
-              <div style="flex:1;background:rgba(228,160,160,0.1);border-radius:4px;padding:4px;text-align:center;font-size:8px;color:#E4A0A0">HOLD</div>
-            </div>
+      <div class="phone"><div class="pnotch"></div><div class="pscr">
+        <div class="phdr"><span>PRODUCTION</span><span style="color:#80C8A0">● LIVE</span></div>
+        <div class="pmet"><div class="pmv" id="pm1">4,847</div><div class="pml">TODAY'S OUTPUT</div><div class="pbar" style="background:linear-gradient(90deg,rgba(196,186,224,0.6) 87%,rgba(196,186,224,0.1) 87%)"></div></div>
+        <div class="pmet"><div class="pmv">87.3%</div><div class="pml">LINE EFF.</div><div class="pbar" style="background:linear-gradient(90deg,rgba(128,200,160,0.6) 87%,rgba(128,200,160,0.1) 87%)"></div></div>
+        <div class="palt palt-r"><div class="palt-t" style="color:#E8A8A8">THREAD ALERT — 2,400m SHORT</div></div>
+      </div></div>
+      <div class="phone"><div class="pnotch"></div><div class="pscr">
+        <div class="phdr"><span>KPI DASH</span><span style="color:#E8CC88">SYNC</span></div>
+        <div class="pmet" style="border-color:rgba(232,168,168,0.18)"><div class="pmv" style="color:#E8A8A8">3</div><div class="pml">OPEN ALERTS</div></div>
+        <div class="pmet"><div class="pmv">94.8%</div><div class="pml">CUTTING</div><div class="pbar" style="background:linear-gradient(90deg,rgba(128,200,160,0.6) 95%,rgba(128,200,160,0.1) 95%)"></div></div>
+        <div class="pmet"><div class="pmv">61.7%</div><div class="pml">FINISHING</div><div class="pbar" style="background:linear-gradient(90deg,rgba(232,204,136,0.6) 62%,rgba(232,204,136,0.1) 62%)"></div></div>
+      </div></div>
+      <div class="phone"><div class="pnotch"></div><div class="pscr">
+        <div class="phdr"><span>APPROVALS</span><span style="color:#80C8A0">2 PENDING</span></div>
+        <div style="background:rgba(128,200,160,0.08);border:1px solid rgba(128,200,160,0.2);border-radius:8px;padding:9px;margin-bottom:7px">
+          <div class="pml" style="color:#80C8A0;margin-bottom:3px">APPROVE COSTING?</div>
+          <div style="font-size:10px;color:rgba(196,186,224,0.5)">TA-2024-005 / BUYER E</div>
+          <div style="display:flex;gap:5px;margin-top:7px">
+            <div style="flex:1;background:rgba(128,200,160,0.22);border-radius:4px;padding:4px;text-align:center;font-size:8px;color:#80C8A0;font-weight:500">APPROVE</div>
+            <div style="flex:1;background:rgba(232,168,168,0.12);border-radius:4px;padding:4px;text-align:center;font-size:8px;color:#E8A8A8;font-weight:500">HOLD</div>
           </div>
-          <div class="palt palt-g"><div class="palt-t" style="color:#7AC4A0">WhatsApp sent to MD</div></div>
         </div>
-      </div>
-      <div class="phone">
-        <div class="pnotch"></div>
-        <div class="pscr">
-          <div class="phdr"><span>INVENTORY</span><span style="color:#E4A0A0">3 LOW</span></div>
-          <div class="pmet"><div class="pmv">28,400<span style="font-size:10px;color:rgba(148,168,188,0.4)">m</span></div><div class="pml">FABRIC IN STOCK</div></div>
-          <div class="palt palt-r"><div class="palt-t" style="color:#E4A0A0">BUTTONS — 4,200 SHORT</div></div>
-          <div class="palt palt-o"><div class="palt-t" style="color:#E4C880">ZIPPER — ORDER PENDING</div></div>
+        <div class="palt palt-g"><div class="palt-t" style="color:#80C8A0">WhatsApp sent to MD ✓</div></div>
+      </div></div>
+      <div class="phone"><div class="pnotch"></div><div class="pscr">
+        <div class="phdr"><span>INVENTORY</span><span style="color:#E8A8A8">3 LOW</span></div>
+        <div class="pmet"><div class="pmv">28,400<span style="font-size:10px;color:rgba(148,168,188,0.35)">m</span></div><div class="pml">FABRIC IN STOCK</div></div>
+        <div class="palt palt-r"><div class="palt-t" style="color:#E8A8A8">BUTTONS — 4,200 SHORT</div></div>
+        <div class="palt palt-o"><div class="palt-t" style="color:#E8CC88">ZIPPER — ORDER PENDING</div></div>
+      </div></div>
+      <div class="phone"><div class="pnotch"></div><div class="pscr">
+        <div class="phdr"><span>REPORTS</span><span style="color:#C8B0F0">AUTO</span></div>
+        <div style="background:rgba(200,176,240,0.08);border:1px solid rgba(200,176,240,0.16);border-radius:8px;padding:9px;margin-bottom:6px">
+          <div class="pml" style="color:#C8B0F0;margin-bottom:2px">DAILY KPI REPORT</div>
+          <div style="font-size:9px;color:rgba(148,168,188,0.38)">Generated: 09:14 AM</div>
         </div>
-      </div>
-      <div class="phone">
-        <div class="pnotch"></div>
-        <div class="pscr">
-          <div class="phdr"><span>REPORTS</span><span style="color:#C0A8E8">AUTO</span></div>
-          <div style="background:rgba(192,168,232,0.08);border:1px solid rgba(192,168,232,0.15);border-radius:7px;padding:9px;margin-bottom:6px">
-            <div class="pml" style="color:#C0A8E8;margin-bottom:2px">DAILY KPI REPORT</div>
-            <div style="font-size:9px;color:rgba(148,168,188,0.4)">Generated: 09:14 AM</div>
-          </div>
-          <div style="background:rgba(184,176,208,0.08);border:1px solid rgba(184,176,208,0.12);border-radius:7px;padding:9px;margin-bottom:6px">
-            <div class="pml" style="color:var(--lav);margin-bottom:2px">BUYER WISE SUMMARY</div>
-            <div style="font-size:9px;color:rgba(148,168,188,0.4)">7 orders · PDF ready</div>
-          </div>
-          <div class="palt palt-g"><div class="palt-t" style="color:#7AC4A0">Sent via WhatsApp</div></div>
+        <div style="background:rgba(196,186,224,0.07);border:1px solid rgba(196,186,224,0.13);border-radius:8px;padding:9px;margin-bottom:6px">
+          <div class="pml" style="color:var(--lav);margin-bottom:2px">BUYER WISE SUMMARY</div>
+          <div style="font-size:9px;color:rgba(148,168,188,0.38)">7 orders · PDF ready</div>
         </div>
-      </div>
+        <div class="palt palt-g"><div class="palt-t" style="color:#80C8A0">Sent via WhatsApp ✓</div></div>
+      </div></div>
     </div>
   </div>
 </section>
 
-<!-- ═══ CTA — VIDEO BG ═══ -->
+<div class="rich-divider"></div>
+
+<!-- ═══ CTA ═══ -->
 <section class="vsec cta-sec" id="cta">
-  <div class="vid-bg">
-    <video autoplay muted loop playsinline src="cta-bg.mp4"><source src="cta-bg.webm" type="video/webm"></video>
-    <div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(14,16,24,0.75) 0%,rgba(14,16,24,0.55) 50%,rgba(14,16,24,0.85) 100%)"></div>
-  </div>
+  <div class="vid-bg"><video autoplay muted loop playsinline src="cta-bg.mp4"></video>
+    <div class="voverlay-dark"></div></div>
   <div class="cta-body">
     <div class="sec-eye" style="text-align:center;margin-bottom:22px">THE FUTURE IS OPERATIONAL</div>
     <h2 class="cta-h">Your Factory Deserves<br>Better Systems.</h2>
     <p class="cta-p">Build a faster, smarter, synchronized garment manufacturing ecosystem powered by Excel AI OS.</p>
-    <div class="cta-row">
-      <button class="btn-p" onclick="window.open('https://wa.me/918100888810')">Get Demo</button>
-      <button class="btn-wa" onclick="window.open('https://wa.me/918100888810')">WhatsApp Now</button>
+
+    <!-- DIRECT CONTACT ACTION BUTTONS -->
+    <div class="contact-actions">
+      <a class="ca-btn ca-wa" href="https://wa.me/918100888810" target="_blank">
+        <div class="ca-icon">💬</div>
+        <div class="ca-label ca-lbl-wa">WHATSAPP DIRECTLY</div>
+        <div class="ca-value">+91 81008 88810</div>
+      </a>
+      <a class="ca-btn ca-mail" href="mailto:Tirumala.textiles10@gmail.com">
+        <div class="ca-icon">✉️</div>
+        <div class="ca-label ca-lbl-mail">SEND EMAIL</div>
+        <div class="ca-value" style="font-size:11px">Tirumala.textiles10@gmail.com</div>
+      </a>
+      <a class="ca-btn ca-insta" href="https://instagram.com/tirumalatextiles10" target="_blank">
+        <div class="ca-icon">📷</div>
+        <div class="ca-label ca-lbl-insta">INSTAGRAM</div>
+        <div class="ca-value">@tirumalatextiles10</div>
+      </a>
     </div>
-    <div class="contact-grid">
-      <div class="cg-item"><div class="cg-lbl">WHATSAPP</div><div class="cg-val">+91 81008 88810</div></div>
-      <div class="cg-item"><div class="cg-lbl">EMAIL</div><div class="cg-val" style="font-size:11px">Tirumala.textiles10@gmail.com</div></div>
-      <div class="cg-item"><div class="cg-lbl">INSTAGRAM</div><div class="cg-val">@tirumalatextiles10</div></div>
+
+    <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
+      <button class="btn-primary" onclick="window.open('https://wa.me/918100888810')">Get Demo</button>
+      <button class="btn-ghost" onclick="document.getElementById('excel').scrollIntoView({behavior:'smooth'})">See Live System</button>
     </div>
   </div>
 </section>
@@ -734,12 +838,12 @@ footer{background:rgba(8,10,14,0.98);border-top:1px solid rgba(184,176,208,0.07)
 <footer>
   <div>
     <div class="fbrand">TIRUMALA AUTOMATION</div>
-    <div class="fdesc">Building the future of garment manufacturing. Advanced Excel AI Operating Systems, Power Apps ecosystems, and VBA automation infrastructures — custom-engineered for textile factories.</div>
+    <div class="fdesc">Building the future of garment manufacturing. Advanced Excel AI Operating Systems, Power Apps ecosystems, and VBA automation — custom-engineered for textile factories across India.</div>
   </div>
   <div>
-    <div class="fcitem"><span class="fcico">💬</span><div class="fctxt"><strong>WHATSAPP</strong>+91 81008 88810</div></div>
-    <div class="fcitem"><span class="fcico">✉</span><div class="fctxt"><strong>EMAIL</strong>Tirumala.textiles10@gmail.com</div></div>
-    <div class="fcitem"><span class="fcico">📷</span><div class="fctxt"><strong>INSTAGRAM</strong>@tirumalatextiles10</div></div>
+    <div class="fcitem"><span style="font-size:14px;opacity:0.5;margin-top:2px">💬</span><div class="fctxt"><strong>WHATSAPP</strong><a href="https://wa.me/918100888810">+91 81008 88810</a></div></div>
+    <div class="fcitem"><span style="font-size:14px;opacity:0.5;margin-top:2px">✉</span><div class="fctxt"><strong>EMAIL</strong><a href="mailto:Tirumala.textiles10@gmail.com">Tirumala.textiles10@gmail.com</a></div></div>
+    <div class="fcitem"><span style="font-size:14px;opacity:0.5;margin-top:2px">📷</span><div class="fctxt"><strong>INSTAGRAM</strong><a href="https://instagram.com/tirumalatextiles10" target="_blank">@tirumalatextiles10</a></div></div>
   </div>
   <div>
     <div class="fstack">Excel AI OS · VBA Engine · Power Apps<br>SharePoint Sync · WhatsApp API<br>Auto PDF Generator · KPI Engine<br>17 Specialized Modules · 38+ Factories</div>
@@ -748,37 +852,67 @@ footer{background:rgba(8,10,14,0.98);border-top:1px solid rgba(184,176,208,0.07)
 </footer>
 
 <script>
+// ── CURSOR ──
 const cur=document.getElementById('cur'),crng=document.getElementById('crng');
 let mx=0,my=0,rx=0,ry=0;
 document.addEventListener('mousemove',e=>{
   mx=e.clientX;my=e.clientY;
   cur.style.transform=`translate(${mx-3}px,${my-3}px)`;
 });
-(function animRing(){
-  rx+=(mx-rx)*0.12;ry+=(my-ry)*0.12;
-  crng.style.transform=`translate(${rx-14}px,${ry-14}px)`;
-  requestAnimationFrame(animRing);
-})();
-document.querySelectorAll('button,a,.mod-c,.stab,.phone').forEach(el=>{
-  el.addEventListener('mouseenter',()=>{crng.style.transform+=` scale(1.8)`;crng.style.borderColor='rgba(184,176,208,0.7)'});
-  el.addEventListener('mouseleave',()=>{crng.style.borderColor='rgba(184,176,208,0.5)'});
+(function ar(){rx+=(mx-rx)*0.12;ry+=(my-ry)*0.12;crng.style.transform=`translate(${rx-16}px,${ry-16}px)`;requestAnimationFrame(ar)})();
+document.querySelectorAll('button,a,.mod-c,.stab,.phone,.ca-btn,.fc-btn').forEach(el=>{
+  el.addEventListener('mouseenter',()=>{crng.style.width='42px';crng.style.height='42px';crng.style.borderColor='rgba(196,186,224,0.7)'});
+  el.addEventListener('mouseleave',()=>{crng.style.width='32px';crng.style.height='32px';crng.style.borderColor='rgba(196,186,224,0.5)'});
 });
 
-const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){const t=+e.target.dataset.target,dur=1800,s=Date.now();(function t2(){const p=Math.min((Date.now()-s)/dur,1),v=Math.round(t*( 1-Math.pow(1-p,3)));e.target.textContent=v;if(p<1)requestAnimationFrame(t2)})();obs.unobserve(e.target)}})},{threshold:0.5});
+// ── PARTICLES ──
+const canvas=document.getElementById('particles-canvas');
+const ctx=canvas.getContext('2d');
+let particles=[];
+function resizeCanvas(){canvas.width=window.innerWidth;canvas.height=window.innerHeight}
+resizeCanvas();window.addEventListener('resize',resizeCanvas);
+for(let i=0;i<60;i++){particles.push({x:Math.random()*canvas.width,y:Math.random()*canvas.height,vx:(Math.random()-.5)*0.3,vy:-0.1-Math.random()*0.3,r:Math.random()*1.5+0.3,a:Math.random()*0.4+0.1})}
+function drawParticles(){
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+  particles.forEach(p=>{
+    ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+    ctx.fillStyle=`rgba(196,186,224,${p.a})`;ctx.fill();
+    p.x+=p.vx;p.y+=p.vy;
+    if(p.y<-5)p.y=canvas.height;
+    if(p.x<0)p.x=canvas.width;if(p.x>canvas.width)p.x=0;
+  });
+  requestAnimationFrame(drawParticles);
+}drawParticles();
+
+// ── COUNTERS ──
+const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){
+  const t=+e.target.dataset.target,dur=2000,s=Date.now();
+  (function run(){const p=Math.min((Date.now()-s)/dur,1),v=Math.round(t*(1-Math.pow(1-p,3)));
+  e.target.textContent=v;if(p<1)requestAnimationFrame(run)})();obs.unobserve(e.target);
+}})},{threshold:0.5});
 document.querySelectorAll('[data-target]').forEach(el=>obs.observe(el));
 
+// ── LIVE KPI ──
 setInterval(()=>{
   const k=document.getElementById('kv1'),p=document.getElementById('pm1');
   const v=Math.round(4847+(Math.random()-.5)*80);
-  if(k)k.textContent=v.toLocaleString();
-  if(p)p.textContent=v.toLocaleString();
+  if(k)k.textContent=v.toLocaleString();if(p)p.textContent=v.toLocaleString();
   const k2=document.getElementById('kv2');
   if(k2)k2.textContent=(87.3+(Math.random()-.5)*1.4).toFixed(1)+'%';
 },3000);
 
-const dashtime=document.getElementById('dashtime');
-if(dashtime){const now=new Date();dashtime.textContent=now.toLocaleDateString('en-IN',{day:'2-digit',month:'short',year:'numeric'})+' · '+now.toLocaleTimeString('en-IN',{hour:'2-digit',minute:'2-digit'})}
+// ── EXCEL FORMULA CYCLE ──
+const formulas=['=IF(F8="PENDING",VLOOKUP(A8,BuyerSheet!$A:$Z,8,0)*C8,"✓ COMPLETE")','=SUMIF(B3:B9,"BUYER A",D3:D9)','=COUNTIF(H3:H9,"⚠ DELAYED")','=MAX(E3:E9)-MIN(E3:E9)','=AVERAGEIF(H3:H9,"COMPLETE",G3:G9)'];
+const refs=['D8','F14','H3','E11','G9'];let fi=0;
+setInterval(()=>{fi=(fi+1)%formulas.length;const xf=document.getElementById('xftxt'),xr=document.getElementById('xcref');if(xf)xf.textContent=formulas[fi];if(xr)xr.textContent=refs[fi];},3500);
 
+// ── CLOCK ──
+const dt=document.getElementById('dashtime');
+if(dt){const now=new Date();dt.textContent=now.toLocaleDateString('en-IN',{day:'2-digit',month:'short',year:'numeric'})+' · '+now.toLocaleTimeString('en-IN',{hour:'2-digit',minute:'2-digit'})}
+const xt=document.getElementById('xtime');
+if(xt){const now=new Date();xt.textContent=now.toLocaleTimeString('en-IN',{hour:'2-digit',minute:'2-digit',second:'2-digit'})}
+
+// ── SHIELD ──
 const shieldData={
   admin:[
     {o:'TA-2024-001',b:'BUYER A',s:'POLO SHIRT / WHITE',q:'12,000',st:'ON TRACK',d:'15-Jun-25',c:'₹2,84,000',bl:false},
@@ -787,37 +921,26 @@ const shieldData={
     {o:'TA-2024-004',b:'BUYER D',s:'DRY-FIT SHORTS',q:'22,000',st:'AT RISK',d:'20-Jun-25',c:'₹3,30,000',bl:false},
     {o:'TA-2024-005',b:'BUYER E',s:'LINEN SHIRT / ECRU',q:'6,800',st:'IN PROGRESS',d:'25-Jun-25',c:'₹1,40,000',bl:false},
   ],
-  hm:[
-    {o:'TA-2024-001',b:'BUYER A',s:'POLO SHIRT / WHITE',q:'12,000',st:'ON TRACK',d:'15-Jun-25',c:'₹2,84,000',bl:false},
-    {o:'TA-2024-002',b:'RESTRICTED',s:'██████████',q:'████',st:'HIDDEN',d:'██-██-25',c:'RESTRICTED',bl:true},
-    {o:'TA-2024-003',b:'RESTRICTED',s:'██████████',q:'████',st:'HIDDEN',d:'██-██-25',c:'RESTRICTED',bl:true},
-  ],
-  zara:[
-    {o:'TA-2024-002',b:'BUYER B',s:'SLIM FIT TROUSER',q:'8,500',st:'DELAYED',d:'10-Jun-25',c:'₹1,97,500',bl:false},
-    {o:'TA-2024-001',b:'RESTRICTED',s:'██████████',q:'████',st:'HIDDEN',d:'██-██-25',c:'RESTRICTED',bl:true},
-  ],
-  uniqlo:[
-    {o:'TA-2024-003',b:'BUYER C',s:'SWEATSHIRT',q:'15,200',st:'COMPLETE',d:'08-Jun-25',c:'₹4,56,000',bl:false},
-    {o:'TA-2024-001',b:'RESTRICTED',s:'██████████',q:'████',st:'HIDDEN',d:'██-██-25',c:'RESTRICTED',bl:true},
-  ]
+  hm:[{o:'TA-2024-001',b:'BUYER A',s:'POLO SHIRT / WHITE',q:'12,000',st:'ON TRACK',d:'15-Jun-25',c:'₹2,84,000',bl:false},{o:'TA-2024-002',b:'RESTRICTED',s:'██████████',q:'████',st:'HIDDEN',d:'██-██-25',c:'RESTRICTED',bl:true},{o:'TA-2024-003',b:'RESTRICTED',s:'██████████',q:'████',st:'HIDDEN',d:'██-██-25',c:'RESTRICTED',bl:true}],
+  zara:[{o:'TA-2024-002',b:'BUYER B',s:'SLIM FIT TROUSER',q:'8,500',st:'DELAYED',d:'10-Jun-25',c:'₹1,97,500',bl:false},{o:'TA-2024-001',b:'RESTRICTED',s:'██████████',q:'████',st:'HIDDEN',d:'██-██-25',c:'RESTRICTED',bl:true}],
+  uniqlo:[{o:'TA-2024-003',b:'BUYER C',s:'SWEATSHIRT',q:'15,200',st:'COMPLETE',d:'08-Jun-25',c:'₹4,56,000',bl:false},{o:'TA-2024-001',b:'RESTRICTED',s:'██████████',q:'████',st:'HIDDEN',d:'██-██-25',c:'RESTRICTED',bl:true}]
 };
 function renderShield(key){
   const data=shieldData[key];
   document.getElementById('shBody').innerHTML=data.map(r=>`<tr class="${r.bl?'blurred':''}">
     <td>${r.o}</td><td>${r.b}</td><td>${r.s}</td><td>${r.q}</td>
     <td><span class="sbadge ${r.st==='COMPLETE'?'sbg':r.st==='DELAYED'||r.st==='AT RISK'?'sbr':'sbo'}">${r.st}</span></td>
-    <td>${r.d}</td><td>${r.c}</td>
-  </tr>`).join('');
+    <td>${r.d}</td><td>${r.c}</td></tr>`).join('');
 }
 renderShield('admin');
 document.querySelectorAll('.stab').forEach(tab=>{
   tab.addEventListener('click',function(){
     document.querySelectorAll('.stab').forEach(t=>t.classList.remove('on'));
-    this.classList.add('on');
-    renderShield(this.dataset.tab);
+    this.classList.add('on');renderShield(this.dataset.tab);
   });
 });
 
+// ── MODULES ──
 const mods=[
   {i:'🖨',n:'Printing Sample Job Card',m:'Auto PDF'},
   {i:'🪡',n:'Embroidery Bulk Job Card',m:'Live Sync'},
@@ -839,19 +962,34 @@ const mods=[
 ];
 document.getElementById('modsGrid').innerHTML=mods.map(m=>`<div class="mod-c"><div class="mod-ico">${m.i}</div><div class="mod-n">${m.n}</div><div class="mod-m">${m.m}</div></div>`).join('');
 
+// ── NAVBAR SCROLL ──
 window.addEventListener('scroll',()=>{
   const nav=document.getElementById('navbar');
-  nav.style.background=window.scrollY>40?'rgba(8,10,14,0.9)':'rgba(14,16,24,0.75)';
+  nav.style.background=window.scrollY>50?'rgba(6,8,14,0.92)':'rgba(10,12,20,0.72)';
+  nav.style.borderColor=window.scrollY>50?'rgba(196,186,224,0.18)':'rgba(196,186,224,0.14)';
 });
 
-let ri=3;
+// ── EXCEL ROW PULSE ──
+let ri=2;
 setInterval(()=>{
   const rows=document.querySelectorAll('.xt tbody tr');
   rows.forEach(r=>r.style.background='');
   const r=rows[ri%rows.length];
-  if(r&&!r.querySelector('[colspan="10"]'))r.style.background='rgba(184,176,208,0.04)';
+  if(r&&!r.querySelector('[colspan="10"]')&&!r.querySelector('[colspan="3"]'))r.style.background='rgba(196,186,224,0.04)';
   ri++;
-},2200);
+},2400);
+
+// ── 3D EXCEL TILT on hover ──
+const xwin=document.getElementById('excelWin');
+if(xwin){
+  xwin.addEventListener('mousemove',e=>{
+    const rect=xwin.getBoundingClientRect();
+    const x=((e.clientX-rect.left)/rect.width-0.5)*6;
+    const y=((e.clientY-rect.top)/rect.height-0.5)*-4;
+    xwin.style.transform=`perspective(1200px) rotateY(${x}deg) rotateX(${y}deg)`;
+  });
+  xwin.addEventListener('mouseleave',()=>{xwin.style.transform='perspective(1200px) rotateY(0) rotateX(0)'});
+}
 </script>
 </body>
 </html>
