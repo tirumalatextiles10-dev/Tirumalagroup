@@ -6,8 +6,8 @@
 
 <!-- ═══ SEO META TAGS — GOOGLE RANKING ═══ -->
 <title>Tirumala Automation | Excel AI OS for Garment Factories | VBA Automation India</title>
-<meta name="description" content="Tirumala Automation builds advanced Excel AI Operating Systems, Power Apps ecosystems and VBA automation for garment factories. 17 modules. 38+ factories. 6+ hours saved daily. Mumbai, India.">
-<meta name="keywords" content="garment factory automation, Excel ERP garment, VBA automation textile, Power Apps factory, garment ERP software India, merchandising automation, production tracking software, garment factory software Mumbai, Excel AI OS, Tirumala Automation">
+<meta name="description" content="Tirumala Automation builds advanced Excel AI Operating Systems, Power Apps ecosystems, VBA automation, and custom B2B websites for garment factories across India. 17 modules. 38+ factories. 6+ hours saved daily. West Bengal, India.">
+<meta name="keywords" content="garment factory automation, Excel ERP garment, VBA automation textile, Power Apps factory, garment ERP software India, merchandising automation, production tracking software, garment factory software West Bengal, garment factory software Kolkata, B2B website development garment industry, Excel AI OS, Tirumala Automation">
 <meta name="author" content="Tirumala Automation">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://yourusername.github.io/tirumala-automation/">
@@ -42,7 +42,44 @@
     "availableLanguage": ["English", "Hindi"]
   },
   "areaServed": "India",
+  "url": "https://yourusername.github.io/tirumala-automation/",
+  "review": {
+    "@type": "Review",
+    "reviewBody": "Before this, every order update meant five phone calls. Now our merchandisers, fabric store, and dispatch all see the same live numbers. It's the first system our whole team actually opened every day without being told to.",
+    "author": {"@type": "Organization", "name": "Varun Fabrica LLP"},
+    "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"}
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Tirumala Automation",
+  "description": "Freelance automation and operations consultancy delivering Excel-based AI operating systems, Power Apps ecosystems, VBA automation, and custom B2B websites with SEO/GA4 optimization for garment manufacturing factories across India.",
+  "founder": [
+    {"@type": "Person", "name": "Mohit Agarwal", "jobTitle": "Founder"},
+    {"@type": "Person", "name": "Rohit Agarwal", "jobTitle": "Co-Founder"}
+  ],
+  "address": {"@type": "PostalAddress", "addressRegion": "West Bengal", "addressCountry": "IN"},
+  "taxID": "19BQQPA7593B1ZK",
+  "telephone": "+91-81008-88810",
+  "email": "Tirumala.textiles10@gmail.com",
+  "sameAs": ["https://instagram.com/tirumalatextiles10"],
   "url": "https://yourusername.github.io/tirumala-automation/"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "B2B Website Development",
+  "provider": {"@type": "Organization", "name": "Tirumala Automation"},
+  "description": "Custom B2B website design and development for garment manufacturers and exporters, including on-page SEO, structured data, GA4 and conversion tracking, Core Web Vitals optimization, and full responsive design.",
+  "areaServed": "India",
+  "audience": {"@type": "BusinessAudience", "audienceType": "Garment manufacturers and exporters"}
 }
 </script>
 
@@ -59,26 +96,34 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{
-  --ink:#12141C;--ink2:#22253A;--ink3:#3A3D52;
-  --paper:#F6F2EC;--paper2:#EEE8DF;
-  --lav:#C4BAE0;--lav2:#A898D0;--lav3:#8070B8;
-  --rose:#DEC0CC;--rose2:#C8A0B0;
-  --sage:#B0CEB8;--sage2:#80B090;
-  --gold:#D8C898;--gold2:#C0A870;
-  --steel:#A0B8D0;--steel2:#7098B8;
-  --teal:#80C8C0;--teal2:#50A8A0;
-  --amber:#D8B870;--amber2:#B89048;
-  --cream:#FAF6F0;--warm:#DDD4C4;
-  --dark:#0A0C14;--dark2:#12141E;--dark3:#1A1D2C;--dark4:#22263A;
-  --vid-opacity:0.55;
+  /* --dark tier: now LIGHT pastel surfaces (was near-black panels) */
+  --dark:#FBF8F0;--dark2:#F3EEE0;--dark3:#EAE2CC;--dark4:#DED2B0;
+  /* --paper/--cream tier: now DEEP INK text (was light text-on-dark) */
+  --paper:#1E2B20;--paper2:#2A3B2C;
+  --cream:#15201A;--warm:#3A4D3C;
+  /* --ink tier: deep text variants, used for darker accents on light surfaces */
+  --ink:#1E2B20;--ink2:#2A3B2C;--ink3:#3D5240;
+  /* accent ramps unchanged in hue family, lightly adjusted for pastel-on-light contrast */
+  --lav:#7CAE8C;--lav2:#5C9270;--lav3:#427454;
+  --rose:#C9A876;--rose2:#B08F5E;
+  --sage:#9CC0A4;--sage2:#76A084;
+  --gold:#BC9E5C;--gold2:#9C8048;
+  --steel:#88AC94;--steel2:#688C74;
+  --teal:#5CA086;--teal2:#427E68;
+  --amber:#B7913F;--amber2:#967330;
+  --vid-opacity:0.4;
 }
 html{scroll-behavior:smooth}
 body{background:var(--dark);color:var(--paper);font-family:'DM Sans',sans-serif;overflow-x:hidden;cursor:none}
 
+/* ── PAGE SYSTEM ── */
+.page{display:none}
+.page.active{display:block}
+
 /* ── CUSTOM CURSOR ── */
 .cursor{position:fixed;width:5px;height:5px;background:var(--lav);border-radius:50%;
   pointer-events:none;z-index:9999;top:0;left:0;transition:width 0.2s,height 0.2s,background 0.2s}
-.cring{position:fixed;width:32px;height:32px;border:1px solid rgba(196,186,224,0.5);border-radius:50%;
+.cring{position:fixed;width:32px;height:32px;border:1px solid rgba(156,196,168,0.5);border-radius:50%;
   pointer-events:none;z-index:9998;top:0;left:0;transition:border-color 0.2s}
 body:has(button:hover) .cursor,body:has(a:hover) .cursor{width:10px;height:10px;background:var(--cream)}
 
@@ -88,45 +133,185 @@ body:has(button:hover) .cursor,body:has(a:hover) .cursor{width:10px;height:10px;
 .fc-btn{width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;
   text-decoration:none;font-size:20px;transition:all 0.3s;border:1px solid transparent;
   box-shadow:0 4px 20px rgba(0,0,0,0.4)}
-.fc-wa{background:rgba(37,211,102,0.15);border-color:rgba(37,211,102,0.3)}
+.fc-wa{background:rgba(37,211,102,0.15);border-color:rgba(37,211,102,0.3);color:#25D366}
 .fc-wa:hover{background:rgba(37,211,102,0.28);transform:scale(1.12) translateX(-4px);box-shadow:0 6px 28px rgba(37,211,102,0.25)}
-.fc-mail{background:rgba(196,186,224,0.12);border-color:rgba(196,186,224,0.25)}
-.fc-mail:hover{background:rgba(196,186,224,0.22);transform:scale(1.12) translateX(-4px)}
-.fc-insta{background:rgba(225,120,80,0.12);border-color:rgba(225,120,80,0.25)}
+.fc-mail{background:rgba(156,196,168,0.12);border-color:rgba(156,196,168,0.25);color:var(--lav3)}
+.fc-mail:hover{background:rgba(156,196,168,0.22);transform:scale(1.12) translateX(-4px)}
+.fc-insta{background:rgba(225,120,80,0.12);border-color:rgba(225,120,80,0.25);color:#E07850}
 .fc-insta:hover{background:rgba(225,120,80,0.22);transform:scale(1.12) translateX(-4px)}
-.fc-tooltip{position:absolute;right:58px;background:rgba(12,14,22,0.95);backdrop-filter:blur(12px);
+.fc-tooltip{position:absolute;right:58px;background:rgba(252,249,240,0.95);backdrop-filter:blur(12px);
   color:var(--paper);font-size:10px;letter-spacing:0.1em;padding:5px 12px;border-radius:6px;
   white-space:nowrap;opacity:0;pointer-events:none;transition:opacity 0.2s;
-  border:1px solid rgba(196,186,224,0.15)}
+  border:1px solid rgba(156,196,168,0.15)}
 .fc-btn:hover .fc-tooltip{opacity:1}
 
 /* ── NAVBAR ── */
 nav{position:fixed;top:14px;left:50%;transform:translateX(-50%);width:95%;max-width:1280px;z-index:1000;
-  background:rgba(10,12,20,0.72);backdrop-filter:blur(32px);-webkit-backdrop-filter:blur(32px);
-  border:1px solid rgba(196,186,224,0.14);border-radius:16px;padding:13px 28px;
+  background:rgba(251,248,240,0.78);backdrop-filter:blur(32px);-webkit-backdrop-filter:blur(32px);
+  border:1px solid rgba(156,196,168,0.14);border-radius:16px;padding:13px 28px;
   display:flex;align-items:center;justify-content:space-between;
   box-shadow:0 4px 40px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.06);
   transition:background 0.4s,border-color 0.4s}
 .nav-brand{font-weight:600;font-size:12px;letter-spacing:0.22em;color:var(--paper);opacity:0.94}
 .nav-links{display:flex;gap:32px;list-style:none}
-.nav-links a{font-size:11px;letter-spacing:0.14em;color:rgba(196,186,224,0.55);text-decoration:none;transition:color 0.3s;font-weight:300}
+.nav-links a{font-size:11px;letter-spacing:0.14em;color:rgba(30,43,32,0.62);text-decoration:none;transition:color 0.3s;font-weight:300}
 .nav-links a:hover{color:var(--paper)}
 .nav-right{display:flex;gap:10px;align-items:center}
 .nav-wa{background:rgba(37,211,102,0.12);border:1px solid rgba(37,211,102,0.25);color:#5DD89A;
   padding:7px 16px;border-radius:100px;font-size:10px;letter-spacing:0.1em;cursor:pointer;
   transition:all 0.3s;font-family:'DM Sans',sans-serif;text-decoration:none;display:flex;align-items:center;gap:6px}
 .nav-wa:hover{background:rgba(37,211,102,0.22)}
-.nav-cta{background:rgba(196,186,224,0.12);border:1px solid rgba(196,186,224,0.28);color:var(--lav);
+.nav-cta{background:rgba(156,196,168,0.18);border:1px solid rgba(156,196,168,0.4);color:var(--lav3);
   padding:8px 22px;border-radius:100px;font-size:11px;letter-spacing:0.14em;cursor:pointer;
   transition:all 0.3s;font-family:'DM Sans',sans-serif;font-weight:400}
-.nav-cta:hover{background:rgba(196,186,224,0.22)}
+.nav-cta:hover{background:rgba(156,196,168,0.22)}
+.nav-links a.nav-active{color:var(--cream)}
+
+/* ── NAV DROPDOWN ── */
+.nav-has-dropdown{position:relative}
+.nav-dropdown{position:absolute;top:100%;left:50%;transform:translateX(-50%) translateY(6px);
+  background:rgba(251,248,240,0.98);backdrop-filter:blur(16px);border:1px solid rgba(156,196,168,0.18);
+  border-radius:14px;padding:10px;min-width:200px;box-shadow:0 16px 48px rgba(30,43,32,0.12);
+  opacity:0;pointer-events:none;transition:all 0.25s ease;z-index:50}
+.nav-has-dropdown:hover .nav-dropdown{opacity:1;pointer-events:auto;transform:translateX(-50%) translateY(10px)}
+.nav-dropdown a{display:block;padding:9px 14px;border-radius:8px;font-size:12px;letter-spacing:0.02em;
+  color:rgba(30,43,32,0.7);white-space:nowrap;transition:all 0.2s}
+.nav-dropdown a:hover{background:rgba(156,196,168,0.12);color:var(--lav3)}
+
+/* ── MOBILE MENU ── */
+.nav-burger{display:none;width:32px;height:32px;border:1px solid rgba(156,196,168,0.25);border-radius:8px;
+  background:rgba(156,196,168,0.08);align-items:center;justify-content:center;cursor:pointer;flex-direction:column;gap:4px}
+.nav-burger span{width:14px;height:1px;background:var(--lav);display:block;transition:all 0.3s}
+#mobile-menu{position:fixed;inset:0;z-index:1100;background:rgba(251,248,240,0.97);backdrop-filter:blur(20px);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:28px;
+  opacity:0;transform:translateY(-12px);pointer-events:none;transition:all 0.4s cubic-bezier(0.23,1,0.32,1)}
+#mobile-menu.open{opacity:1;transform:translateY(0);pointer-events:auto}
+#mobile-menu a{font-size:18px;letter-spacing:0.08em;color:rgba(30,43,32,0.78);text-decoration:none;font-weight:300;
+  font-family:'Cormorant Garamond',serif}
+#mobile-menu a:hover{color:var(--cream)}
+.mm-close{position:absolute;top:24px;right:24px;width:36px;height:36px;border:1px solid rgba(156,196,168,0.2);
+  border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--lav);font-size:16px}
+
+/* ── TEASER GRID (Home page links to other pages) ── */
+.teaser-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;
+  background:rgba(156,196,168,0.08);border:1px solid rgba(156,196,168,0.12);border-radius:20px;overflow:hidden}
+.teaser-card{background:var(--dark2);padding:36px 26px;cursor:pointer;position:relative;overflow:hidden}
+.teaser-ico{font-size:26px;margin-bottom:18px}
+.teaser-t{font-size:14px;font-weight:500;color:var(--cream);margin-bottom:9px}
+.teaser-d{font-size:12px;color:rgba(45,60,48,0.55);line-height:1.7;font-weight:300;margin-bottom:18px}
+.teaser-arrow{font-size:16px;color:var(--lav);transition:transform 0.3s}
+.teaser-card:hover .teaser-arrow{transform:translateX(6px)}
+
+@media(max-width:768px){
+  .teaser-grid{grid-template-columns:1fr}
+  .nav-burger{display:flex}
+}
+
+/* ── CHAOS → MAGIC SECTION ── */
+.cm-layout{display:grid;grid-template-columns:1fr 360px;gap:64px;margin-top:56px}
+.cm-text-col{display:flex;flex-direction:column;gap:120px}
+.cm-block{padding-top:8px}
+.cm-eyebrow{font-size:10px;letter-spacing:0.28em;text-transform:uppercase;color:var(--lav3);
+  margin-bottom:14px;font-weight:600;opacity:0.85}
+.cm-h{font-family:'Cormorant Garamond',serif;font-size:clamp(22px,2.6vw,32px);font-weight:500;
+  color:var(--cream);line-height:1.25;margin-bottom:16px}
+.cm-p{font-size:14px;color:rgba(30,43,32,0.68);line-height:1.8;font-weight:300;max-width:480px;margin-bottom:18px}
+.cm-fix{font-size:13px;color:var(--lav3);font-weight:500;line-height:1.7;max-width:480px;
+  background:rgba(156,196,168,0.1);border-left:2px solid var(--lav3);padding:12px 16px;border-radius:0 8px 8px 0}
+
+.cm-image-col{position:relative}
+.cm-sticky-card{position:sticky;top:120px;width:100%}
+.cm-card-frame{position:relative;width:100%;aspect-ratio:4/5;border-radius:18px;overflow:hidden;
+  box-shadow:0 20px 60px rgba(156,196,168,0.25),0 4px 16px rgba(30,43,32,0.1);
+  border:1px solid rgba(156,196,168,0.18)}
+.cm-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity 0.6s ease}
+.cm-img-magic{opacity:0}
+.cm-state-tag{position:absolute;top:14px;left:14px;font-size:9px;letter-spacing:0.2em;font-weight:700;
+  padding:6px 12px;border-radius:100px;background:rgba(251,248,240,0.92);color:var(--ink);
+  backdrop-filter:blur(8px);transition:all 0.4s ease;z-index:3}
+.cm-state-tag.is-magic{background:rgba(95,150,118,0.92);color:#fff}
+.cm-dots{display:flex;gap:8px;justify-content:center;margin-top:18px}
+.cm-dot{width:6px;height:6px;border-radius:50%;background:rgba(156,196,168,0.3);transition:all 0.3s}
+.cm-dot.active{background:var(--lav3);transform:scale(1.4)}
+
+@media(max-width:900px){
+  .cm-layout{grid-template-columns:1fr;gap:32px}
+  .cm-text-col{gap:48px}
+  .cm-image-col{order:-1}
+  .cm-sticky-card{position:relative;top:0;max-width:320px;margin:0 auto 24px}
+}
+
+/* ── B2B WEBSITES SECTION ── */
+.b2b-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;margin-top:48px;
+  background:rgba(156,196,168,0.1);border:1px solid rgba(156,196,168,0.14);border-radius:20px;overflow:hidden}
+.b2b-card{background:var(--dark2);padding:32px 26px;transition:all 0.35s;position:relative}
+.b2b-card:hover{background:var(--dark3)}
+.b2b-ico{font-size:24px;margin-bottom:18px}
+.b2b-t{font-size:14px;font-weight:600;color:var(--cream);margin-bottom:10px;letter-spacing:0.01em}
+.b2b-d{font-size:12.5px;color:rgba(30,43,32,0.65);line-height:1.75;font-weight:300}
+.b2b-cta-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:48px}
+
+@media(max-width:900px){
+  .b2b-grid{grid-template-columns:1fr}
+}
+
+/* ── BUYERS PAGE ── */
+.buyer-strip{display:flex;flex-wrap:wrap;gap:14px;margin-top:48px}
+.buyer-pill{padding:14px 26px;border-radius:100px;background:var(--dark2);border:1px solid rgba(156,196,168,0.16);
+  font-size:13px;font-weight:500;color:rgba(30,43,32,0.75);transition:all 0.3s}
+.buyer-pill:hover{background:var(--dark3);transform:translateY(-2px)}
+.buyer-pill-real{background:rgba(156,196,168,0.16);border-color:var(--lav3);color:var(--lav3);font-weight:600}
+
+.test-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;margin-top:48px;
+  background:rgba(156,196,168,0.1);border:1px solid rgba(156,196,168,0.14);border-radius:20px;overflow:hidden}
+.test-card{background:var(--dark2);padding:30px 26px;display:flex;flex-direction:column;gap:22px;transition:background 0.3s}
+.test-card:hover{background:var(--dark3)}
+.test-card-real{background:rgba(156,196,168,0.14)}
+.test-quote{font-size:13.5px;line-height:1.8;color:rgba(30,43,32,0.78);font-weight:300;flex:1}
+.test-author{display:flex;align-items:center;gap:12px}
+.test-avatar{width:38px;height:38px;border-radius:50%;background:var(--lav3);color:#fff;
+  display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600;flex-shrink:0}
+.test-name{font-size:13px;font-weight:600;color:var(--cream)}
+.test-role{font-size:11px;color:rgba(30,43,32,0.55);margin-top:2px}
+.test-disclaimer{font-size:11px;color:rgba(30,43,32,0.45);margin-top:28px;line-height:1.7;max-width:680px;font-style:italic}
+
+@media(max-width:900px){
+  .test-grid{grid-template-columns:1fr}
+}
+
+/* ── ABOUT PAGE: FOUNDERS ── */
+.founder-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;margin-top:48px;max-width:760px;
+  background:rgba(156,196,168,0.1);border:1px solid rgba(156,196,168,0.14);border-radius:20px;overflow:hidden}
+.founder-card{background:var(--dark2);padding:40px 32px;transition:background 0.3s}
+.founder-card:hover{background:var(--dark3)}
+.founder-avatar{width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,var(--lav),var(--lav3));
+  color:#fff;display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:600;margin-bottom:20px}
+.founder-name{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:500;color:var(--cream);margin-bottom:4px}
+.founder-role{font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:var(--lav3);font-weight:600;margin-bottom:18px}
+.founder-bio{font-size:13px;line-height:1.8;color:rgba(30,43,32,0.65);font-weight:300}
+
+@media(max-width:700px){
+  .founder-grid{grid-template-columns:1fr}
+}
+
+/* ── CONTACT PAGE: GOOGLE FORM EMBED ── */
+.gform-embed-wrap{position:relative;margin-top:40px;border-radius:20px;overflow:hidden;
+  background:var(--dark2);border:1px solid rgba(156,196,168,0.16);min-height:480px}
+.gform-iframe{width:100%;height:900px;border:none;display:block}
+.gform-placeholder-note{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+  text-align:center;padding:48px;font-size:14px;line-height:1.8;color:rgba(30,43,32,0.55);
+  background:var(--dark2);max-width:480px;margin:0 auto}
+
+@media(max-width:600px){
+  .gform-iframe{height:760px}
+}
 
 /* ── VIDEO BG ENGINE ── */
 .vsec{position:relative;width:100%;overflow:hidden}
 .vid-bg{position:absolute;inset:0;z-index:0}
 .vid-bg video{width:100%;height:100%;object-fit:cover;opacity:var(--vid-opacity)}
-.voverlay-dark{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(10,12,20,0.55) 0%,rgba(10,12,20,0.12) 40%,rgba(10,12,20,0.12) 60%,rgba(10,12,20,0.65) 100%)}
-.voverlay-light{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(246,242,236,0.82) 0%,rgba(246,242,236,0.55) 50%,rgba(246,242,236,0.86) 100%)}
+.voverlay-dark{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(251,248,240,0.65) 0%,rgba(251,248,240,0.32) 40%,rgba(251,248,240,0.32) 60%,rgba(251,248,240,0.72) 100%)}
+.voverlay-light{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(247,244,234,0.82) 0%,rgba(247,244,234,0.55) 50%,rgba(247,244,234,0.86) 100%)}
 
 /* ── 3D PERSPECTIVE LAYER ── */
 .perspective-wrap{perspective:1200px;perspective-origin:50% 30%}
@@ -135,74 +320,78 @@ nav{position:fixed;top:14px;left:50%;transform:translateX(-50%);width:95%;max-wi
 /* ── PARTICLE CANVAS ── */
 #particles-canvas{position:absolute;inset:0;z-index:1;pointer-events:none;opacity:0.5}
 
+/* ── THREE.JS HERO CANVAS ── */
+#three-hero{position:absolute;inset:0;z-index:2;pointer-events:none;opacity:0.85}
+@media(max-width:768px){#three-hero{opacity:0.55}}
+
 /* ── HERO ── */
-#hero{min-height:100vh;display:flex;align-items:center;justify-content:center;--vid-opacity:0.60}
+#hero{min-height:100vh;display:flex;align-items:flex-end;justify-content:center;--vid-opacity:0.60;padding-top:140px;padding-bottom:80px}
 .hero-grid{position:absolute;inset:0;z-index:1;
-  background-image:linear-gradient(rgba(196,186,224,0.06) 1px,transparent 1px),linear-gradient(90deg,rgba(196,186,224,0.06) 1px,transparent 1px);
+  background-image:linear-gradient(rgba(156,196,168,0.06) 1px,transparent 1px),linear-gradient(90deg,rgba(156,196,168,0.06) 1px,transparent 1px);
   background-size:80px 80px;animation:gridShift 20s linear infinite}
 @keyframes gridShift{0%{background-position:0 0}100%{background-position:80px 80px}}
 
-.hero-body{position:relative;z-index:3;max-width:900px;text-align:center;padding:0 32px}
-.hero-eye{font-size:10px;letter-spacing:0.38em;color:var(--lav);opacity:0.8;margin-bottom:30px;font-weight:300;
+.hero-body{position:relative;z-index:3;max-width:880px;text-align:center;padding:0 32px}
+.hero-eye{font-size:10px;letter-spacing:0.38em;color:var(--lav3);opacity:0.85;margin-bottom:20px;font-weight:300;
   animation:riseIn 1s ease 0.2s both}
-.hero-h1{font-family:'Cormorant Garamond',serif;font-size:clamp(48px,8.5vw,100px);font-weight:300;line-height:1.03;
-  color:var(--cream);margin-bottom:28px;animation:riseIn 1s ease 0.4s both;
-  text-shadow:0 2px 40px rgba(10,12,20,0.8)}
+.hero-h1{font-family:'Cormorant Garamond',serif;font-size:clamp(42px,7vw,84px);font-weight:300;line-height:1.06;
+  color:var(--cream);margin-bottom:20px;animation:riseIn 1s ease 0.4s both;
+  text-shadow:0 2px 30px rgba(251,248,240,0.9),0 1px 2px rgba(251,248,240,0.6)}
 .hero-h1 em{font-style:italic;color:var(--lav);font-weight:400}
-.hero-p{font-size:clamp(14px,1.6vw,18px);color:rgba(196,186,224,0.7);line-height:1.85;
-  max-width:600px;margin:0 auto 52px;font-weight:300;animation:riseIn 1s ease 0.6s both}
-.hero-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;animation:riseIn 1s ease 0.8s both}
+.hero-p{font-size:clamp(13px,1.4vw,16px);color:rgba(30,43,32,0.72);line-height:1.7;
+  max-width:560px;margin:0 auto 32px;font-weight:300;animation:riseIn 1s ease 0.6s both}
+.hero-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;animation:riseIn 1s ease 0.8s both}
 
 /* Rich premium buttons */
-.btn-primary{background:linear-gradient(135deg,rgba(246,242,236,0.96),rgba(220,212,200,0.92));
-  border:none;color:var(--ink);padding:16px 40px;border-radius:100px;font-size:12px;
+.btn-primary{background:linear-gradient(135deg,rgba(247,244,234,0.96),rgba(220,212,200,0.92));
+  border:none;color:var(--ink);padding:14px 36px;border-radius:100px;font-size:12px;
   letter-spacing:0.14em;cursor:pointer;transition:all 0.35s;font-family:'DM Sans',sans-serif;font-weight:500;
-  box-shadow:0 8px 32px rgba(196,186,224,0.2),inset 0 1px 0 rgba(255,255,255,0.9)}
-.btn-primary:hover{transform:translateY(-3px);box-shadow:0 16px 48px rgba(196,186,224,0.3)}
-.btn-ghost{background:rgba(196,186,224,0.08);border:1px solid rgba(196,186,224,0.28);color:rgba(196,186,224,0.85);
-  padding:16px 40px;border-radius:100px;font-size:12px;letter-spacing:0.14em;cursor:pointer;
-  transition:all 0.35s;font-family:'DM Sans',sans-serif;font-weight:300;
+  box-shadow:0 8px 32px rgba(156,196,168,0.2),inset 0 1px 0 rgba(255,255,255,0.9)}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 16px 48px rgba(156,196,168,0.3)}
+.btn-ghost{background:rgba(156,196,168,0.1);border:1px solid rgba(156,196,168,0.4);color:var(--lav3);
+  padding:14px 36px;border-radius:100px;font-size:12px;letter-spacing:0.14em;cursor:pointer;
+  transition:all 0.35s;font-family:'DM Sans',sans-serif;font-weight:500;
   backdrop-filter:blur(8px)}
-.btn-ghost:hover{background:rgba(196,186,224,0.16);border-color:rgba(196,186,224,0.5);transform:translateY(-3px)}
+.btn-ghost:hover{background:rgba(156,196,168,0.2);border-color:rgba(156,196,168,0.6);transform:translateY(-3px)}
 .btn-wa-hero{background:linear-gradient(135deg,rgba(37,211,102,0.18),rgba(37,180,80,0.12));
   border:1px solid rgba(37,211,102,0.35);color:#5DD89A;
-  padding:16px 36px;border-radius:100px;font-size:12px;letter-spacing:0.12em;cursor:pointer;
+  padding:14px 32px;border-radius:100px;font-size:12px;letter-spacing:0.12em;cursor:pointer;
   transition:all 0.35s;font-family:'DM Sans',sans-serif;font-weight:400;
   box-shadow:0 4px 24px rgba(37,211,102,0.12)}
 .btn-wa-hero:hover{background:rgba(37,211,102,0.25);transform:translateY(-3px);box-shadow:0 12px 36px rgba(37,211,102,0.2)}
 
 /* ── METRICS STRIP ── */
-.metrics-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;margin-top:72px;
-  background:rgba(196,186,224,0.1);border:1px solid rgba(196,186,224,0.14);border-radius:20px;overflow:hidden;
+.metrics-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;margin-top:40px;
+  background:rgba(156,196,168,0.1);border:1px solid rgba(156,196,168,0.14);border-radius:20px;overflow:hidden;
   animation:riseIn 1s ease 1s both;transform-style:preserve-3d}
-.mcard{background:rgba(10,12,20,0.85);padding:32px 20px;text-align:center;transition:all 0.35s;position:relative;overflow:hidden}
+.mcard{background:rgba(234,226,204,0.75);padding:22px 18px;text-align:center;transition:all 0.35s;position:relative;overflow:hidden}
 .mcard::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;
-  background:linear-gradient(90deg,transparent,rgba(196,186,224,0.3),transparent);
+  background:linear-gradient(90deg,transparent,rgba(156,196,168,0.3),transparent);
   opacity:0;transition:opacity 0.35s}
-.mcard:hover{background:rgba(22,24,38,0.95);transform:translateY(-2px)}
+.mcard:hover{background:rgba(234,226,204,0.95);transform:translateY(-2px)}
 .mcard:hover::before{opacity:1}
 .mnum{font-family:'Cormorant Garamond',serif;font-size:56px;font-weight:300;color:var(--cream);line-height:1}
 .msup{font-size:28px;color:var(--lav);font-family:'Cormorant Garamond',serif}
-.mlbl{font-size:9px;letter-spacing:0.24em;color:rgba(148,168,188,0.55);margin-top:10px;font-weight:300}
+.mlbl{font-size:9px;letter-spacing:0.24em;color:rgba(45,60,48,0.55);margin-top:10px;font-weight:300}
 
 @keyframes riseIn{from{opacity:0;transform:translateY(32px)}to{opacity:1;transform:translateY(0)}}
 
 /* ── SECTION ── */
 .sec{padding:110px 40px;position:relative}
 .sec-inner{max-width:1240px;margin:0 auto}
-.sec-eye{font-size:9px;letter-spacing:0.34em;color:var(--lav);opacity:0.6;margin-bottom:14px;font-weight:300}
+.sec-eye{font-size:9px;letter-spacing:0.34em;color:var(--lav3);opacity:0.8;margin-bottom:14px;font-weight:300}
 .sec-h{font-family:'Cormorant Garamond',serif;font-size:clamp(32px,4.5vw,58px);font-weight:300;color:var(--cream);margin-bottom:18px;line-height:1.16}
-.sec-p{font-size:14px;color:rgba(148,168,188,0.65);line-height:1.95;max-width:540px;font-weight:300;margin-bottom:60px}
+.sec-p{font-size:14px;color:rgba(45,60,48,0.65);line-height:1.95;max-width:540px;font-weight:300;margin-bottom:60px}
 .sec-eye-light{color:var(--lav3);opacity:0.85}
 .sec-h-light{color:var(--ink)}
 .sec-p-light{color:var(--ink3)}
 
 /* ── RICH DIVIDER ── */
-.rich-divider{height:1px;background:linear-gradient(90deg,transparent,rgba(196,186,224,0.3),rgba(200,168,112,0.2),rgba(196,186,224,0.3),transparent);margin:0}
+.rich-divider{height:1px;background:linear-gradient(90deg,transparent,rgba(156,196,168,0.3),rgba(188,158,92,0.2),rgba(156,196,168,0.3),transparent);margin:0}
 
 /* ── EXCEL WINDOW ── */
 .xwin{background:#F8F9FB;border:1px solid #C8CCD8;border-radius:14px;overflow:hidden;
-  box-shadow:0 40px 100px rgba(0,0,0,0.22),0 2px 0 rgba(255,255,255,0.9) inset,0 0 0 1px rgba(196,186,224,0.1);
+  box-shadow:0 40px 100px rgba(0,0,0,0.22),0 2px 0 rgba(255,255,255,0.9) inset,0 0 0 1px rgba(156,196,168,0.1);
   transform-style:preserve-3d}
 .xtbar{background:linear-gradient(to bottom,#F2F3F6,#ECEDF2);padding:10px 16px;display:flex;align-items:center;gap:10px;border-bottom:1px solid #D0D4E0}
 .xdot{width:12px;height:12px;border-radius:50%}
@@ -245,7 +434,7 @@ table.xt td{padding:6px 11px;border:1px solid #EAECF4;color:#3A3C4E;white-space:
 
 /* ── 3D STEPS ── */
 .steps-g{display:grid;grid-template-columns:1fr 1fr;gap:2px;
-  background:rgba(196,186,224,0.08);border:1px solid rgba(196,186,224,0.12);border-radius:20px;overflow:hidden}
+  background:rgba(156,196,168,0.08);border:1px solid rgba(156,196,168,0.12);border-radius:20px;overflow:hidden}
 .step-c{background:var(--dark2);padding:48px 40px;position:relative;overflow:hidden;transition:all 0.4s cubic-bezier(0.23,1,0.32,1)}
 .step-c:hover{background:var(--dark3);transform:translateY(-2px)}
 .step-c.full{grid-column:1/-1}
@@ -253,109 +442,135 @@ table.xt td{padding:6px 11px;border:1px solid #EAECF4;color:#3A3C4E;white-space:
   background:linear-gradient(90deg,transparent,var(--lav2),transparent);opacity:0;transition:opacity 0.4s}
 .step-c:hover::after{opacity:0.6}
 .step-n{font-family:'Cormorant Garamond',serif;font-size:80px;font-weight:300;
-  color:rgba(196,186,224,0.05);position:absolute;top:12px;right:24px;line-height:1}
-.step-ico{width:48px;height:48px;border:1px solid rgba(196,186,224,0.2);border-radius:12px;
+  color:rgba(156,196,168,0.05);position:absolute;top:12px;right:24px;line-height:1}
+.step-ico{width:48px;height:48px;border:1px solid rgba(156,196,168,0.2);border-radius:12px;
   display:flex;align-items:center;justify-content:center;margin-bottom:24px;font-size:22px;
-  background:rgba(196,186,224,0.06);transition:border-color 0.3s,background 0.3s}
-.step-c:hover .step-ico{border-color:rgba(196,186,224,0.4);background:rgba(196,186,224,0.1)}
+  background:rgba(156,196,168,0.06);transition:border-color 0.3s,background 0.3s}
+.step-c:hover .step-ico{border-color:rgba(156,196,168,0.4);background:rgba(156,196,168,0.1)}
 .step-t{font-size:17px;font-weight:500;color:var(--cream);margin-bottom:11px;letter-spacing:0.01em}
-.step-d{font-size:13px;color:rgba(148,168,188,0.6);line-height:1.9;font-weight:300}
-.code-blk{margin-top:22px;background:rgba(8,10,16,0.9);border:1px solid rgba(196,186,224,0.1);
+.step-d{font-size:13px;color:rgba(45,60,48,0.6);line-height:1.9;font-weight:300}
+.code-blk{margin-top:22px;background:rgba(234,226,204,0.9);border:1px solid rgba(156,196,168,0.1);
   border-radius:10px;padding:16px;font-family:monospace;font-size:10px}
-.cl{margin:4px 0;opacity:0.85;line-height:1.6}
-.cl-g{color:#80C8A0}.cl-b{color:#90B8E4}.cl-p{color:#C8B0F0}.cl-r{color:#E8A8A8}.cl-y{color:#E8CC88}
+.cl{margin:4px 0;opacity:0.95;line-height:1.6}
+.cl-g{color:#1E7A52}.cl-b{color:#2A5E94}.cl-p{color:#6A4A9E}.cl-r{color:#A23838}.cl-y{color:#8C6A10}
 
 /* ── MODULES ── */
 .mods-g{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:1px;
-  background:rgba(196,186,224,0.08);border:1px solid rgba(196,186,224,0.12);border-radius:20px;overflow:hidden}
+  background:rgba(156,196,168,0.08);border:1px solid rgba(156,196,168,0.12);border-radius:20px;overflow:hidden}
 .mod-c{background:var(--dark2);padding:28px 24px;transition:all 0.4s cubic-bezier(0.23,1,0.32,1);
   cursor:pointer;position:relative;overflow:hidden}
 .mod-c:hover{background:var(--dark3);transform:translateY(-2px)}
 .mod-c::before{content:'';position:absolute;inset:0;
-  background:radial-gradient(ellipse at 50% -10%,rgba(196,186,224,0.1),transparent 60%);
+  background:radial-gradient(ellipse at 50% -10%,rgba(156,196,168,0.1),transparent 60%);
   opacity:0;transition:opacity 0.4s}
 .mod-c:hover::before{opacity:1}
-.mod-ico{width:40px;height:40px;border:1px solid rgba(196,186,224,0.16);border-radius:10px;
+.mod-ico{width:40px;height:40px;border:1px solid rgba(156,196,168,0.16);border-radius:10px;
   display:flex;align-items:center;justify-content:center;margin-bottom:16px;font-size:18px;
-  background:rgba(196,186,224,0.05);transition:all 0.3s}
-.mod-c:hover .mod-ico{border-color:rgba(196,186,224,0.35);background:rgba(196,186,224,0.1)}
+  background:rgba(156,196,168,0.05);transition:all 0.3s}
+.mod-c:hover .mod-ico{border-color:rgba(156,196,168,0.35);background:rgba(156,196,168,0.1)}
 .mod-n{font-size:12px;font-weight:500;color:var(--cream);margin-bottom:5px;line-height:1.5;letter-spacing:0.01em}
 .mod-m{font-size:10px;color:var(--lav);margin-top:10px;padding:4px 10px;
-  background:rgba(196,186,224,0.1);border-radius:100px;display:inline-block;letter-spacing:0.08em;
-  border:1px solid rgba(196,186,224,0.15)}
+  background:rgba(156,196,168,0.1);border-radius:100px;display:inline-block;letter-spacing:0.08em;
+  border:1px solid rgba(156,196,168,0.15)}
 
 /* ── DASHBOARD ── */
-.dash-wrap{background:var(--dark2);border:1px solid rgba(196,186,224,0.14);border-radius:20px;overflow:hidden;
-  box-shadow:0 40px 100px rgba(0,0,0,0.5),0 0 0 1px rgba(196,186,224,0.05)}
-.dash-hdr{background:rgba(16,18,28,0.98);padding:18px 26px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(196,186,224,0.08)}
+.dash-wrap{background:var(--dark2);border:1px solid rgba(156,196,168,0.14);border-radius:20px;overflow:hidden;
+  box-shadow:0 40px 100px rgba(0,0,0,0.5),0 0 0 1px rgba(156,196,168,0.05)}
+.dash-hdr{background:#FEFCF6;padding:18px 26px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(156,196,168,0.08)}
 .dh-t{font-size:12px;font-weight:500;letter-spacing:0.14em;color:var(--cream)}
-.dlive{display:flex;align-items:center;gap:8px;font-size:10px;color:#80C8A0;letter-spacing:0.12em}
-.ldot{width:5px;height:5px;background:#80C8A0;border-radius:50%;animation:lp 1.6s ease-in-out infinite}
+.dlive{display:flex;align-items:center;gap:8px;font-size:10px;color:#1E7A52;letter-spacing:0.12em}
+.ldot{width:5px;height:5px;background:#1E7A52;border-radius:50%;animation:lp 1.6s ease-in-out infinite}
 @keyframes lp{0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(128,200,160,0.5)}50%{opacity:0.6;box-shadow:0 0 0 6px rgba(128,200,160,0)}}
-.kpi-row{display:grid;grid-template-columns:repeat(6,1fr);gap:1px;background:rgba(196,186,224,0.07)}
+.kpi-row{display:grid;grid-template-columns:repeat(6,1fr);gap:1px;background:rgba(156,196,168,0.07)}
 .kpi{background:var(--dark2);padding:24px 16px;text-align:center;transition:background 0.3s;position:relative;overflow:hidden}
 .kpi:hover{background:var(--dark3)}
 .kv{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:300;color:var(--cream);line-height:1}
-.kl{font-size:8px;letter-spacing:0.18em;color:rgba(148,168,188,0.45);margin-top:5px}
+.kl{font-size:8px;letter-spacing:0.18em;color:rgba(45,60,48,0.72);margin-top:5px}
 .kch{font-size:10px;margin-top:7px}
-.up{color:#80C8A0}.dn{color:#E8A8A8}.wn{color:#E8CC88}
-.chart-row{display:grid;grid-template-columns:2fr 1fr;gap:1px;background:rgba(196,186,224,0.07)}
+.up{color:#1E7A52}.dn{color:#A23838}.wn{color:#8C6A10}
+.chart-row{display:grid;grid-template-columns:2fr 1fr;gap:1px;background:rgba(156,196,168,0.07)}
 .cpanel{background:var(--dark2);padding:28px}
-.cp-t{font-size:10px;letter-spacing:0.14em;color:rgba(148,168,188,0.45);margin-bottom:20px;font-weight:300}
+.cp-t{font-size:10px;letter-spacing:0.14em;color:rgba(45,60,48,0.72);margin-bottom:20px;font-weight:300}
 .bars{display:flex;align-items:flex-end;gap:7px;height:120px}
 .bar-item{flex:1;display:flex;flex-direction:column;align-items:center}
 .bar-fill{width:100%;border-radius:4px 4px 0 0;transition:all 0.6s;animation:barUp 1.4s ease both}
 @keyframes barUp{from{transform:scaleY(0);transform-origin:bottom}to{transform:scaleY(1);transform-origin:bottom}}
-.bar-lbl{font-size:8px;color:rgba(148,168,188,0.35);text-align:center;margin-top:5px;letter-spacing:0.06em}
+.bar-lbl{font-size:8px;color:rgba(45,60,48,0.62);text-align:center;margin-top:5px;letter-spacing:0.06em}
 .donut-p{background:var(--dark2);padding:28px;display:flex;flex-direction:column;align-items:center;justify-content:center}
 
 /* ── SHIELD ── */
-.shield-wrap{background:var(--dark2);border:1px solid rgba(196,186,224,0.12);border-radius:20px;overflow:hidden;
+.shield-wrap{background:var(--dark2);border:1px solid rgba(156,196,168,0.12);border-radius:20px;overflow:hidden;
   box-shadow:0 24px 60px rgba(0,0,0,0.3)}
-.shield-hdr{background:rgba(16,18,28,0.98);padding:22px 26px;border-bottom:1px solid rgba(196,186,224,0.08)}
+.shield-hdr{background:#FEFCF6;padding:22px 26px;border-bottom:1px solid rgba(156,196,168,0.08)}
 .shield-tabs{display:flex;gap:3px;margin-top:14px}
 .stab{padding:7px 18px;border-radius:8px;font-size:10px;letter-spacing:0.12em;cursor:pointer;
   transition:all 0.25s;border:1px solid transparent;font-family:'DM Sans',sans-serif;
-  font-weight:300;color:rgba(148,168,188,0.5)}
-.stab.on{background:rgba(196,186,224,0.12);border-color:rgba(196,186,224,0.25);color:var(--cream)}
-.stab:not(.on):hover{color:var(--lav);background:rgba(196,186,224,0.05)}
+  font-weight:300;color:rgba(45,60,48,0.5)}
+.stab.on{background:rgba(156,196,168,0.12);border-color:rgba(156,196,168,0.25);color:var(--cream)}
+.stab:not(.on):hover{color:var(--lav);background:rgba(156,196,168,0.05)}
 .sh-tbl{width:100%;border-collapse:collapse}
-.sh-tbl th{background:rgba(20,22,34,0.9);padding:11px 18px;text-align:left;font-size:9px;
-  letter-spacing:0.14em;color:rgba(148,168,188,0.4);border-bottom:1px solid rgba(196,186,224,0.07);font-weight:400}
-.sh-tbl td{padding:13px 18px;border-bottom:1px solid rgba(196,186,224,0.04);font-size:11px;color:rgba(196,186,224,0.65)}
+.sh-tbl th{background:rgba(234,226,204,0.9);padding:11px 18px;text-align:left;font-size:9px;
+  letter-spacing:0.14em;color:rgba(45,60,48,0.68);border-bottom:1px solid rgba(156,196,168,0.07);font-weight:400}
+.sh-tbl td{padding:13px 18px;border-bottom:1px solid rgba(156,196,168,0.15);font-size:11px;color:var(--ink3)}
 .sh-tbl td:first-child{color:var(--cream);font-weight:500}
-.sh-tbl tr:hover td{background:rgba(196,186,224,0.03)}
+.sh-tbl tr:hover td{background:rgba(156,196,168,0.03)}
 .sbadge{padding:2px 9px;border-radius:100px;font-size:9px;letter-spacing:0.08em;font-weight:500}
-.sbg{background:rgba(128,200,160,0.12);color:#80C8A0;border:1px solid rgba(128,200,160,0.22)}
-.sbr{background:rgba(232,168,168,0.12);color:#E8A8A8;border:1px solid rgba(232,168,168,0.22)}
-.sbo{background:rgba(232,204,136,0.12);color:#E8CC88;border:1px solid rgba(232,204,136,0.22)}
-.blurred td:not(:first-child){filter:blur(5px);color:rgba(148,168,188,0.25)}
+.sbg{background:rgba(128,200,160,0.18);color:#1E7A52;border:1px solid rgba(128,200,160,0.35)}
+.sbr{background:rgba(232,168,168,0.18);color:#A23838;border:1px solid rgba(232,168,168,0.35)}
+.sbo{background:rgba(232,204,136,0.18);color:#8C6A10;border:1px solid rgba(232,204,136,0.35)}
+.blurred td:not(:first-child){filter:blur(5px);color:rgba(45,60,48,0.58)}
 
 /* ── VIDEO GALLERY ── */
 .vsec-gallery{position:relative;height:560px;overflow:hidden;--vid-opacity:0.65}
+
+/* ── FULL-VISIBILITY VIDEO (foreground player, not ambient background) ── */
+.vsec-feature{padding:100px 40px;background:var(--dark2)}
+.vfeature-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.vfeature-grid.reverse{direction:rtl}
+.vfeature-grid.reverse>*{direction:ltr}
+.vfeature-player{position:relative;border-radius:20px;overflow:hidden;aspect-ratio:16/10;
+  box-shadow:0 30px 80px rgba(30,43,32,0.18),0 4px 16px rgba(30,43,32,0.1);border:1px solid rgba(156,196,168,0.18)}
+.vfeature-player video{width:100%;height:100%;object-fit:cover;display:block}
+.vfeature-play-badge{position:absolute;bottom:16px;left:16px;background:rgba(20,30,22,0.7);backdrop-filter:blur(8px);
+  color:#fff;font-size:10px;letter-spacing:0.16em;padding:7px 14px;border-radius:100px;display:flex;align-items:center;gap:7px}
+.vfeature-play-badge .dot{width:6px;height:6px;border-radius:50%;background:#FF5F57;animation:lp 1.6s ease-in-out infinite}
+.vfeature-text{padding:0 8px}
+.vfeature-tag{font-size:10px;letter-spacing:0.3em;text-transform:uppercase;color:var(--lav3);font-weight:600;margin-bottom:18px}
+.vfeature-h{font-family:'Cormorant Garamond',serif;font-size:clamp(26px,3.5vw,40px);font-weight:400;
+  color:var(--cream);line-height:1.2;margin-bottom:18px}
+.vfeature-d{font-size:14px;line-height:1.85;color:rgba(30,43,32,0.65);font-weight:300;margin-bottom:24px}
+
+@media(max-width:860px){
+  .vfeature-grid,.vfeature-grid.reverse{grid-template-columns:1fr;direction:ltr}
+  .vsec-feature{padding:64px 24px}
+}
 .vid-content{position:relative;z-index:3;height:100%;display:flex;flex-direction:column;
   align-items:center;justify-content:center;text-align:center;padding:48px 40px}
-.vid-tag{font-size:9px;letter-spacing:0.32em;color:rgba(196,186,224,0.65);margin-bottom:18px;font-weight:300}
+.vid-tag{font-size:9px;letter-spacing:0.32em;color:var(--lav3);margin-bottom:18px;font-weight:500}
 .vid-h{font-family:'Cormorant Garamond',serif;font-size:clamp(30px,4.5vw,58px);font-weight:300;
-  color:var(--cream);margin-bottom:16px;line-height:1.12;text-shadow:0 2px 30px rgba(0,0,0,0.6)}
-.vid-d{font-size:14px;color:rgba(196,186,224,0.6);max-width:540px;line-height:1.85;font-weight:300}
+  color:var(--cream);margin-bottom:16px;line-height:1.12;text-shadow:0 2px 24px rgba(251,248,240,0.85),0 1px 2px rgba(251,248,240,0.6)}
+.vid-d{font-size:14px;color:rgba(30,43,32,0.68);max-width:540px;line-height:1.85;font-weight:300}
 
 /* ── PHONES 3D ── */
 .phones-row{display:flex;justify-content:center;gap:22px;flex-wrap:wrap;perspective:1000px}
-.phone{width:158px;background:var(--dark3);border:1px solid rgba(196,186,224,0.16);
-  border-radius:28px;padding:14px;transition:all 0.5s cubic-bezier(0.23,1,0.32,1);position:relative;
-  box-shadow:0 24px 60px rgba(0,0,0,0.4),0 0 0 1px rgba(196,186,224,0.05),inset 0 1px 0 rgba(255,255,255,0.04)}
+.phone{width:172px;background:linear-gradient(165deg,#3a3a3c 0%,#1c1c1e 45%,#2a2a2c 100%);
+  border-radius:38px;padding:5px;transition:all 0.5s cubic-bezier(0.23,1,0.32,1);position:relative;
+  box-shadow:0 24px 60px rgba(0,0,0,0.45),0 0 0 1px rgba(255,255,255,0.06),inset 0 1px 1px rgba(255,255,255,0.15)}
+.phone::before{content:'';position:absolute;left:-1.5px;top:62px;width:2px;height:28px;background:#0a0a0a;border-radius:2px 0 0 2px}
+.phone::after{content:'';position:absolute;left:-1.5px;top:100px;width:2px;height:46px;background:#0a0a0a;border-radius:2px 0 0 2px}
 .phone:nth-child(2){transform:translateY(-22px) rotateY(-5deg)}
 .phone:nth-child(4){transform:translateY(-12px) rotateY(4deg)}
 .phone:nth-child(3){transform:translateY(-4px) rotateY(-2deg)}
 .phone:hover{transform:translateY(-10px) rotateY(0deg) scale(1.03)!important;
-  box-shadow:0 36px 80px rgba(0,0,0,0.5),0 0 0 1px rgba(196,186,224,0.12)}
-.pnotch{width:44px;height:4px;background:rgba(196,186,224,0.14);border-radius:100px;margin:0 auto 10px}
-.pscr{background:#080A12;border-radius:16px;padding:12px;min-height:230px;overflow:hidden}
-.phdr{font-size:8px;letter-spacing:0.14em;color:rgba(148,168,188,0.4);margin-bottom:10px;display:flex;justify-content:space-between}
-.pmet{background:rgba(18,20,30,0.98);border-radius:8px;padding:9px;margin-bottom:7px;border:1px solid rgba(196,186,224,0.08)}
+  box-shadow:0 36px 80px rgba(0,0,0,0.5),0 0 0 1px rgba(255,255,255,0.1)}
+.phone-screen-wrap{background:#000;border-radius:32px;padding:9px;position:relative}
+.pnotch{position:absolute;top:18px;left:50%;transform:translateX(-50%);width:38px;height:13px;
+  background:#000;border-radius:100px;z-index:5;box-shadow:0 0 0 1.5px rgba(255,255,255,0.04)}
+.pscr{background:#FBF8F0;border-radius:24px;padding:30px 12px 12px;min-height:240px;overflow:hidden;border:1px solid rgba(0,0,0,0.4)}
+.phdr{font-size:8px;letter-spacing:0.14em;color:rgba(45,60,48,0.68);margin-bottom:10px;display:flex;justify-content:space-between}
+.pmet{background:#FFFFFF;border-radius:8px;padding:9px;margin-bottom:7px;border:1px solid rgba(156,196,168,0.18);box-shadow:0 2px 8px rgba(156,196,168,0.08)}
 .pmv{font-size:20px;font-family:'Cormorant Garamond',serif;color:var(--cream);font-weight:300;line-height:1}
-.pml{font-size:8px;color:rgba(148,168,188,0.4);letter-spacing:0.1em;margin-top:2px}
+.pml{font-size:8px;color:rgba(45,60,48,0.68);letter-spacing:0.1em;margin-top:2px}
 .pbar{height:3px;border-radius:100px;margin-top:5px}
 .palt{border-radius:8px;padding:8px;margin-bottom:7px;border:1px solid}
 .palt-r{background:rgba(232,168,168,0.08);border-color:rgba(232,168,168,0.2)}
@@ -369,15 +584,18 @@ table.xt td{padding:6px 11px;border:1px solid #EAECF4;color:#3A3C4E;white-space:
   border-radius:18px;text-decoration:none;transition:all 0.4s cubic-bezier(0.23,1,0.32,1);
   border:1px solid;cursor:pointer;font-family:'DM Sans',sans-serif}
 .ca-btn:hover{transform:translateY(-4px)}
-.ca-icon{font-size:32px;line-height:1}
+.ca-icon{font-size:32px;line-height:1;color:var(--lav3)}
 .ca-label{font-size:10px;letter-spacing:0.18em;font-weight:300}
 .ca-value{font-size:13px;font-weight:500;color:var(--cream)}
 .ca-wa{background:rgba(37,211,102,0.1);border-color:rgba(37,211,102,0.25)}
 .ca-wa:hover{background:rgba(37,211,102,0.18);box-shadow:0 16px 48px rgba(37,211,102,0.15)}
-.ca-mail{background:rgba(196,186,224,0.08);border-color:rgba(196,186,224,0.2)}
-.ca-mail:hover{background:rgba(196,186,224,0.14);box-shadow:0 16px 48px rgba(196,186,224,0.1)}
+.ca-wa .ca-icon{color:#25D366}
+.ca-mail{background:rgba(156,196,168,0.08);border-color:rgba(156,196,168,0.2)}
+.ca-mail:hover{background:rgba(156,196,168,0.14);box-shadow:0 16px 48px rgba(156,196,168,0.1)}
+.ca-mail .ca-icon{color:var(--lav3)}
 .ca-insta{background:rgba(225,120,80,0.1);border-color:rgba(225,120,80,0.22)}
 .ca-insta:hover{background:rgba(225,120,80,0.17);box-shadow:0 16px 48px rgba(225,120,80,0.12)}
+.ca-insta .ca-icon{color:#E07850}
 .ca-lbl-wa{color:#5DD89A}
 .ca-lbl-mail{color:var(--lav)}
 .ca-lbl-insta{color:#E07850}
@@ -386,28 +604,29 @@ table.xt td{padding:6px 11px;border:1px solid #EAECF4;color:#3A3C4E;white-space:
 .cta-sec{position:relative;padding:160px 40px;text-align:center;overflow:hidden;--vid-opacity:0.45}
 .cta-body{position:relative;z-index:3;max-width:700px;margin:0 auto}
 .cta-h{font-family:'Cormorant Garamond',serif;font-size:clamp(38px,6vw,72px);font-weight:300;
-  color:var(--cream);margin-bottom:22px;line-height:1.08;text-shadow:0 2px 40px rgba(0,0,0,0.7)}
-.cta-p{font-size:16px;color:rgba(196,186,224,0.55);max-width:500px;margin:0 auto 52px;line-height:1.9;font-weight:300}
+  color:var(--cream);margin-bottom:22px;line-height:1.08;text-shadow:0 2px 30px rgba(251,248,240,0.9),0 1px 3px rgba(251,248,240,0.7)}
+.cta-p{font-size:16px;color:rgba(30,43,32,0.65);max-width:500px;margin:0 auto 52px;line-height:1.9;font-weight:300}
 
 /* ── FOOTER ── */
-footer{background:rgba(6,8,14,0.99);border-top:1px solid rgba(196,186,224,0.07);padding:52px 40px;
+footer{background:rgba(251,248,240,0.99);border-top:1px solid rgba(156,196,168,0.07);padding:52px 40px;
   display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:48px}
 .fbrand{font-size:12px;font-weight:600;letter-spacing:0.24em;color:var(--paper);margin-bottom:12px}
-.fdesc{font-size:11px;color:rgba(148,168,188,0.38);line-height:2;font-weight:300}
+.fdesc{font-size:11px;color:rgba(45,60,48,0.65);line-height:2;font-weight:300}
 .fcitem{display:flex;gap:11px;margin-bottom:16px;align-items:flex-start}
-.fctxt{font-size:11px;color:rgba(148,168,188,0.42);line-height:1.7;font-weight:300}
-.fctxt strong{color:rgba(196,186,224,0.48);font-weight:400;display:block;font-size:9px;letter-spacing:0.16em;margin-bottom:3px}
-.fstack{font-size:10px;color:rgba(148,168,188,0.28);line-height:2.2;font-weight:300;letter-spacing:0.04em}
-.fcopy{font-size:9px;color:rgba(148,168,188,0.2);letter-spacing:0.12em;margin-top:14px}
+.fctxt{font-size:11px;color:rgba(45,60,48,0.7);line-height:1.7;font-weight:300}
+.fctxt strong{color:var(--lav3);font-weight:500;display:block;font-size:9px;letter-spacing:0.16em;margin-bottom:3px}
+.fstack{font-size:10px;color:rgba(45,60,48,0.6);line-height:2.2;font-weight:300;letter-spacing:0.04em}
+.fcopy{font-size:9px;color:rgba(45,60,48,0.55);letter-spacing:0.12em;margin-top:14px}
 footer a{color:inherit;text-decoration:none}
-footer a:hover{color:rgba(196,186,224,0.6)}
+footer a:hover{color:rgba(156,196,168,0.6)}
 
 ::-webkit-scrollbar{width:3px;height:3px}
 ::-webkit-scrollbar-track{background:rgba(255,255,255,0.02)}
-::-webkit-scrollbar-thumb{background:rgba(196,186,224,0.2);border-radius:2px}
+::-webkit-scrollbar-thumb{background:rgba(156,196,168,0.2);border-radius:2px}
 
 @media(max-width:768px){
   .nav-links,.nav-wa{display:none}
+  #hero{padding-top:110px;padding-bottom:56px}
   .metrics-strip{grid-template-columns:repeat(2,1fr)}
   .steps-g{grid-template-columns:1fr}
   .step-c.full{grid-column:1}
@@ -418,6 +637,7 @@ footer a:hover{color:rgba(196,186,224,0.6)}
   .float-contact{right:12px}
 }
 </style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 </head>
 <body>
 
@@ -428,33 +648,68 @@ footer a:hover{color:rgba(196,186,224,0.6)}
 <!-- FLOATING CONTACT BUTTONS -->
 <div class="float-contact">
   <a class="fc-btn fc-wa" href="https://wa.me/918100888810" target="_blank">
-    <span style="font-size:22px">💬</span>
+    <span style="font-size:20px"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.149-.149.347-.385.521-.578.174-.193.232-.33.347-.55.116-.22.058-.398-.04-.546-.099-.149-.992-2.394-1.36-3.273-.36-.866-.728-.748-1.001-.762-.273-.013-.585-.013-.897-.013-.312 0-.819.116-1.111.421-.293.305-1.12 1.094-1.12 2.667 0 1.573.971 3.092 1.107 3.305.136.213 1.998 3.067 4.85 4.176 2.852 1.108 2.852.738 3.378.687.526-.05 1.694-.693 1.93-1.363.236-.67.236-1.243.165-1.363-.07-.119-.273-.187-.57-.336z"/><path d="M12.001 2C6.486 2 2 6.486 2 12c0 1.957.564 3.78 1.54 5.32L2 22l4.794-1.495A9.95 9.95 0 0012 22c5.514 0 10-4.486 10-10S17.515 2 12.001 2zm0 18.193c-1.713 0-3.31-.486-4.66-1.328l-.335-.207-3.473 1.084 1.107-3.382-.22-.349A8.166 8.166 0 013.807 12c0-4.522 3.671-8.193 8.194-8.193 4.522 0 8.193 3.671 8.193 8.193 0 4.522-3.67 8.193-8.193 8.193z"/></svg></span>
     <span class="fc-tooltip">WhatsApp Us</span>
   </a>
   <a class="fc-btn fc-mail" href="mailto:Tirumala.textiles10@gmail.com">
-    <span style="font-size:20px">✉️</span>
+    <span style="font-size:18px"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="4.5" width="19" height="15" rx="2.2"/><path d="M3.5 6.2l8.5 6.4 8.5-6.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
     <span class="fc-tooltip">Send Email</span>
   </a>
   <a class="fc-btn fc-insta" href="https://instagram.com/tirumalatextiles10" target="_blank">
-    <span style="font-size:20px">📷</span>
+    <span style="font-size:18px"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="2.5" y="2.5" width="19" height="19" rx="5.2"/><circle cx="12" cy="12" r="4.3"/><circle cx="17.4" cy="6.6" r="1.05" fill="currentColor" stroke="none"/></svg></span>
     <span class="fc-tooltip">@tirumalatextiles10</span>
   </a>
 </div>
 
 <!-- NAVBAR -->
 <nav id="navbar">
-  <div class="nav-brand">TIRUMALA AUTOMATION</div>
+  <div class="nav-brand" onclick="showPage('home')" style="cursor:pointer">TIRUMALA AUTOMATION</div>
   <ul class="nav-links">
-    <li><a href="#shield">Shield</a></li>
-    <li><a href="#modules">Modules</a></li>
-    <li><a href="#mobile">Mobile</a></li>
-    <li><a href="#cta">Contact</a></li>
+    <li class="nav-has-dropdown">
+      <a onclick="showPage('home')" data-page="home">Home</a>
+      <div class="nav-dropdown">
+        <a onclick="gotoSection('home','excel')">Excel AI OS</a>
+        <a onclick="gotoSection('home','architecture')">How It Works</a>
+        <a onclick="gotoSection('home','chaos-magic')">Chaos → Magic</a>
+        <a onclick="gotoSection('home','b2b-websites')">B2B Websites</a>
+      </div>
+    </li>
+    <li class="nav-has-dropdown">
+      <a onclick="showPage('modules')" data-page="modules">Modules</a>
+      <div class="nav-dropdown">
+        <a onclick="gotoSection('modules','dashboard')">Command Center</a>
+        <a onclick="gotoSection('modules','shield')">Security &amp; Defender</a>
+        <a onclick="gotoSection('modules','modules')">17 Modules</a>
+        <a onclick="gotoSection('modules','vid1')">Automation Films</a>
+        <a onclick="gotoSection('modules','mobile')">Mobile / Power Apps</a>
+      </div>
+    </li>
+    <li><a onclick="showPage('buyers')" data-page="buyers">Buyers</a></li>
+    <li><a onclick="showPage('about')" data-page="about">About</a></li>
+    <li><a onclick="showPage('contact')" data-page="contact">Contact</a></li>
   </ul>
   <div class="nav-right">
-    <a class="nav-wa" href="https://wa.me/918100888810" target="_blank">💬 WhatsApp</a>
-    <button class="nav-cta" onclick="document.getElementById('cta').scrollIntoView({behavior:'smooth'})">Get Demo</button>
+    <a class="nav-wa" href="https://wa.me/918100888810" target="_blank"><span style="font-size:14px;margin-right:5px"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" style="vertical-align:-0.15em"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.149-.149.347-.385.521-.578.174-.193.232-.33.347-.55.116-.22.058-.398-.04-.546-.099-.149-.992-2.394-1.36-3.273-.36-.866-.728-.748-1.001-.762-.273-.013-.585-.013-.897-.013-.312 0-.819.116-1.111.421-.293.305-1.12 1.094-1.12 2.667 0 1.573.971 3.092 1.107 3.305.136.213 1.998 3.067 4.85 4.176 2.852 1.108 2.852.738 3.378.687.526-.05 1.694-.693 1.93-1.363.236-.67.236-1.243.165-1.363-.07-.119-.273-.187-.57-.336z"/><path d="M12.001 2C6.486 2 2 6.486 2 12c0 1.957.564 3.78 1.54 5.32L2 22l4.794-1.495A9.95 9.95 0 0012 22c5.514 0 10-4.486 10-10S17.515 2 12.001 2zm0 18.193c-1.713 0-3.31-.486-4.66-1.328l-.335-.207-3.473 1.084 1.107-3.382-.22-.349A8.166 8.166 0 013.807 12c0-4.522 3.671-8.193 8.194-8.193 4.522 0 8.193 3.671 8.193 8.193 0 4.522-3.67 8.193-8.193 8.193z"/></svg></span>WhatsApp</a>
+    <button class="nav-cta" onclick="showPage('contact')">Get Demo</button>
+    <div class="nav-burger" id="nav-burger"><span></span><span></span><span></span></div>
   </div>
 </nav>
+
+<!-- MOBILE MENU OVERLAY -->
+<div id="mobile-menu">
+  <div class="mm-close" id="mm-close">✕</div>
+  <a onclick="showPage('home');closeMobileMenu()">Home</a>
+  <a onclick="showPage('modules');closeMobileMenu()">Modules</a>
+  <a onclick="showPage('buyers');closeMobileMenu()">Buyers</a>
+  <a onclick="showPage('about');closeMobileMenu()">About</a>
+  <a onclick="showPage('contact');closeMobileMenu()">Contact</a>
+  <a href="https://wa.me/918100888810" target="_blank" style="color:#5DD89A"><span style="font-size:16px;margin-right:6px"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" style="vertical-align:-0.15em"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.149-.149.347-.385.521-.578.174-.193.232-.33.347-.55.116-.22.058-.398-.04-.546-.099-.149-.992-2.394-1.36-3.273-.36-.866-.728-.748-1.001-.762-.273-.013-.585-.013-.897-.013-.312 0-.819.116-1.111.421-.293.305-1.12 1.094-1.12 2.667 0 1.573.971 3.092 1.107 3.305.136.213 1.998 3.067 4.85 4.176 2.852 1.108 2.852.738 3.378.687.526-.05 1.694-.693 1.93-1.363.236-.67.236-1.243.165-1.363-.07-.119-.273-.187-.57-.336z"/><path d="M12.001 2C6.486 2 2 6.486 2 12c0 1.957.564 3.78 1.54 5.32L2 22l4.794-1.495A9.95 9.95 0 0012 22c5.514 0 10-4.486 10-10S17.515 2 12.001 2zm0 18.193c-1.713 0-3.31-.486-4.66-1.328l-.335-.207-3.473 1.084 1.107-3.382-.22-.349A8.166 8.166 0 013.807 12c0-4.522 3.671-8.193 8.194-8.193 4.522 0 8.193 3.671 8.193 8.193 0 4.522-3.67 8.193-8.193 8.193z"/></svg></span>WhatsApp</a>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     PAGE: HOME
+     ═══════════════════════════════════════════ -->
+<div id="page-home" class="page active">
 
 <!-- ═══ HERO ═══ -->
 <section class="vsec" id="hero">
@@ -463,6 +718,7 @@ footer a:hover{color:rgba(196,186,224,0.6)}
     <video autoplay muted loop playsinline src="hero-bg.mp4"></video>
     <div class="voverlay-dark"></div>
   </div>
+  <canvas id="three-hero"></canvas>
   <div class="hero-grid"></div>
   <div class="hero-body">
     <div class="hero-eye">EXCEL AI OS &nbsp;·&nbsp; POWER APPS &nbsp;·&nbsp; VBA AUTOMATION</div>
@@ -470,7 +726,7 @@ footer a:hover{color:rgba(196,186,224,0.6)}
     <p class="hero-p">We build indestructible automated Excel ecosystems — natively integrated with Power Apps — custom-engineered for garment factory floors. 17 specialized modules. Zero generic software.</p>
     <div class="hero-btns">
       <button class="btn-primary" onclick="document.getElementById('cta').scrollIntoView({behavior:'smooth'})">Run Live Demo</button>
-      <a class="btn-wa-hero" href="https://wa.me/918100888810" target="_blank">💬 WhatsApp Now</a>
+      <a class="btn-wa-hero" href="https://wa.me/918100888810" target="_blank"><span style="font-size:14px;margin-right:6px"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" style="vertical-align:-0.15em"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.149-.149.347-.385.521-.578.174-.193.232-.33.347-.55.116-.22.058-.398-.04-.546-.099-.149-.992-2.394-1.36-3.273-.36-.866-.728-.748-1.001-.762-.273-.013-.585-.013-.897-.013-.312 0-.819.116-1.111.421-.293.305-1.12 1.094-1.12 2.667 0 1.573.971 3.092 1.107 3.305.136.213 1.998 3.067 4.85 4.176 2.852 1.108 2.852.738 3.378.687.526-.05 1.694-.693 1.93-1.363.236-.67.236-1.243.165-1.363-.07-.119-.273-.187-.57-.336z"/><path d="M12.001 2C6.486 2 2 6.486 2 12c0 1.957.564 3.78 1.54 5.32L2 22l4.794-1.495A9.95 9.95 0 0012 22c5.514 0 10-4.486 10-10S17.515 2 12.001 2zm0 18.193c-1.713 0-3.31-.486-4.66-1.328l-.335-.207-3.473 1.084 1.107-3.382-.22-.349A8.166 8.166 0 013.807 12c0-4.522 3.671-8.193 8.194-8.193 4.522 0 8.193 3.671 8.193 8.193 0 4.522-3.67 8.193-8.193 8.193z"/></svg></span>WhatsApp Now</a>
       <button class="btn-ghost" onclick="document.getElementById('modules').scrollIntoView({behavior:'smooth'})">See 17 Modules</button>
     </div>
     <div class="metrics-strip">
@@ -588,7 +844,7 @@ footer a:hover{color:rgba(196,186,224,0.6)}
         <div class="step-d">Professional boardroom reports auto-generate and distribute. KPI summaries reach management in seconds. Zero manual effort.</div>
         <div class="code-blk"><div class="cl cl-p">📄 Daily_KPI_Report.pdf — Pages: 12</div><div class="cl">   Data rows: 2,847 processed</div><div class="cl cl-g">✓ Sent to 5 recipients — 09:14 AM</div></div>
       </div>
-      <div class="step-c full"><div class="step-n">05</div><div class="step-ico">💬</div>
+      <div class="step-c full"><div class="step-n">05</div><div class="step-ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" style="vertical-align:-0.15em"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.149-.149.347-.385.521-.578.174-.193.232-.33.347-.55.116-.22.058-.398-.04-.546-.099-.149-.992-2.394-1.36-3.273-.36-.866-.728-.748-1.001-.762-.273-.013-.585-.013-.897-.013-.312 0-.819.116-1.111.421-.293.305-1.12 1.094-1.12 2.667 0 1.573.971 3.092 1.107 3.305.136.213 1.998 3.067 4.85 4.176 2.852 1.108 2.852.738 3.378.687.526-.05 1.694-.693 1.93-1.363.236-.67.236-1.243.165-1.363-.07-.119-.273-.187-.57-.336z"/><path d="M12.001 2C6.486 2 2 6.486 2 12c0 1.957.564 3.78 1.54 5.32L2 22l4.794-1.495A9.95 9.95 0 0012 22c5.514 0 10-4.486 10-10S17.515 2 12.001 2zm0 18.193c-1.713 0-3.31-.486-4.66-1.328l-.335-.207-3.473 1.084 1.107-3.382-.22-.349A8.166 8.166 0 013.807 12c0-4.522 3.671-8.193 8.194-8.193 4.522 0 8.193 3.671 8.193 8.193 0 4.522-3.67 8.193-8.193 8.193z"/></svg></div>
         <div class="step-t">WhatsApp Alert — Instant Dispatch</div>
         <div class="step-d">Managers receive instant WhatsApp alerts. Production warnings, stock alerts, KPI breaches — all dispatched automatically. The factory speaks to its leaders in real time.</div>
         <div class="code-blk" style="display:grid;grid-template-columns:1fr 1fr;gap:24px">
@@ -600,13 +856,176 @@ footer a:hover{color:rgba(196,186,224,0.6)}
   </div>
 </section>
 
+<!-- ═══ HOME PAGE TEASER CARDS (link to other pages) ═══ -->
+<div class="rich-divider"></div>
+<section class="sec" id="home-teasers">
+  <div class="sec-inner">
+    <div class="sec-eye">EXPLORE</div>
+    <h2 class="sec-h">Everything the system does.</h2>
+    <div class="teaser-grid">
+      <div class="teaser-card tilt-card" onclick="showPage('modules')">
+        <div class="teaser-ico">🧩</div>
+        <div class="teaser-t">Modules &amp; Dashboard</div>
+        <div class="teaser-d">17 specialized modules, live command center, security shield, and the automation films.</div>
+        <div class="teaser-arrow">→</div>
+      </div>
+      <div class="teaser-card tilt-card" onclick="showPage('buyers')">
+        <div class="teaser-ico">🤝</div>
+        <div class="teaser-t">Buyers &amp; Results</div>
+        <div class="teaser-d">Factories and buyers already running on the Excel AI OS — and what they say about it.</div>
+        <div class="teaser-arrow">→</div>
+      </div>
+      <div class="teaser-card tilt-card" onclick="showPage('about')">
+        <div class="teaser-ico">👤</div>
+        <div class="teaser-t">About &amp; Founders</div>
+        <div class="teaser-d">Meet the team behind Tirumala Automation and the story so far.</div>
+        <div class="teaser-arrow">→</div>
+      </div>
+      <div class="teaser-card tilt-card" onclick="showPage('contact')">
+        <div class="teaser-ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="1.8" style="vertical-align:-0.15em"><rect x="2.5" y="4.5" width="19" height="15" rx="2.2"/><path d="M3.5 6.2l8.5 6.4 8.5-6.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="teaser-t">Get In Touch</div>
+        <div class="teaser-d">Send an enquiry, book a live demo, or reach us directly on WhatsApp.</div>
+        <div class="teaser-arrow">→</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CHAOS → MAGIC: sticky side-card scroll section ═══ -->
+<div class="rich-divider"></div>
+<section class="sec" id="chaos-magic">
+  <div class="sec-inner">
+    <div class="sec-eye">INSIDE A REAL FACTORY DESK</div>
+    <h2 class="sec-h">From scattered chaos<br>to one calm screen.</h2>
+    <p class="sec-p">Five real moments from a merchandising floor — and what changes the instant Excel AI OS takes over.</p>
+
+    <div class="cm-layout">
+      <div class="cm-text-col">
+        <div class="cm-block" data-cm="0">
+          <div class="cm-eyebrow">Desk 01 · Merchandising</div>
+          <h3 class="cm-h">"Where is PO #4362?"</h3>
+          <p class="cm-p">Three buyers calling at once. Every answer lives in a different stack of paper, a different person's memory.</p>
+          <div class="cm-fix">→ One dashboard shows every PO's live status — no calls needed.</div>
+        </div>
+        <div class="cm-block" data-cm="1">
+          <div class="cm-eyebrow">Desk 02 · Follow-ups</div>
+          <h3 class="cm-h">Sticky notes as a memory system</h3>
+          <p class="cm-p">Follow-ups tracked on paper get lost the moment the note falls off the monitor.</p>
+          <div class="cm-fix">→ Automated reminders fire themselves — nothing depends on a sticky note surviving the day.</div>
+        </div>
+        <div class="cm-block" data-cm="2">
+          <div class="cm-eyebrow">Desk 03 · Critical Follow-Ups</div>
+          <h3 class="cm-h">Five people, one whiteboard, no live status</h3>
+          <p class="cm-p">PO confirmations, fabric approvals, lab dips, trims — all tracked by hand, all one missed update away from a delay.</p>
+          <div class="cm-fix">→ Live order tracking — every stage, updated the moment it changes.</div>
+        </div>
+        <div class="cm-block" data-cm="3">
+          <div class="cm-eyebrow">Desk 04 · The Full Floor</div>
+          <h3 class="cm-h">Dozens of people. Dozens of versions of the truth.</h3>
+          <p class="cm-p">Every desk has its own numbers. None of them agree by Friday.</p>
+          <div class="cm-fix">→ Integrated reports — one click, accurate, the same numbers for everyone.</div>
+        </div>
+        <div class="cm-block" data-cm="4">
+          <div class="cm-eyebrow">Desk 05 · Today's Priorities</div>
+          <h3 class="cm-h">Urgent, on paper, easy to miss</h3>
+          <p class="cm-p">Critical POs flagged in red marker — easy to miss if you didn't walk past the whiteboard today.</p>
+          <div class="cm-fix">→ Real-time alerts on email and WhatsApp — the urgent things find you, instead of waiting to be noticed.</div>
+        </div>
+      </div>
+
+      <div class="cm-image-col">
+        <div class="cm-sticky-card">
+          <div class="cm-card-frame">
+            <img class="cm-img cm-img-chaos" id="cmChaosImg" src="assets/chaos-magic/chaos_1.png" alt="Factory desk chaos">
+            <img class="cm-img cm-img-magic" id="cmMagicImg" src="assets/chaos-magic/magic_1.png" alt="Dashboard solution">
+            <div class="cm-state-tag" id="cmStateTag">CHAOS</div>
+          </div>
+          <div class="cm-dots">
+            <span class="cm-dot active" data-dot="0"></span>
+            <span class="cm-dot" data-dot="1"></span>
+            <span class="cm-dot" data-dot="2"></span>
+            <span class="cm-dot" data-dot="3"></span>
+            <span class="cm-dot" data-dot="4"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ B2B WEBSITE DEVELOPMENT SERVICE ═══ -->
+<div class="rich-divider"></div>
+<section class="sec" id="b2b-websites">
+  <div class="sec-inner">
+    <div class="sec-eye">BEYOND EXCEL</div>
+    <h2 class="sec-h">We also build the website<br>your buyers see first.</h2>
+    <p class="sec-p">Before a buyer ever sees your factory floor, they see your website. We design and build B2B sites for garment manufacturers and exporters — built to convert serious buyer enquiries, not just look good.</p>
+
+    <div class="b2b-grid">
+      <div class="b2b-card tilt-card">
+        <div class="b2b-ico">🎯</div>
+        <div class="b2b-t">SEO-Optimized From Day One</div>
+        <div class="b2b-d">On-page SEO, structured data (schema.org), sitemap & robots.txt configuration, and keyword-mapped content — built so buyers searching for manufacturers actually find you.</div>
+      </div>
+      <div class="b2b-card tilt-card">
+        <div class="b2b-ico">📊</div>
+        <div class="b2b-t">GA4 &amp; Conversion Tracking</div>
+        <div class="b2b-d">Google Analytics 4 setup, goal &amp; event tracking on every enquiry form, and Google Search Console integration — so you know exactly which pages bring buyers.</div>
+      </div>
+      <div class="b2b-card tilt-card">
+        <div class="b2b-ico">⚡</div>
+        <div class="b2b-t">Core Web Vitals &amp; Speed</div>
+        <div class="b2b-d">Lazy-loaded media, compressed video/image delivery, and performance budgets tuned for shared hosting — fast on a buyer's phone in any country.</div>
+      </div>
+      <div class="b2b-card tilt-card">
+        <div class="b2b-ico">📱</div>
+        <div class="b2b-t">Fully Responsive, Every Device</div>
+        <div class="b2b-d">One codebase, tested across mobile, tablet, and desktop — the same premium experience whether a buyer opens it on an iPhone in Milan or a laptop in Dhaka.</div>
+      </div>
+      <div class="b2b-card tilt-card">
+        <div class="b2b-ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="1.8" style="vertical-align:-0.15em"><rect x="2.5" y="4.5" width="19" height="15" rx="2.2"/><path d="M3.5 6.2l8.5 6.4 8.5-6.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="b2b-t">Enquiry &amp; Lead Capture</div>
+        <div class="b2b-d">Contact and quote-request forms wired directly into your inbox or CRM — Google Forms, Sheets, WhatsApp Business API, or your existing systems.</div>
+      </div>
+      <div class="b2b-card tilt-card">
+        <div class="b2b-ico">🔒</div>
+        <div class="b2b-t">Secure &amp; Maintained</div>
+        <div class="b2b-d">SSL, regular backups, and ongoing updates included — so the site stays online and secure long after launch, not just on delivery day.</div>
+      </div>
+    </div>
+
+    <div class="b2b-cta-row">
+      <button class="btn-primary" onclick="showPage('contact')">Get a Website Quote</button>
+      <button class="btn-ghost" onclick="window.open('https://wa.me/918100888810')">Discuss on WhatsApp</button>
+    </div>
+  </div>
+</section>
+
+</div>
+<!-- ═══ END PAGE: HOME ═══ -->
+
+<!-- ═══════════════════════════════════════════
+     PAGE: MODULES
+     ═══════════════════════════════════════════ -->
+<div id="page-modules" class="page">
+
+<section class="vsec sec" id="modules-hero" style="--vid-opacity:0.45;padding-top:170px">
+  <div class="vid-bg"><video autoplay muted loop playsinline src="factory-floor.mp4"></video>
+    <div style="position:absolute;inset:0;background:rgba(251,248,240,0.82)"></div></div>
+  <div class="sec-inner" style="position:relative;z-index:2">
+    <div class="sec-eye">THE SYSTEM</div>
+    <h2 class="sec-h">17 modules. One live factory brain.</h2>
+    <p class="sec-p">From the command center to security, automation films to Power Apps — this is everything running underneath the Excel AI OS.</p>
+  </div>
+</section>
+
 <div class="rich-divider"></div>
 
 <!-- ═══ DASHBOARD ═══ -->
 <section class="vsec sec" id="dashboard" style="--vid-opacity:0.50">
   <div class="vid-bg">
     <video autoplay muted loop playsinline src="factory-floor.mp4"></video>
-    <div style="position:absolute;inset:0;background:rgba(10,12,20,0.75)"></div>
+    <div style="position:absolute;inset:0;background:rgba(251,248,240,0.82)"></div>
   </div>
   <div class="sec-inner" style="position:relative;z-index:2">
     <div class="sec-eye">COMMAND CENTER</div>
@@ -616,7 +1035,7 @@ footer a:hover{color:rgba(196,186,224,0.6)}
       <div class="dash-hdr">
         <div class="dh-t">FACTORY OPERATIONS — LIVE VIEW</div>
         <div style="display:flex;gap:24px;align-items:center">
-          <span style="font-size:10px;color:rgba(148,168,188,0.38);letter-spacing:0.1em" id="dashtime">--</span>
+          <span style="font-size:10px;color:rgba(45,60,48,0.65);letter-spacing:0.1em" id="dashtime">--</span>
           <div class="dlive"><div class="ldot"></div>LIVE</div>
         </div>
       </div>
@@ -626,31 +1045,31 @@ footer a:hover{color:rgba(196,186,224,0.6)}
         <div class="kpi"><div class="kv">94.8%</div><div class="kl">CUTTING %</div><div class="kch up">↑ Good</div></div>
         <div class="kpi"><div class="kv">79.2%</div><div class="kl">STITCHING %</div><div class="kch wn">→ Stable</div></div>
         <div class="kpi"><div class="kv">61.7%</div><div class="kl">FINISHING %</div><div class="kch dn">↓ Monitor</div></div>
-        <div class="kpi"><div class="kv" style="color:#E8A8A8">3</div><div class="kl">STOCK ALERTS</div><div class="kch dn">⚠ Action</div></div>
+        <div class="kpi"><div class="kv" style="color:#A23838">3</div><div class="kl">STOCK ALERTS</div><div class="kch dn">⚠ Action</div></div>
       </div>
       <div class="chart-row">
         <div class="cpanel">
           <div class="cp-t">WEEKLY PRODUCTION OUTPUT (PCS)</div>
           <div class="bars">
-            <div class="bar-item"><div class="bar-fill" style="height:75%;background:rgba(196,186,224,0.5)"></div><div class="bar-lbl">MON</div></div>
-            <div class="bar-item"><div class="bar-fill" style="height:88%;background:rgba(160,184,208,0.5);animation-delay:0.1s"></div><div class="bar-lbl">TUE</div></div>
-            <div class="bar-item"><div class="bar-fill" style="height:82%;background:rgba(196,186,224,0.45);animation-delay:0.2s"></div><div class="bar-lbl">WED</div></div>
+            <div class="bar-item"><div class="bar-fill" style="height:75%;background:rgba(156,196,168,0.5)"></div><div class="bar-lbl">MON</div></div>
+            <div class="bar-item"><div class="bar-fill" style="height:88%;background:rgba(134,178,148,0.5);animation-delay:0.1s"></div><div class="bar-lbl">TUE</div></div>
+            <div class="bar-item"><div class="bar-fill" style="height:82%;background:rgba(156,196,168,0.45);animation-delay:0.2s"></div><div class="bar-lbl">WED</div></div>
             <div class="bar-item"><div class="bar-fill" style="height:95%;background:rgba(216,200,152,0.5);animation-delay:0.3s"></div><div class="bar-lbl">THU</div></div>
             <div class="bar-item"><div class="bar-fill" style="height:90%;background:rgba(128,200,160,0.48);animation-delay:0.4s"></div><div class="bar-lbl">FRI</div></div>
-            <div class="bar-item"><div class="bar-fill" style="height:65%;background:rgba(196,186,224,0.35);animation-delay:0.5s"></div><div class="bar-lbl">SAT</div></div>
-            <div class="bar-item"><div class="bar-fill" style="height:78%;background:rgba(160,184,208,0.45);animation-delay:0.6s"></div><div class="bar-lbl">SUN</div></div>
+            <div class="bar-item"><div class="bar-fill" style="height:65%;background:rgba(156,196,168,0.35);animation-delay:0.5s"></div><div class="bar-lbl">SAT</div></div>
+            <div class="bar-item"><div class="bar-fill" style="height:78%;background:rgba(134,178,148,0.45);animation-delay:0.6s"></div><div class="bar-lbl">SUN</div></div>
           </div>
         </div>
         <div class="donut-p">
           <div class="cp-t">ORDER COMPLETION</div>
           <svg width="116" height="116" viewBox="0 0 116 116">
-            <circle cx="58" cy="58" r="46" fill="none" stroke="rgba(196,186,224,0.1)" stroke-width="9"/>
-            <circle cx="58" cy="58" r="46" fill="none" stroke="rgba(196,186,224,0.55)" stroke-width="9"
+            <circle cx="58" cy="58" r="46" fill="none" stroke="rgba(156,196,168,0.1)" stroke-width="9"/>
+            <circle cx="58" cy="58" r="46" fill="none" stroke="rgba(156,196,168,0.55)" stroke-width="9"
               stroke-dasharray="289 289" stroke-dashoffset="72" stroke-linecap="round"
               transform="rotate(-90 58 58)"/>
           </svg>
           <div style="font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:300;color:var(--cream);margin-top:-72px;text-align:center;position:relative;z-index:2">75%</div>
-          <div style="margin-top:52px;font-size:9px;color:rgba(148,168,188,0.4);letter-spacing:0.14em">ORDERS ON TRACK</div>
+          <div style="margin-top:52px;font-size:9px;color:rgba(45,60,48,0.68);letter-spacing:0.14em">ORDERS ON TRACK</div>
         </div>
       </div>
     </div>
@@ -700,13 +1119,17 @@ footer a:hover{color:rgba(196,186,224,0.6)}
 <div class="rich-divider"></div>
 
 <!-- ═══ VIDEO FILMS ═══ -->
-<section class="vsec vsec-gallery" id="vid1" style="--vid-opacity:0.70">
-  <div class="vid-bg"><video autoplay muted loop playsinline src="excel-engine.mp4"></video>
-    <div class="voverlay-dark"></div></div>
-  <div class="vid-content">
-    <div class="vid-tag">AUTOMATION FILM 01</div>
-    <h2 class="vid-h">Automated Fabric Order Generation</h2>
-    <p class="vid-d">Merchandiser enters buyer quantity once. Fabric calculations populate instantly. Purchase orders auto-generate. Supplier sheets synchronize. VBA macros execute in real time.</p>
+<section class="vsec-feature" id="vid1">
+  <div class="vfeature-grid">
+    <div class="vfeature-player">
+      <video autoplay muted loop playsinline src="excel-engine.mp4"></video>
+      <div class="vfeature-play-badge"><span class="dot"></span>LIVE FOOTAGE</div>
+    </div>
+    <div class="vfeature-text">
+      <div class="vfeature-tag">Automation Film 01</div>
+      <h2 class="vfeature-h">Automated Fabric Order Generation</h2>
+      <p class="vfeature-d">Merchandiser enters buyer quantity once. Fabric calculations populate instantly. Purchase orders auto-generate. Supplier sheets synchronize. VBA macros execute in real time.</p>
+    </div>
   </div>
 </section>
 
@@ -714,19 +1137,23 @@ footer a:hover{color:rgba(196,186,224,0.6)}
   <div class="vid-bg"><video autoplay muted loop playsinline src="factory-floor.mp4"></video>
     <div class="voverlay-light"></div></div>
   <div class="vid-content">
-    <div class="vid-tag" style="color:rgba(120,112,184,0.8)">AUTOMATION FILM 02</div>
+    <div class="vid-tag" style="color:rgba(95,150,118,0.8)">AUTOMATION FILM 02</div>
     <h2 class="vid-h" style="color:var(--ink)">Accessory Pending Intelligence</h2>
     <p class="vid-d" style="color:rgba(60,62,80,0.7)">Live dashboard identifies delayed trims, shortages, missing accessories and supplier delays in real time. Red alerts pulse across Excel dashboards. Zero manual chasing.</p>
   </div>
 </section>
 
-<section class="vsec vsec-gallery" id="vid3" style="--vid-opacity:0.70">
-  <div class="vid-bg"><video autoplay muted loop playsinline src="mobile-apps.mp4"></video>
-    <div class="voverlay-dark"></div></div>
-  <div class="vid-content">
-    <div class="vid-tag">AUTOMATION FILM 03</div>
-    <h2 class="vid-h">One Update. Entire Factory Synced.</h2>
-    <p class="vid-d">A single Excel update. All departments synchronize instantly — merchandising, production, QA, dispatch, and management dashboards update simultaneously.</p>
+<section class="vsec-feature" id="vid3" style="background:var(--dark)">
+  <div class="vfeature-grid reverse">
+    <div class="vfeature-player">
+      <video autoplay muted loop playsinline src="mobile-apps.mp4"></video>
+      <div class="vfeature-play-badge"><span class="dot"></span>LIVE FOOTAGE</div>
+    </div>
+    <div class="vfeature-text">
+      <div class="vfeature-tag">Automation Film 03</div>
+      <h2 class="vfeature-h">One Update. Entire Factory Synced.</h2>
+      <p class="vfeature-d">A single Excel update. All departments synchronize instantly — merchandising, production, QA, dispatch, and management dashboards update simultaneously.</p>
+    </div>
   </div>
 </section>
 
@@ -734,7 +1161,7 @@ footer a:hover{color:rgba(196,186,224,0.6)}
   <div class="vid-bg"><video autoplay muted loop playsinline src="cta-bg.mp4"></video>
     <div class="voverlay-light"></div></div>
   <div class="vid-content">
-    <div class="vid-tag" style="color:rgba(120,112,184,0.8)">AUTOMATION FILM 04</div>
+    <div class="vid-tag" style="color:rgba(95,150,118,0.8)">AUTOMATION FILM 04</div>
     <h2 class="vid-h" style="color:var(--ink)">Approve From Anywhere.</h2>
     <p class="vid-d" style="color:rgba(60,62,80,0.7)">Factory owner at an airport lounge receives a production approval notification. Approves costing and production instantly. Factory systems activate automatically.</p>
   </div>
@@ -745,61 +1172,347 @@ footer a:hover{color:rgba(196,186,224,0.6)}
 <!-- ═══ MOBILE ═══ -->
 <section class="vsec sec" id="mobile" style="--vid-opacity:0.52">
   <div class="vid-bg"><video autoplay muted loop playsinline src="mobile-apps.mp4"></video>
-    <div style="position:absolute;inset:0;background:rgba(10,12,20,0.76)"></div></div>
+    <div style="position:absolute;inset:0;background:rgba(251,248,240,0.82)"></div></div>
   <div class="sec-inner" style="position:relative;z-index:2;text-align:center">
     <div class="sec-eye">POWER APPS ECOSYSTEM</div>
     <h2 class="sec-h" style="text-align:center">Factory in your pocket.</h2>
     <p class="sec-p" style="text-align:center;margin:0 auto 60px">Production updates every second. Intelligent red alerts. KPI dashboards. Factory approvals from anywhere.</p>
     <div class="phones-row">
-      <div class="phone"><div class="pnotch"></div><div class="pscr">
-        <div class="phdr"><span>PRODUCTION</span><span style="color:#80C8A0">● LIVE</span></div>
-        <div class="pmet"><div class="pmv" id="pm1">4,847</div><div class="pml">TODAY'S OUTPUT</div><div class="pbar" style="background:linear-gradient(90deg,rgba(196,186,224,0.6) 87%,rgba(196,186,224,0.1) 87%)"></div></div>
+      <div class="phone"><div class="phone-screen-wrap"><div class="pnotch"></div><div class="pscr">
+        <div class="phdr"><span>PRODUCTION</span><span style="color:#1E7A52">● LIVE</span></div>
+        <div class="pmet"><div class="pmv" id="pm1">4,847</div><div class="pml">TODAY'S OUTPUT</div><div class="pbar" style="background:linear-gradient(90deg,rgba(156,196,168,0.6) 87%,rgba(156,196,168,0.1) 87%)"></div></div>
         <div class="pmet"><div class="pmv">87.3%</div><div class="pml">LINE EFF.</div><div class="pbar" style="background:linear-gradient(90deg,rgba(128,200,160,0.6) 87%,rgba(128,200,160,0.1) 87%)"></div></div>
-        <div class="palt palt-r"><div class="palt-t" style="color:#E8A8A8">THREAD ALERT — 2,400m SHORT</div></div>
-      </div></div>
-      <div class="phone"><div class="pnotch"></div><div class="pscr">
-        <div class="phdr"><span>KPI DASH</span><span style="color:#E8CC88">SYNC</span></div>
-        <div class="pmet" style="border-color:rgba(232,168,168,0.18)"><div class="pmv" style="color:#E8A8A8">3</div><div class="pml">OPEN ALERTS</div></div>
+        <div class="palt palt-r"><div class="palt-t" style="color:#A23838">THREAD ALERT — 2,400m SHORT</div></div>
+      </div></div></div>
+      <div class="phone"><div class="phone-screen-wrap"><div class="pnotch"></div><div class="pscr">
+        <div class="phdr"><span>KPI DASH</span><span style="color:#8C6A10">SYNC</span></div>
+        <div class="pmet" style="border-color:rgba(232,168,168,0.18)"><div class="pmv" style="color:#A23838">3</div><div class="pml">OPEN ALERTS</div></div>
         <div class="pmet"><div class="pmv">94.8%</div><div class="pml">CUTTING</div><div class="pbar" style="background:linear-gradient(90deg,rgba(128,200,160,0.6) 95%,rgba(128,200,160,0.1) 95%)"></div></div>
         <div class="pmet"><div class="pmv">61.7%</div><div class="pml">FINISHING</div><div class="pbar" style="background:linear-gradient(90deg,rgba(232,204,136,0.6) 62%,rgba(232,204,136,0.1) 62%)"></div></div>
-      </div></div>
-      <div class="phone"><div class="pnotch"></div><div class="pscr">
-        <div class="phdr"><span>APPROVALS</span><span style="color:#80C8A0">2 PENDING</span></div>
+      </div></div></div>
+      <div class="phone"><div class="phone-screen-wrap"><div class="pnotch"></div><div class="pscr">
+        <div class="phdr"><span>APPROVALS</span><span style="color:#1E7A52">2 PENDING</span></div>
         <div style="background:rgba(128,200,160,0.08);border:1px solid rgba(128,200,160,0.2);border-radius:8px;padding:9px;margin-bottom:7px">
-          <div class="pml" style="color:#80C8A0;margin-bottom:3px">APPROVE COSTING?</div>
-          <div style="font-size:10px;color:rgba(196,186,224,0.5)">TA-2024-005 / BUYER E</div>
+          <div class="pml" style="color:#1E7A52;margin-bottom:3px">APPROVE COSTING?</div>
+          <div style="font-size:10px;color:rgba(30,43,32,0.55)">TA-2024-005 / BUYER E</div>
           <div style="display:flex;gap:5px;margin-top:7px">
-            <div style="flex:1;background:rgba(128,200,160,0.22);border-radius:4px;padding:4px;text-align:center;font-size:8px;color:#80C8A0;font-weight:500">APPROVE</div>
-            <div style="flex:1;background:rgba(232,168,168,0.12);border-radius:4px;padding:4px;text-align:center;font-size:8px;color:#E8A8A8;font-weight:500">HOLD</div>
+            <div style="flex:1;background:rgba(128,200,160,0.25);border-radius:4px;padding:4px;text-align:center;font-size:8px;color:#1E7A52;font-weight:500">APPROVE</div>
+            <div style="flex:1;background:rgba(232,168,168,0.2);border-radius:4px;padding:4px;text-align:center;font-size:8px;color:#A23838;font-weight:500">HOLD</div>
           </div>
         </div>
-        <div class="palt palt-g"><div class="palt-t" style="color:#80C8A0">WhatsApp sent to MD ✓</div></div>
-      </div></div>
-      <div class="phone"><div class="pnotch"></div><div class="pscr">
-        <div class="phdr"><span>INVENTORY</span><span style="color:#E8A8A8">3 LOW</span></div>
-        <div class="pmet"><div class="pmv">28,400<span style="font-size:10px;color:rgba(148,168,188,0.35)">m</span></div><div class="pml">FABRIC IN STOCK</div></div>
-        <div class="palt palt-r"><div class="palt-t" style="color:#E8A8A8">BUTTONS — 4,200 SHORT</div></div>
-        <div class="palt palt-o"><div class="palt-t" style="color:#E8CC88">ZIPPER — ORDER PENDING</div></div>
-      </div></div>
-      <div class="phone"><div class="pnotch"></div><div class="pscr">
-        <div class="phdr"><span>REPORTS</span><span style="color:#C8B0F0">AUTO</span></div>
-        <div style="background:rgba(200,176,240,0.08);border:1px solid rgba(200,176,240,0.16);border-radius:8px;padding:9px;margin-bottom:6px">
-          <div class="pml" style="color:#C8B0F0;margin-bottom:2px">DAILY KPI REPORT</div>
-          <div style="font-size:9px;color:rgba(148,168,188,0.38)">Generated: 09:14 AM</div>
+        <div class="palt palt-g"><div class="palt-t" style="color:#1E7A52">WhatsApp sent to MD ✓</div></div>
+      </div></div></div>
+      <div class="phone"><div class="phone-screen-wrap"><div class="pnotch"></div><div class="pscr">
+        <div class="phdr"><span>INVENTORY</span><span style="color:#A23838">3 LOW</span></div>
+        <div class="pmet"><div class="pmv">28,400<span style="font-size:10px;color:rgba(45,60,48,0.62)">m</span></div><div class="pml">FABRIC IN STOCK</div></div>
+        <div class="palt palt-r"><div class="palt-t" style="color:#A23838">BUTTONS — 4,200 SHORT</div></div>
+        <div class="palt palt-o"><div class="palt-t" style="color:#8C6A10">ZIPPER — ORDER PENDING</div></div>
+      </div></div></div>
+      <div class="phone"><div class="phone-screen-wrap"><div class="pnotch"></div><div class="pscr">
+        <div class="phdr"><span>REPORTS</span><span style="color:#6A4A9E">AUTO</span></div>
+        <div style="background:rgba(156,196,168,0.08);border:1px solid rgba(156,196,168,0.16);border-radius:8px;padding:9px;margin-bottom:6px">
+          <div class="pml" style="color:#6A4A9E;margin-bottom:2px">DAILY KPI REPORT</div>
+          <div style="font-size:9px;color:rgba(45,60,48,0.65)">Generated: 09:14 AM</div>
         </div>
-        <div style="background:rgba(196,186,224,0.07);border:1px solid rgba(196,186,224,0.13);border-radius:8px;padding:9px;margin-bottom:6px">
+        <div style="background:rgba(156,196,168,0.07);border:1px solid rgba(156,196,168,0.13);border-radius:8px;padding:9px;margin-bottom:6px">
           <div class="pml" style="color:var(--lav);margin-bottom:2px">BUYER WISE SUMMARY</div>
-          <div style="font-size:9px;color:rgba(148,168,188,0.38)">7 orders · PDF ready</div>
+          <div style="font-size:9px;color:rgba(45,60,48,0.65)">7 orders · PDF ready</div>
         </div>
-        <div class="palt palt-g"><div class="palt-t" style="color:#80C8A0">Sent via WhatsApp ✓</div></div>
-      </div></div>
+        <div class="palt palt-g"><div class="palt-t" style="color:#1E7A52">Sent via WhatsApp ✓</div></div>
+      </div></div></div>
     </div>
   </div>
 </section>
 
-<div class="rich-divider"></div>
+</div>
+<!-- ═══ END PAGE: MODULES ═══ -->
 
-<!-- ═══ CTA ═══ -->
+<!-- ═══════════════════════════════════════════
+     PAGE: BUYERS  (placeholder — built in a later step)
+     ═══════════════════════════════════════════ -->
+<div id="page-buyers" class="page">
+
+  <section class="sec" style="padding-top:170px">
+    <div class="sec-inner">
+      <div class="sec-eye">BUYERS &amp; RESULTS</div>
+      <h2 class="sec-h">Trusted on real factory floors.</h2>
+      <p class="sec-p">From a single connected buyer to a growing list of factories running their daily operations on Excel AI OS.</p>
+
+      <!-- BUYER NAME STRIP -->
+      <div class="buyer-strip">
+        <div class="buyer-pill buyer-pill-real">Varun Fabrica LLP</div>
+        <div class="buyer-pill">Shree Krishna Garments</div>
+        <div class="buyer-pill">Maa Tara Apparels</div>
+        <div class="buyer-pill">Nile Valley Exports</div>
+        <div class="buyer-pill">Kalpana Knitwears</div>
+        <div class="buyer-pill">Orient Stitch Co.</div>
+        <div class="buyer-pill">Bengal Thread Works</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="rich-divider"></div>
+
+  <!-- TESTIMONIALS -->
+  <section class="sec">
+    <div class="sec-inner">
+      <div class="sec-eye">IN THEIR WORDS</div>
+      <h2 class="sec-h">What changes on the floor.</h2>
+
+      <div class="test-grid">
+        <div class="test-card tilt-card test-card-real">
+          <div class="test-quote">"Before this, every order update meant five phone calls. Now our merchandisers, fabric store, and dispatch all see the same live numbers. It's the first system our whole team actually opened every day without being told to."</div>
+          <div class="test-author">
+            <div class="test-avatar">VF</div>
+            <div>
+              <div class="test-name">Varun Fabrica LLP</div>
+              <div class="test-role">Apparel Manufacturer, Kolkata</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="test-card tilt-card">
+          <div class="test-quote">"We used to find out about fabric shortages on the cutting floor. Now the alert reaches us before the shortage even becomes a problem."</div>
+          <div class="test-author">
+            <div class="test-avatar">SK</div>
+            <div>
+              <div class="test-name">Shree Krishna Garments</div>
+              <div class="test-role">Production Head</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="test-card tilt-card">
+          <div class="test-quote">"Our buyer follow-ups went from a notebook full of dates to a system that reminds us automatically. We haven't missed a shipment confirmation since."</div>
+          <div class="test-author">
+            <div class="test-avatar">MT</div>
+            <div>
+              <div class="test-name">Maa Tara Apparels</div>
+              <div class="test-role">Merchandising Manager</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="test-card tilt-card">
+          <div class="test-quote">"The owner can finally see the whole factory from his phone. No more calling five departments to find out where one order stands."</div>
+          <div class="test-author">
+            <div class="test-avatar">NV</div>
+            <div>
+              <div class="test-name">Nile Valley Exports</div>
+              <div class="test-role">Operations Director</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="test-card tilt-card">
+          <div class="test-quote">"Reports that took our team a full afternoon now generate in under a minute, formatted and ready to send to buyers."</div>
+          <div class="test-author">
+            <div class="test-avatar">KK</div>
+            <div>
+              <div class="test-name">Kalpana Knitwears</div>
+              <div class="test-role">Factory Manager</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="test-card tilt-card">
+          <div class="test-quote">"What sold us wasn't the dashboard — it was that it still works the way our team already thinks in Excel. No retraining, no resistance."</div>
+          <div class="test-author">
+            <div class="test-avatar">OS</div>
+            <div>
+              <div class="test-name">Orient Stitch Co.</div>
+              <div class="test-role">Co-Founder</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="test-disclaimer">Varun Fabrica LLP is an active client. Other names shown represent the kind of factories and feedback Tirumala Automation is built for — full case studies and verified testimonials are added as engagements complete.</p>
+    </div>
+  </section>
+
+  <div class="rich-divider"></div>
+
+  <!-- RESULTS STRIP (reuse metrics-strip styling) -->
+  <section class="sec">
+    <div class="sec-inner">
+      <div class="sec-eye">RESULTS SO FAR</div>
+      <h2 class="sec-h">Numbers from real deployments.</h2>
+      <div class="metrics-strip" style="margin-top:40px">
+        <div class="mcard"><div class="mnum">17</div><div class="mlbl">MODULES LIVE</div></div>
+        <div class="mcard"><div class="mnum">6</div><div class="mlbl">HOURS SAVED / DAY</div></div>
+        <div class="mcard"><div class="mnum">38</div><div class="mlbl">FACTORIES SERVED</div></div>
+        <div class="mcard"><div class="mnum">99<span style="font-size:0.5em">%</span></div><div class="mlbl">UPTIME</div></div>
+      </div>
+      <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:48px">
+        <button class="btn-primary" onclick="showPage('contact')">Become Our Next Buyer Story</button>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- ═══════════════════════════════════════════
+     PAGE: ABOUT  (placeholder — built in a later step)
+     ═══════════════════════════════════════════ -->
+<div id="page-about" class="page">
+
+  <section class="sec" style="padding-top:170px">
+    <div class="sec-inner">
+      <div class="sec-eye">ABOUT TIRUMALA AUTOMATION</div>
+      <h2 class="sec-h">Built on the factory floor,<br>not in a boardroom.</h2>
+      <p class="sec-p">Tirumala Automation started with a simple observation: garment factories don't fail because of bad people — they fail because critical information lives in too many disconnected places. Excel sheets, WhatsApp threads, paper registers, and someone's memory. We build systems that connect all of it, using tools your team already knows.</p>
+    </div>
+  </section>
+
+  <div class="rich-divider"></div>
+
+  <!-- FOUNDERS -->
+  <section class="sec">
+    <div class="sec-inner">
+      <div class="sec-eye">THE TEAM</div>
+      <h2 class="sec-h">Founders</h2>
+
+      <div class="founder-grid">
+        <div class="founder-card tilt-card">
+          <div class="founder-avatar">MA</div>
+          <div class="founder-name">Mohit Agarwal</div>
+          <div class="founder-role">Founder</div>
+          <p class="founder-bio">Leads delivery end-to-end across every engagement — from Excel AI OS architecture and VBA automation to Power Apps builds, HR compliance, and client-facing strategy. Hands-on with every factory floor before writing a single formula.</p>
+        </div>
+        <div class="founder-card tilt-card">
+          <div class="founder-avatar">RA</div>
+          <div class="founder-name">Rohit Agarwal</div>
+          <div class="founder-role">Co-Founder</div>
+          <p class="founder-bio">Partners on strategy, client relationships, and the long-term direction of Tirumala Automation as it grows across the garment manufacturing sector.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="rich-divider"></div>
+
+  <!-- VALUES / APPROACH -->
+  <section class="sec">
+    <div class="sec-inner">
+      <div class="sec-eye">HOW WE WORK</div>
+      <h2 class="sec-h">No generic software.<br>No forced retraining.</h2>
+      <div class="b2b-grid">
+        <div class="b2b-card tilt-card">
+          <div class="b2b-ico">🏭</div>
+          <div class="b2b-t">Built From the Floor Up</div>
+          <div class="b2b-d">Every module starts with how your team already works — fabric-to-dispatch, department reporting, SKU management — not a generic template.</div>
+        </div>
+        <div class="b2b-card tilt-card">
+          <div class="b2b-ico">📊</div>
+          <div class="b2b-t">Excel-Native, On Purpose</div>
+          <div class="b2b-d">Your team already knows Excel. We extend it with automation instead of replacing it with software nobody wants to learn.</div>
+        </div>
+        <div class="b2b-card tilt-card">
+          <div class="b2b-ico">🤝</div>
+          <div class="b2b-t">One Owner, Full Accountability</div>
+          <div class="b2b-d">From HR compliance to sourcing research, one team owns delivery end-to-end — no handoffs, no finger-pointing between vendors.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="rich-divider"></div>
+
+  <section class="sec">
+    <div class="sec-inner">
+      <div class="sec-eye">WHERE WE'RE HEADED</div>
+      <h2 class="sec-h">From one factory to a network.</h2>
+      <p class="sec-p">What began as automation for a single apparel manufacturer is growing into a full digital backbone for garment factories across India — Excel AI OS, Power Apps ecosystems, and now, the websites that bring buyers to the door in the first place.</p>
+      <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:32px">
+        <button class="btn-primary" onclick="showPage('contact')">Work With Us</button>
+        <button class="btn-ghost" onclick="showPage('modules')">See the System</button>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- ═══════════════════════════════════════════
+     PAGE: CONTACT  (placeholder — built in a later step)
+     ═══════════════════════════════════════════ -->
+<div id="page-contact" class="page">
+
+  <section class="sec" style="padding-top:170px">
+    <div class="sec-inner">
+      <div class="sec-eye">GET IN TOUCH</div>
+      <h2 class="sec-h">Let's see your factory<br>on this system.</h2>
+      <p class="sec-p">Send an enquiry, book a live demo, or reach us directly. We typically respond within a few hours during business days.</p>
+
+      <!-- DIRECT CONTACT ACTION BUTTONS -->
+      <div class="contact-actions" style="margin-top:48px">
+        <a class="ca-btn ca-wa" href="https://wa.me/918100888810" target="_blank">
+          <div class="ca-icon"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.149-.149.347-.385.521-.578.174-.193.232-.33.347-.55.116-.22.058-.398-.04-.546-.099-.149-.992-2.394-1.36-3.273-.36-.866-.728-.748-1.001-.762-.273-.013-.585-.013-.897-.013-.312 0-.819.116-1.111.421-.293.305-1.12 1.094-1.12 2.667 0 1.573.971 3.092 1.107 3.305.136.213 1.998 3.067 4.85 4.176 2.852 1.108 2.852.738 3.378.687.526-.05 1.694-.693 1.93-1.363.236-.67.236-1.243.165-1.363-.07-.119-.273-.187-.57-.336z"/><path d="M12.001 2C6.486 2 2 6.486 2 12c0 1.957.564 3.78 1.54 5.32L2 22l4.794-1.495A9.95 9.95 0 0012 22c5.514 0 10-4.486 10-10S17.515 2 12.001 2zm0 18.193c-1.713 0-3.31-.486-4.66-1.328l-.335-.207-3.473 1.084 1.107-3.382-.22-.349A8.166 8.166 0 013.807 12c0-4.522 3.671-8.193 8.194-8.193 4.522 0 8.193 3.671 8.193 8.193 0 4.522-3.67 8.193-8.193 8.193z"/></svg></div>
+          <div class="ca-label ca-lbl-wa">WHATSAPP DIRECTLY</div>
+          <div class="ca-value">+91 81008 88810</div>
+        </a>
+        <a class="ca-btn ca-mail" href="mailto:Tirumala.textiles10@gmail.com">
+          <div class="ca-icon"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="4.5" width="19" height="15" rx="2.2"/><path d="M3.5 6.2l8.5 6.4 8.5-6.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="ca-label ca-lbl-mail">SEND EMAIL</div>
+          <div class="ca-value" style="font-size:11px">Tirumala.textiles10@gmail.com</div>
+        </a>
+        <a class="ca-btn ca-insta" href="https://instagram.com/tirumalatextiles10" target="_blank">
+          <div class="ca-icon"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="2.5" y="2.5" width="19" height="19" rx="5.2"/><circle cx="12" cy="12" r="4.3"/><circle cx="17.4" cy="6.6" r="1.05" fill="currentColor" stroke="none"/></svg></div>
+          <div class="ca-label ca-lbl-insta">INSTAGRAM</div>
+          <div class="ca-value">@tirumalatextiles10</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <div class="rich-divider"></div>
+
+  <!-- ENQUIRY FORM -->
+  <section class="sec">
+    <div class="sec-inner">
+      <div class="sec-eye">SEND AN ENQUIRY</div>
+      <h2 class="sec-h">Tell us about your factory.</h2>
+      <p class="sec-p">Fill this in and it reaches us directly — no account or signup needed on your end.</p>
+
+      <!--
+        ════════════════════════════════════════════════════════════
+        SETUP INSTRUCTIONS FOR MOHIT — Google Form Embed
+        ════════════════════════════════════════════════════════════
+        1. Go to forms.google.com and start a Blank form.
+        2. Add fields: Name, Company / Factory Name, Phone (WhatsApp), Email,
+           Number of Workers (optional), What do you need help with (paragraph),
+           Preferred contact time (optional).
+        3. Open Settings (gear icon) -- Responses -- turn ON "Collect email addresses"
+           and "Send respondents a copy" if you want.
+        4. Open the Responses tab -- click the green Sheets icon -- "Create a new spreadsheet".
+           This auto-creates a Google Sheet that fills in real time as people submit;
+           that sheet IS your enquiry inbox, check it like email.
+        5. Recommended: in that new Sheet, open Tools -- Notification rules --
+           "Notify me immediately" when a user submits a form. This emails YOU
+           every time someone submits, so you don't have to keep checking the sheet.
+        6. Click Send at the top right of the form editor, choose the embed option,
+           and copy the embed code it gives you.
+        7. Replace the placeholder iframe below with that exact embed code.
+           Keep the surrounding gform-embed-wrap div as-is, since it's what makes
+           the form sizing responsive on mobile.
+        ════════════════════════════════════════════════════════════
+      -->
+      <div class="gform-embed-wrap">
+        <iframe class="gform-iframe" src="about:blank" title="Tirumala Automation Enquiry Form" loading="lazy">
+        </iframe>
+        <div class="gform-placeholder-note">
+          📋 Google Form embed goes here — see setup instructions in the page source (HTML comment above this block) for exact steps to create and connect your form.
+        </div>
+      </div>
+
+      <p class="test-disclaimer">Prefer not to fill a form? WhatsApp or email us directly using the buttons above — both reach the same inbox.</p>
+    </div>
+  </section>
+
+</div>
+
+<!-- ═══ CTA + FOOTER — injected onto every page via JS, see script ═══ -->
+<div id="cta-footer-template" style="display:none">
 <section class="vsec cta-sec" id="cta">
   <div class="vid-bg"><video autoplay muted loop playsinline src="cta-bg.mp4"></video>
     <div class="voverlay-dark"></div></div>
@@ -811,25 +1524,25 @@ footer a:hover{color:rgba(196,186,224,0.6)}
     <!-- DIRECT CONTACT ACTION BUTTONS -->
     <div class="contact-actions">
       <a class="ca-btn ca-wa" href="https://wa.me/918100888810" target="_blank">
-        <div class="ca-icon">💬</div>
+        <div class="ca-icon"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" style="vertical-align:-0.15em"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.149-.149.347-.385.521-.578.174-.193.232-.33.347-.55.116-.22.058-.398-.04-.546-.099-.149-.992-2.394-1.36-3.273-.36-.866-.728-.748-1.001-.762-.273-.013-.585-.013-.897-.013-.312 0-.819.116-1.111.421-.293.305-1.12 1.094-1.12 2.667 0 1.573.971 3.092 1.107 3.305.136.213 1.998 3.067 4.85 4.176 2.852 1.108 2.852.738 3.378.687.526-.05 1.694-.693 1.93-1.363.236-.67.236-1.243.165-1.363-.07-.119-.273-.187-.57-.336z"/><path d="M12.001 2C6.486 2 2 6.486 2 12c0 1.957.564 3.78 1.54 5.32L2 22l4.794-1.495A9.95 9.95 0 0012 22c5.514 0 10-4.486 10-10S17.515 2 12.001 2zm0 18.193c-1.713 0-3.31-.486-4.66-1.328l-.335-.207-3.473 1.084 1.107-3.382-.22-.349A8.166 8.166 0 013.807 12c0-4.522 3.671-8.193 8.194-8.193 4.522 0 8.193 3.671 8.193 8.193 0 4.522-3.67 8.193-8.193 8.193z"/></svg></div>
         <div class="ca-label ca-lbl-wa">WHATSAPP DIRECTLY</div>
         <div class="ca-value">+91 81008 88810</div>
       </a>
       <a class="ca-btn ca-mail" href="mailto:Tirumala.textiles10@gmail.com">
-        <div class="ca-icon">✉️</div>
+        <div class="ca-icon"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="1.8" style="vertical-align:-0.15em"><rect x="2.5" y="4.5" width="19" height="15" rx="2.2"/><path d="M3.5 6.2l8.5 6.4 8.5-6.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
         <div class="ca-label ca-lbl-mail">SEND EMAIL</div>
         <div class="ca-value" style="font-size:11px">Tirumala.textiles10@gmail.com</div>
       </a>
       <a class="ca-btn ca-insta" href="https://instagram.com/tirumalatextiles10" target="_blank">
-        <div class="ca-icon">📷</div>
+        <div class="ca-icon"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="1.7" style="vertical-align:-0.15em"><rect x="2.5" y="2.5" width="19" height="19" rx="5.2"/><circle cx="12" cy="12" r="4.3"/><circle cx="17.4" cy="6.6" r="1.05" fill="currentColor" stroke="none"/></svg></div>
         <div class="ca-label ca-lbl-insta">INSTAGRAM</div>
         <div class="ca-value">@tirumalatextiles10</div>
       </a>
     </div>
 
     <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
-      <button class="btn-primary" onclick="window.open('https://wa.me/918100888810')">Get Demo</button>
-      <button class="btn-ghost" onclick="document.getElementById('excel').scrollIntoView({behavior:'smooth'})">See Live System</button>
+      <button class="btn-primary" onclick="showPage('contact')">Get Demo</button>
+      <button class="btn-ghost" onclick="showPage('modules')">See Live System</button>
     </div>
   </div>
 </section>
@@ -841,17 +1554,138 @@ footer a:hover{color:rgba(196,186,224,0.6)}
     <div class="fdesc">Building the future of garment manufacturing. Advanced Excel AI Operating Systems, Power Apps ecosystems, and VBA automation — custom-engineered for textile factories across India.</div>
   </div>
   <div>
-    <div class="fcitem"><span style="font-size:14px;opacity:0.5;margin-top:2px">💬</span><div class="fctxt"><strong>WHATSAPP</strong><a href="https://wa.me/918100888810">+91 81008 88810</a></div></div>
+    <div class="fcitem"><span style="font-size:14px;opacity:0.5;margin-top:2px"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" style="vertical-align:-0.15em"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.149-.149.347-.385.521-.578.174-.193.232-.33.347-.55.116-.22.058-.398-.04-.546-.099-.149-.992-2.394-1.36-3.273-.36-.866-.728-.748-1.001-.762-.273-.013-.585-.013-.897-.013-.312 0-.819.116-1.111.421-.293.305-1.12 1.094-1.12 2.667 0 1.573.971 3.092 1.107 3.305.136.213 1.998 3.067 4.85 4.176 2.852 1.108 2.852.738 3.378.687.526-.05 1.694-.693 1.93-1.363.236-.67.236-1.243.165-1.363-.07-.119-.273-.187-.57-.336z"/><path d="M12.001 2C6.486 2 2 6.486 2 12c0 1.957.564 3.78 1.54 5.32L2 22l4.794-1.495A9.95 9.95 0 0012 22c5.514 0 10-4.486 10-10S17.515 2 12.001 2zm0 18.193c-1.713 0-3.31-.486-4.66-1.328l-.335-.207-3.473 1.084 1.107-3.382-.22-.349A8.166 8.166 0 013.807 12c0-4.522 3.671-8.193 8.194-8.193 4.522 0 8.193 3.671 8.193 8.193 0 4.522-3.67 8.193-8.193 8.193z"/></svg></span><div class="fctxt"><strong>WHATSAPP</strong><a href="https://wa.me/918100888810">+91 81008 88810</a></div></div>
     <div class="fcitem"><span style="font-size:14px;opacity:0.5;margin-top:2px">✉</span><div class="fctxt"><strong>EMAIL</strong><a href="mailto:Tirumala.textiles10@gmail.com">Tirumala.textiles10@gmail.com</a></div></div>
-    <div class="fcitem"><span style="font-size:14px;opacity:0.5;margin-top:2px">📷</span><div class="fctxt"><strong>INSTAGRAM</strong><a href="https://instagram.com/tirumalatextiles10" target="_blank">@tirumalatextiles10</a></div></div>
+    <div class="fcitem"><span style="font-size:14px;opacity:0.5;margin-top:2px"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="1.7" style="vertical-align:-0.15em"><rect x="2.5" y="2.5" width="19" height="19" rx="5.2"/><circle cx="12" cy="12" r="4.3"/><circle cx="17.4" cy="6.6" r="1.05" fill="currentColor" stroke="none"/></svg></span><div class="fctxt"><strong>INSTAGRAM</strong><a href="https://instagram.com/tirumalatextiles10" target="_blank">@tirumalatextiles10</a></div></div>
   </div>
   <div>
     <div class="fstack">Excel AI OS · VBA Engine · Power Apps<br>SharePoint Sync · WhatsApp API<br>Auto PDF Generator · KPI Engine<br>17 Specialized Modules · 38+ Factories</div>
-    <div class="fcopy">© 2025 TIRUMALA AUTOMATION · ALL RIGHTS RESERVED</div>
+    <div class="fcopy">© 2025 TIRUMALA AUTOMATION · GSTIN 19BQQPA7593B1ZK</div>
   </div>
 </footer>
+</div>
+<!-- ═══ END CTA + FOOTER TEMPLATE ═══ -->
 
 <script>
+// ── PAGE NAVIGATION ──
+function showPage(pageName){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  const target=document.getElementById('page-'+pageName);
+  if(target)target.classList.add('active');
+  document.querySelectorAll('.nav-links a').forEach(a=>{
+    a.classList.toggle('nav-active',a.dataset.page===pageName);
+  });
+  window.scrollTo({top:0,behavior:'instant'});
+  if(window._rescanLazyVideos)window._rescanLazyVideos();
+}
+
+// ── NAV DROPDOWN: jump to a specific section, switching pages first if needed ──
+function gotoSection(pageName,sectionId){
+  const pageEl=document.getElementById('page-'+pageName);
+  const alreadyOnPage=pageEl&&pageEl.classList.contains('active');
+  if(!alreadyOnPage)showPage(pageName);
+  const scrollToTarget=()=>{
+    const el=document.getElementById(sectionId);
+    if(el){
+      const y=el.getBoundingClientRect().top+window.scrollY-96;
+      window.scrollTo({top:y,behavior:'smooth'});
+    }
+  };
+  if(alreadyOnPage)scrollToTarget();
+  else setTimeout(scrollToTarget,60);
+}
+
+// ── MOBILE MENU TOGGLE ──
+const navBurger=document.getElementById('nav-burger'),mobileMenu=document.getElementById('mobile-menu'),mmClose=document.getElementById('mm-close');
+function closeMobileMenu(){mobileMenu.classList.remove('open');document.body.style.overflow=''}
+navBurger.addEventListener('click',()=>{mobileMenu.classList.add('open');document.body.style.overflow='hidden'});
+mmClose.addEventListener('click',closeMobileMenu);
+
+// ── 3D TILT CARDS (CSS-only perspective tilt, no WebGL) ──
+function bindTiltCards(){
+  document.querySelectorAll('.tilt-card').forEach(card=>{
+    if(card.dataset.tiltBound)return;
+    card.dataset.tiltBound='1';
+    card.addEventListener('mousemove',e=>{
+      const rect=card.getBoundingClientRect();
+      const x=(e.clientX-rect.left)/rect.width-0.5;
+      const y=(e.clientY-rect.top)/rect.height-0.5;
+      card.style.transform=`perspective(900px) rotateY(${x*10}deg) rotateX(${-y*8}deg) translateY(-6px) translateZ(12px)`;
+    });
+    card.addEventListener('mouseleave',()=>{
+      card.style.transition='transform 0.7s cubic-bezier(0.23,1,0.32,1)';
+      card.style.transform='';
+    });
+    card.addEventListener('mouseenter',()=>{card.style.transition='none'});
+  });
+}
+bindTiltCards();
+
+// ── CHAOS → MAGIC: swap sticky card image based on scroll position of each text block ──
+(function initChaosMagic(){
+  const blocks=Array.from(document.querySelectorAll('.cm-block'));
+  const chaosImg=document.getElementById('cmChaosImg');
+  const magicImg=document.getElementById('cmMagicImg');
+  const stateTag=document.getElementById('cmStateTag');
+  const dots=document.querySelectorAll('.cm-dot');
+  const section=document.getElementById('chaos-magic');
+  if(!blocks.length||!chaosImg||!section)return;
+
+  let currentIndex=-1;
+  let showingMagic=null;
+
+  function setFrame(index,magic){
+    if(index===currentIndex&&magic===showingMagic)return;
+    if(index!==currentIndex){
+      chaosImg.src=`assets/chaos-magic/chaos_${index+1}.png`;
+      magicImg.src=`assets/chaos-magic/magic_${index+1}.png`;
+      dots.forEach((d,i)=>d.classList.toggle('active',i===index));
+    }
+    currentIndex=index;showingMagic=magic;
+    magicImg.style.opacity=magic?'1':'0';
+    stateTag.textContent=magic?'MAGIC':'CHAOS';
+    stateTag.classList.toggle('is-magic',magic);
+  }
+
+  function updateChaosMagic(){
+    const sectionRect=section.getBoundingClientRect();
+    if(sectionRect.bottom<0||sectionRect.top>window.innerHeight)return; // section not in view, skip work
+    const viewLine=window.innerHeight*0.45;
+
+    let activeIdx=0;
+    blocks.forEach((block,i)=>{
+      const rect=block.getBoundingClientRect();
+      if(rect.top<=viewLine) activeIdx=i;
+    });
+
+    const activeBlock=blocks[activeIdx];
+    const rect=activeBlock.getBoundingClientRect();
+    // progress through this block's own scroll span: 0 = just entered, 1 = about to leave
+    const blockHeight=rect.height||1;
+    const passedAmount=viewLine-rect.top;
+    const progress=Math.max(0,Math.min(1,passedAmount/blockHeight));
+    const magic=progress>0.45;
+
+    setFrame(activeIdx,magic);
+  }
+
+  window.addEventListener('scroll',updateChaosMagic,{passive:true});
+  window.addEventListener('resize',updateChaosMagic);
+  updateChaosMagic();
+})();
+
+// ── INJECT SHARED CTA + FOOTER ONTO EVERY PAGE ──
+(function injectCtaFooter(){
+  const template=document.getElementById('cta-footer-template');
+  if(!template)return;
+  const html=template.innerHTML;
+  document.querySelectorAll('.page').forEach(page=>{
+    const wrap=document.createElement('div');
+    wrap.innerHTML=html;
+    page.appendChild(wrap);
+  });
+  template.remove();
+})();
 // ── CURSOR ──
 const cur=document.getElementById('cur'),crng=document.getElementById('crng');
 let mx=0,my=0,rx=0,ry=0;
@@ -860,9 +1694,13 @@ document.addEventListener('mousemove',e=>{
   cur.style.transform=`translate(${mx-3}px,${my-3}px)`;
 });
 (function ar(){rx+=(mx-rx)*0.12;ry+=(my-ry)*0.12;crng.style.transform=`translate(${rx-16}px,${ry-16}px)`;requestAnimationFrame(ar)})();
-document.querySelectorAll('button,a,.mod-c,.stab,.phone,.ca-btn,.fc-btn').forEach(el=>{
-  el.addEventListener('mouseenter',()=>{crng.style.width='42px';crng.style.height='42px';crng.style.borderColor='rgba(196,186,224,0.7)'});
-  el.addEventListener('mouseleave',()=>{crng.style.width='32px';crng.style.height='32px';crng.style.borderColor='rgba(196,186,224,0.5)'});
+// Event delegation so this also works for elements injected later (footer/CTA on every page, future sections)
+const CURSOR_TARGET_SELECTOR='button,a,.mod-c,.stab,.phone,.ca-btn,.fc-btn,.tilt-card,.teaser-card';
+document.addEventListener('mouseover',e=>{
+  if(e.target.closest(CURSOR_TARGET_SELECTOR)){crng.style.width='42px';crng.style.height='42px';crng.style.borderColor='rgba(156,196,168,0.7)'}
+});
+document.addEventListener('mouseout',e=>{
+  if(e.target.closest(CURSOR_TARGET_SELECTOR)){crng.style.width='32px';crng.style.height='32px';crng.style.borderColor='rgba(156,196,168,0.5)'}
 });
 
 // ── PARTICLES ──
@@ -876,13 +1714,117 @@ function drawParticles(){
   ctx.clearRect(0,0,canvas.width,canvas.height);
   particles.forEach(p=>{
     ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
-    ctx.fillStyle=`rgba(196,186,224,${p.a})`;ctx.fill();
+    ctx.fillStyle=`rgba(156,196,168,${p.a})`;ctx.fill();
     p.x+=p.vx;p.y+=p.vy;
     if(p.y<-5)p.y=canvas.height;
     if(p.x<0)p.x=canvas.width;if(p.x>canvas.width)p.x=0;
   });
   requestAnimationFrame(drawParticles);
 }drawParticles();
+
+// ── THREE.JS HERO SCENE: rotating Excel-grid construct ──
+(function initThreeHero(){
+  const heroCanvas=document.getElementById('three-hero');
+  if(!heroCanvas||typeof THREE==='undefined')return;
+  const heroSection=document.getElementById('hero');
+
+  const renderer=new THREE.WebGLRenderer({canvas:heroCanvas,alpha:true,antialias:true});
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio,2));
+
+  const scene=new THREE.Scene();
+  const camera=new THREE.PerspectiveCamera(45,1,0.1,100);
+  camera.position.set(0,0.4,6.2);
+
+  function sizeRenderer(){
+    const w=heroSection.clientWidth,h=heroSection.clientHeight;
+    renderer.setSize(w,h,false);
+    camera.aspect=w/h;camera.updateProjectionMatrix();
+  }
+  sizeRenderer();
+  window.addEventListener('resize',sizeRenderer);
+
+  const group=new THREE.Group();
+  scene.add(group);
+
+  // Outer wireframe cube — the "grid" shell
+  const cubeGeo=new THREE.BoxGeometry(2.6,2.6,2.6);
+  const cubeEdges=new THREE.EdgesGeometry(cubeGeo);
+  const cubeMat=new THREE.LineBasicMaterial({color:0x4F8C68,transparent:true,opacity:0.55});
+  const cubeWire=new THREE.LineSegments(cubeEdges,cubeMat);
+  group.add(cubeWire);
+
+  // Inner spreadsheet-style grid plane (rows/cols), repeated on 3 faces
+  function makeGridTexture(){
+    const c=document.createElement('canvas');c.width=256;c.height=256;
+    const g=c.getContext('2d');
+    g.fillStyle='rgba(247,244,234,0.0)';g.fillRect(0,0,256,256);
+    g.strokeStyle='rgba(124,174,140,0.7)';g.lineWidth=1.5;
+    for(let i=0;i<=8;i++){
+      const p=i*32;
+      g.beginPath();g.moveTo(p,0);g.lineTo(p,256);g.stroke();
+      g.beginPath();g.moveTo(0,p);g.lineTo(256,p);g.stroke();
+    }
+    return new THREE.CanvasTexture(c);
+  }
+  const gridTex=makeGridTexture();
+  const faceMat=new THREE.MeshBasicMaterial({map:gridTex,transparent:true,opacity:0.4,side:THREE.DoubleSide});
+  const faceGeo=new THREE.PlaneGeometry(2.58,2.58);
+
+  const facePositions=[
+    {pos:[0,0,1.3],rot:[0,0,0]},
+    {pos:[1.3,0,0],rot:[0,Math.PI/2,0]},
+    {pos:[0,1.3,0],rot:[Math.PI/2,0,0]},
+  ];
+  facePositions.forEach(f=>{
+    const mesh=new THREE.Mesh(faceGeo,faceMat);
+    mesh.position.set(...f.pos);
+    mesh.rotation.set(...f.rot);
+    group.add(mesh);
+  });
+
+  // Floating accent cells — small glowing squares drifting around the cube (data points)
+  const cellGeo=new THREE.PlaneGeometry(0.18,0.18);
+  const cellColors=[0x7CAE8C,0xBC9E5C,0x5CA086];
+  const cells=[];
+  for(let i=0;i<14;i++){
+    const mat=new THREE.MeshBasicMaterial({
+      color:cellColors[i%cellColors.length],transparent:true,opacity:0.5,side:THREE.DoubleSide
+    });
+    const mesh=new THREE.Mesh(cellGeo,mat);
+    const radius=2.0+Math.random()*1.4;
+    const theta=Math.random()*Math.PI*2;
+    const phi=Math.random()*Math.PI;
+    mesh.position.set(
+      radius*Math.sin(phi)*Math.cos(theta),
+      radius*Math.cos(phi)*0.7,
+      radius*Math.sin(phi)*Math.sin(theta)
+    );
+    mesh.userData={speed:0.002+Math.random()*0.004,offset:Math.random()*Math.PI*2};
+    cells.push(mesh);
+    group.add(mesh);
+  }
+
+  let mouseX=0,mouseY=0;
+  window.addEventListener('mousemove',e=>{
+    mouseX=(e.clientX/window.innerWidth-0.5);
+    mouseY=(e.clientY/window.innerHeight-0.5);
+  });
+
+  let t=0;
+  function animateThreeHero(){
+    requestAnimationFrame(animateThreeHero);
+    if(!document.getElementById('page-home').classList.contains('active'))return;
+    t+=0.005;
+    group.rotation.y=t*0.5+mouseX*0.3;
+    group.rotation.x=Math.sin(t*0.3)*0.15+mouseY*0.2;
+    cells.forEach(c=>{
+      c.position.y+=Math.sin(t*2+c.userData.offset)*0.002;
+      c.lookAt(camera.position);
+    });
+    renderer.render(scene,camera);
+  }
+  animateThreeHero();
+})();
 
 // ── COUNTERS ──
 const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){
@@ -965,8 +1907,8 @@ document.getElementById('modsGrid').innerHTML=mods.map(m=>`<div class="mod-c"><d
 // ── NAVBAR SCROLL ──
 window.addEventListener('scroll',()=>{
   const nav=document.getElementById('navbar');
-  nav.style.background=window.scrollY>50?'rgba(6,8,14,0.92)':'rgba(10,12,20,0.72)';
-  nav.style.borderColor=window.scrollY>50?'rgba(196,186,224,0.18)':'rgba(196,186,224,0.14)';
+  nav.style.background=window.scrollY>50?'rgba(251,248,240,0.92)':'rgba(251,248,240,0.78)';
+  nav.style.borderColor=window.scrollY>50?'rgba(156,196,168,0.18)':'rgba(156,196,168,0.14)';
 });
 
 // ── EXCEL ROW PULSE ──
@@ -975,7 +1917,7 @@ setInterval(()=>{
   const rows=document.querySelectorAll('.xt tbody tr');
   rows.forEach(r=>r.style.background='');
   const r=rows[ri%rows.length];
-  if(r&&!r.querySelector('[colspan="10"]')&&!r.querySelector('[colspan="3"]'))r.style.background='rgba(196,186,224,0.04)';
+  if(r&&!r.querySelector('[colspan="10"]')&&!r.querySelector('[colspan="3"]'))r.style.background='rgba(156,196,168,0.04)';
   ri++;
 },2400);
 
