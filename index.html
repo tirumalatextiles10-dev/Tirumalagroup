@@ -296,14 +296,11 @@ nav{position:fixed;top:14px;left:50%;transform:translateX(-50%);width:95%;max-wi
 
 /* ── CONTACT PAGE: GOOGLE FORM EMBED ── */
 .gform-embed-wrap{position:relative;margin-top:40px;border-radius:20px;overflow:hidden;
-  background:var(--dark2);border:1px solid rgba(156,196,168,0.16);min-height:480px}
-.gform-iframe{width:100%;height:900px;border:none;display:block}
-.gform-placeholder-note{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
-  text-align:center;padding:48px;font-size:14px;line-height:1.8;color:rgba(30,43,32,0.55);
-  background:var(--dark2);max-width:480px;margin:0 auto}
+  background:var(--dark2);border:1px solid rgba(156,196,168,0.16);max-width:660px}
+.gform-iframe{width:100%;height:1336px;border:none;display:block}
 
 @media(max-width:600px){
-  .gform-iframe{height:760px}
+  .gform-iframe{height:1450px}
 }
 
 /* ── VIDEO BG ENGINE ── */
@@ -1474,35 +1471,8 @@ footer a:hover{color:rgba(156,196,168,0.6)}
       <h2 class="sec-h">Tell us about your factory.</h2>
       <p class="sec-p">Fill this in and it reaches us directly — no account or signup needed on your end.</p>
 
-      <!--
-        ════════════════════════════════════════════════════════════
-        SETUP INSTRUCTIONS FOR MOHIT — Google Form Embed
-        ════════════════════════════════════════════════════════════
-        1. Go to forms.google.com and start a Blank form.
-        2. Add fields: Name, Company / Factory Name, Phone (WhatsApp), Email,
-           Number of Workers (optional), What do you need help with (paragraph),
-           Preferred contact time (optional).
-        3. Open Settings (gear icon) -- Responses -- turn ON "Collect email addresses"
-           and "Send respondents a copy" if you want.
-        4. Open the Responses tab -- click the green Sheets icon -- "Create a new spreadsheet".
-           This auto-creates a Google Sheet that fills in real time as people submit;
-           that sheet IS your enquiry inbox, check it like email.
-        5. Recommended: in that new Sheet, open Tools -- Notification rules --
-           "Notify me immediately" when a user submits a form. This emails YOU
-           every time someone submits, so you don't have to keep checking the sheet.
-        6. Click Send at the top right of the form editor, choose the embed option,
-           and copy the embed code it gives you.
-        7. Replace the placeholder iframe below with that exact embed code.
-           Keep the surrounding gform-embed-wrap div as-is, since it's what makes
-           the form sizing responsive on mobile.
-        ════════════════════════════════════════════════════════════
-      -->
       <div class="gform-embed-wrap">
-        <iframe class="gform-iframe" src="about:blank" title="Tirumala Automation Enquiry Form" loading="lazy">
-        </iframe>
-        <div class="gform-placeholder-note">
-          📋 Google Form embed goes here — see setup instructions in the page source (HTML comment above this block) for exact steps to create and connect your form.
-        </div>
+        <iframe class="gform-iframe" src="https://docs.google.com/forms/d/e/1FAIpQLScdPOQdb_aj-woQo2IqZi9gFISwVHESTA-zJxtmuS_sW2WMgw/viewform?embedded=true" title="Tirumala Automation Enquiry Form" loading="lazy">Loading…</iframe>
       </div>
 
       <p class="test-disclaimer">Prefer not to fill a form? WhatsApp or email us directly using the buttons above — both reach the same inbox.</p>
