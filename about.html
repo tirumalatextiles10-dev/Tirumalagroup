@@ -221,7 +221,7 @@ const icon=()=>{const b=$("#th");if(b)b.textContent=isDark()?"☀":"☾"};
 function toggleTheme(){const n=isDark()?"light":"dark";document.documentElement.dataset.theme=n;try{localStorage.setItem("tt_theme",n)}catch(e){}icon()}
 if(dm.addEventListener)dm.addEventListener("change",()=>{try{if(!localStorage.getItem("tt_theme"))icon()}catch(e){icon()}});icon();
 // ===== GOOGLE ANALYTICS 4 =====
-const GA_ID="G-XXXXXXXXXX";window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}
+const GA_ID="G-6E9EJV5XW4";window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}
 if(!GA_ID.includes("XXXX")){const g=document.createElement("script");g.async=1;g.src="https://www.googletagmanager.com/gtag/js?id="+GA_ID;document.head.appendChild(g);gtag("js",new Date());gtag("config",GA_ID)}
 document.addEventListener("click",e=>{const a=e.target.closest("a");if(!a)return;const h=a.getAttribute("href")||"";
  if(h.includes("wa.me"))gtag("event","whatsapp_click");else if(h.startsWith("mailto"))gtag("event","email_click");else if(h.includes("instagram"))gtag("event","instagram_click");else if(a.classList.contains("btn")&&/demo/i.test(a.textContent))gtag("event","cta_demo_click",{page:document.body.dataset.p})});
