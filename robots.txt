@@ -1,0 +1,19 @@
+# Tirumala Automation: everyone is welcome, including AI search and assistant crawlers
+User-agent: *
+Allow: /
+
+User-agent: Googlebot
+User-agent: Bingbot
+User-agent: OAI-SearchBot
+User-agent: GPTBot
+User-agent: ChatGPT-User
+User-agent: ClaudeBot
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+Allow: /
+
+Sitemap: https://tirumala-automation.com/sitemap.xml
