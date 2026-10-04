@@ -7,10 +7,11 @@
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Book a Live Demo | Contact Tirumala Automation"><meta name="twitter:description" content="Contact Tirumala Automation on WhatsApp +91 81008 88810 or by email to book a live demo of Excel automation, Power Apps and QR inventory for your business."><meta name="twitter:image" content="https://tirumala-automation.com/og-image.jpg">
 <link rel="icon" href="favicon.png"><link rel="apple-touch-icon" href="favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&amp;family=DM+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&amp;family=DM+Sans:wght@400;500;600&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&amp;family=DM+Sans:wght@400;500;600&amp;display=swap"></noscript>
 <script>try{var t=localStorage.getItem("tt_theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://tirumala-automation.com/#org", "name": "Tirumala Automation", "url": "https://tirumala-automation.com/", "logo": "https://tirumala-automation.com/favicon.png", "email": "Tirumala.textiles10@gmail.com", "telephone": "+91-81008-88810", "sameAs": ["https://instagram.com/tirumalatextiles10"], "founder": [{"@type": "Person", "name": "Mohit Agarwal"}, {"@type": "Person", "name": "Rohit Agarwal"}], "areaServed": "IN", "description": "Custom Excel automation, Power Apps and QR code inventory systems for garment, furniture and interior businesses in India. Built on Microsoft. Book a live demo.", "knowsAbout": ["Excel automation", "Excel VBA", "Power Apps development", "QR code inventory system", "Garment manufacturing software", "Furniture manufacturing automation", "Interior design project management"]}, {"@type": "WebSite", "@id": "https://tirumala-automation.com/#website", "url": "https://tirumala-automation.com/", "name": "Tirumala Automation", "publisher": {"@id": "https://tirumala-automation.com/#org"}, "inLanguage": "en-IN"}, {"@type": "WebPage", "@id": "https://tirumala-automation.com/contact.html#webpage", "url": "https://tirumala-automation.com/contact.html", "name": "Book a Live Demo | Contact Tirumala Automation", "description": "Contact Tirumala Automation on WhatsApp +91 81008 88810 or by email to book a live demo of Excel automation, Power Apps and QR inventory for your business.", "isPartOf": {"@id": "https://tirumala-automation.com/#website"}, "about": {"@id": "https://tirumala-automation.com/#org"}, "inLanguage": "en-IN"}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://tirumala-automation.com/"}, {"@type": "ListItem", "position": 2, "name": "Book a Live Demo", "item": "https://tirumala-automation.com/contact.html"}]}]}</script>
-<noscript><style>.rv{opacity:1!important;transform:none!important}</style></noscript>
+<noscript><style>.rv{opacity:1!important;transform:none!important}.vt{font:500 24px/1.05 'Cormorant Garamond',serif;color:var(--leaf)}.step h3{font-size:22px}
+</style></noscript>
 <style>
 :root{--bg:#FAF7EE;--card:#FFFEFA;--mint:#E8F0E4;--sage:#CFE0D0;--blush:#F6E9DD;--leaf:#2C5A43;--leaf2:#4F8367;--gold:#B8975A;--ink:#1F3226;--mut:#61736A;--line:rgba(44,90,67,.14)}
 *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
@@ -133,7 +134,7 @@ body{background:linear-gradient(180deg,var(--bg),var(--mint) 55%,var(--bg))}
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
 const V="",CL_="";
 // poster = same name, .jpg
-const vw=(src,t,s,extra="")=>`<div class="vw rv"><video muted loop playsinline preload="none" src="${src}" ${extra}></video><div><h4>${t}</h4><p>${s}</p></div></div>`;
+const vw=(src,t,s,extra="")=>`<div class="vw rv"><video muted loop playsinline preload="none" src="${src}" ${extra}></video><div><div class="vt">${t}</div><p>${s}</p></div></div>`;
 // ===== NAV + FOOTER =====
 const U=k=>k=="home"?"index.html":k+".html";
 const PG=[["home","Home"],["industries","Industries"],["solutions","Solutions"],["clients","Clients"],["about","About"],["contact","Contact"]];
@@ -163,7 +164,7 @@ if($("#mg"))mods();
 const ROWS=[["TA-001","Buyer A","Polo Shirt","12,000","On Track"],["TA-002","Buyer B","Slim Trouser","8,500","Delayed"],["TA-003","Buyer C","Crew Sweatshirt","15,200","Complete"],["TA-004","Buyer A","Dry-fit Shorts","22,000","At Risk"],["TA-005","Buyer B","Linen Shirt","6,800","In Progress"]];
 function role(r){$$("#roles button").forEach(b=>b.classList.toggle("on",b.textContent==r));$r("rt","<tr><th>ORDER</th><th>BUYER</th><th>STYLE</th><th>QTY</th><th>STATUS</th></tr>"+ROWS.filter(x=>r=="Admin"||x[1]==r).map(x=>`<tr>${x.map(c=>`<td>${c}</td>`).join("")}</tr>`).join(""))}
 if($("#roles")){$r("roles",["Admin","Buyer A","Buyer B"].map(r=>`<button onclick="role('${r}')">${r}</button>`).join(""));role("Admin")}
-$r("flow",[["Generate QR","Excel creates a unique QR for every piece."],["Print & tag","Labels go on each piece, bundle or unit."],["Scan one by one","Scan with a phone or scanner, straight into Excel."],["Inventory updates","Stock, stage and reports refresh live."]].map((s,i)=>`<div class="step ${i?'':'on'}" onclick="hl(${i})"><b>0${i+1}</b><h4>${s[0]}</h4><p>${s[1]}</p></div>`).join(""));
+$r("flow",[["Generate QR","Excel creates a unique QR for every piece."],["Print & tag","Labels go on each piece, bundle or unit."],["Scan one by one","Scan with a phone or scanner, straight into Excel."],["Inventory updates","Stock, stage and reports refresh live."]].map((s,i)=>`<div class="step ${i?'':'on'}" onclick="hl(${i})"><b>0${i+1}</b><h3>${s[0]}</h3><p>${s[1]}</p></div>`).join(""));
 function hl(i){$$(".step").forEach((e,j)=>e.classList.toggle("on",i==j))}
 $r("qr",Array.from({length:121},(_,i)=>`<s class="${(i*7+i%5)%3?'':'o'}"></s>`).join(""));
 let n=0;if($("#scanBtn"))$("#scanBtn").onclick=()=>{n++;$("#cnt").textContent=String(n).padStart(4,"0");hl(n%4)};
@@ -222,7 +223,7 @@ function toggleTheme(){const n=isDark()?"light":"dark";document.documentElement.
 if(dm.addEventListener)dm.addEventListener("change",()=>{try{if(!localStorage.getItem("tt_theme"))icon()}catch(e){icon()}});icon();
 // ===== GOOGLE ANALYTICS 4 =====
 const GA_ID="G-6E9EJV5XW4";window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}
-if(!GA_ID.includes("XXXX")){const g=document.createElement("script");g.async=1;g.src="https://www.googletagmanager.com/gtag/js?id="+GA_ID;document.head.appendChild(g);gtag("js",new Date());gtag("config",GA_ID)}
+if(!GA_ID.includes("XXXX")){gtag("js",new Date());gtag("config",GA_ID);const loadGA=()=>setTimeout(()=>{const g=document.createElement("script");g.async=1;g.src="https://www.googletagmanager.com/gtag/js?id="+GA_ID;document.head.appendChild(g)},300);document.readyState=="complete"?loadGA():addEventListener("load",loadGA)}
 document.addEventListener("click",e=>{const a=e.target.closest("a");if(!a)return;const h=a.getAttribute("href")||"";
  if(h.includes("wa.me"))gtag("event","whatsapp_click");else if(h.startsWith("mailto"))gtag("event","email_click");else if(h.includes("instagram"))gtag("event","instagram_click");else if(a.classList.contains("btn")&&/demo/i.test(a.textContent))gtag("event","cta_demo_click",{page:document.body.dataset.p})});
 if($("#gf"))$("#gf").addEventListener("submit",()=>gtag("event","generate_lead",{form:"contact"}));
