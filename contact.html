@@ -195,7 +195,7 @@ $r("cg",CL.map((c,i)=>`<div class="card rv" style="cursor:pointer" onclick="open
 function openC(i){const c=CL[i];$("#mt").textContent=c[0];$("#mp").textContent="Three demonstrations of how their team manages everything successfully.";$("#mv").innerHTML=DEMOS.map((d,k)=>vw(`client-${c[1]}-demo${k+1}.mp4`,d,`Demo ${k+1} · ${c[0]}`)).join("");$("#modal").classList.add("open");vwatch($("#mv"));gtag("event","view_client",{client:c[0]});$$("#mv .rv").forEach(e=>e.classList.add("in"))}
 // ===== CONTACT FORM -> your Google Form (website design stays; Google's page is never shown) =====
 // PASTE your Google Form "pre-filled link" between the quotes on the next line. Nothing else to set up.
-const FORM_LINK="";
+const FORM_LINK="https://docs.google.com/forms/d/e/1FAIpQLSdlqZYbxc0hZyOh_fbxvSTh34v5hNzZs6pDWJGh854fDmgB3A/viewform?usp=pp_url&entry.1550015586=NAME&entry.2113523197=PHONE&entry.187122479=EMAIL&entry.546848904=Garment+Manufacturing&entry.784117422=MESSAGE";
 const SAMPLE_KEYS={NAME:"name",PHONE:"phone",EMAIL:"email","Garment Manufacturing":"industry",MESSAGE:"msg"};
 function parseForm(){try{const u=new URL(FORM_LINK),id=u.pathname.match(/\/forms\/d\/e\/([^/]+)/);if(!id)return null;const map={};
  u.searchParams.forEach((v,k)=>{if(/^entry\.\d+$/.test(k)&&SAMPLE_KEYS[v])map[SAMPLE_KEYS[v]]=k});
