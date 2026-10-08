@@ -1,6 +1,6 @@
 # Tirumala Automation
 
-> Tirumala Automation builds Excel automation (Excel AI OS), Power Apps mobile apps, QR code generation and piece-by-piece scanning inventory systems for garment manufacturers, furniture makers and interior designers in India. Everything is built on Microsoft platforms: data is stored on Microsoft servers, encrypted end to end, with automated backups.
+> Tirumala Automation builds Excel automation (Excel AI OS), Power Apps mobile apps, QR code generation and piece-by-piece scanning inventory systems for garment manufacturers, furniture makers and interior designers in India. It also builds B2B landing pages and business websites (not e-commerce) with full SEO and AI-search setup. Everything is built on Microsoft platforms: data is stored on Microsoft servers, encrypted end to end, with automated backups.
 
 ## Pages
 - [Home](https://tirumala-automation.com/): what we build, workflow, FAQ
@@ -12,6 +12,8 @@
 
 ## Key facts
 - Services: Excel automation and VBA, Power Apps development, QR code inventory system, production tracking, costing, BOM, daily KPI reports, WhatsApp alerts
+- Website development: B2B landing pages and business websites only, not online stores; also creates professional business email on the client's own domain
+- SEO work included: robots.txt, sitemap.xml, Google Search Console, Bing Webmaster Tools, Google Analytics 4, unique title and description per page, structured data, llms.txt, PageSpeed tuning, Google Business Profile setup
 - Industries: garment manufacturing, furniture manufacturing, interior design
 - Platform: Microsoft Excel, Power Apps, SharePoint
 - Contact: WhatsApp +91 81008 88810, Tirumala.textiles10@gmail.com, Instagram @tirumalatextiles10
